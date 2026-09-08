@@ -1,0 +1,158 @@
+{
+  "revision": "2b6d039ed471f2ba5fd2acb718bf33b0a7e5598e",
+  "chunks": [
+    {
+      "category": "Appliances",
+      "byte_start": 0,
+      "bytes": 100000000,
+      "sha256": "29d7bb359b0608be7d4203ed8d769b4a1b92a394d8523544122b237743271e55",
+      "complete_rows": 30229,
+      "identity_candidates": 48
+    },
+    {
+      "category": "Beauty_and_Personal_Care",
+      "byte_start": 0,
+      "bytes": 50000000,
+      "sha256": "ef7f401b00087f95f4445073059af98429d98d52004d74bbdd6c889b005f9804",
+      "complete_rows": 16161,
+      "identity_candidates": 24
+    },
+    {
+      "category": "Beauty_and_Personal_Care",
+      "byte_start": 300000000,
+      "bytes": 250000000,
+      "sha256": "e92c0787b4e0e8d8b4030af331113b8a5824b64ef4f3bd84814ef85cba41749b",
+      "complete_rows": 84976,
+      "identity_candidates": 221
+    },
+    {
+      "category": "Beauty_and_Personal_Care",
+      "byte_start": 50000000,
+      "bytes": 250000000,
+      "sha256": "d2b84a0a7764f478db7db05daef3d99714b8e0a692839cfe4972be814032bbb6",
+      "complete_rows": 83197,
+      "identity_candidates": 227
+    },
+    {
+      "category": "Electronics",
+      "byte_start": 0,
+      "bytes": 50000000,
+      "sha256": "9396c535386d4aeb83a86c7645cec9bce25c76a79970d17861c7bd7da633f03a",
+      "complete_rows": 13609,
+      "identity_candidates": 906
+    },
+    {
+      "category": "Electronics",
+      "byte_start": 50000000,
+      "bytes": 150000000,
+      "sha256": "0720df998a60d5accc2c772b0990938642c71192122cc030162f61a1cd600eb7",
+      "complete_rows": 41184,
+      "identity_candidates": 2666
+    },
+    {
+      "category": "Health_and_Household",
+      "byte_start": 0,
+      "bytes": 100000000,
+      "sha256": "fe5772cf498dbc5316095ed2206c0006e157acf7ea2cce75c104a02158f921cc",
+      "complete_rows": 28949,
+      "identity_candidates": 202
+    },
+    {
+      "category": "Health_and_Household",
+      "byte_start": 100000000,
+      "bytes": 100000000,
+      "sha256": "f3178045d42cbc14eb5ea6f96de9878a85d756ca91a4c453f5857e2765930e85",
+      "complete_rows": 29346,
+      "identity_candidates": 198
+    },
+    {
+      "category": "Home_and_Kitchen",
+      "byte_start": 0,
+      "bytes": 50000000,
+      "sha256": "abac51fcfc43825be949e14b699dc5dbcf1a50f3011ce2763ee887b5061039ae",
+      "complete_rows": 13533,
+      "identity_candidates": 126
+    },
+    {
+      "category": "Home_and_Kitchen",
+      "byte_start": 1000000000,
+      "bytes": 800000000,
+      "sha256": "2091b51787ff74a845f5d676846b8e492873e0a947fa7039cf9e74b5284455b1",
+      "complete_rows": 231600,
+      "identity_candidates": 2489
+    },
+    {
+      "category": "Home_and_Kitchen",
+      "byte_start": 1800000000,
+      "bytes": 1200000000,
+      "sha256": "987cc4a72039ba9d722c8a05e9e43dd719475b7ee8b01c490d28c92d014b4546",
+      "complete_rows": 355889,
+      "identity_candidates": 3693
+    },
+    {
+      "category": "Home_and_Kitchen",
+      "byte_start": 300000000,
+      "bytes": 323345053,
+      "sha256": "17ca5e8137df4e96f118e2c10f373b6f4307ad838aa808923bc526932554d4d7",
+      "complete_rows": 90002,
+      "identity_candidates": 964
+    },
+    {
+      "category": "Home_and_Kitchen",
+      "byte_start": 50000000,
+      "bytes": 250000000,
+      "sha256": "edc6717b0bc78daed65eb52a9ea8a2e14950003710927f6c2cf8fd72fb227022",
+      "complete_rows": 68028,
+      "identity_candidates": 747
+    },
+    {
+      "category": "Home_and_Kitchen",
+      "byte_start": 623345053,
+      "bytes": 376654947,
+      "sha256": "ed647b83413f7b8c4dd3cb9cc5641ba5a66f7ac73e21b5240931a0f7f5d71398",
+      "complete_rows": 106525,
+      "identity_candidates": 1074
+    },
+    {
+      "category": "Sports_and_Outdoors",
+      "byte_start": 0,
+      "bytes": 50000000,
+      "sha256": "6a867489c83c2e7bf6cb8361dab58f7c7c3ce4f08c9c75ee2bf43505330d3481",
+      "complete_rows": 17174,
+      "identity_candidates": 561
+    },
+    {
+      "category": "Tools_and_Home_Improvement",
+      "byte_start": 0,
+      "bytes": 100000000,
+      "sha256": "4715edfe30f6da0b8642260152c4746018c623a7d8be3bc0c92e17600030390c",
+      "complete_rows": 26503,
+      "identity_candidates": 272
+    },
+    {
+      "category": "Tools_and_Home_Improvement",
+      "byte_start": 100000000,
+      "bytes": 100000000,
+      "sha256": "8375e90b46229f360655b2cf61d09c687befcb37474ff64779a2994059437f3d",
+      "complete_rows": 26675,
+      "identity_candidates": 270
+    }
+  ],
+  "counts": {
+    "vacuum_cleaners": 3938,
+    "headphones": 1892,
+    "electric_kettles": 676,
+    "water_bottles": 3615,
+    "electric_shavers": 329,
+    "backpacks": 1305,
+    "mice": 705,
+    "electric_toothbrushes": 444,
+    "desk_lamps": 398,
+    "keyboards": 719,
+    "bluetooth_speakers": 292,
+    "rice_cookers": 375
+  },
+  "candidate_count": 14688,
+  "candidates_sha256": "76f6ae726e8daafa2ac684920ed9edc718ae8f651c3298139d498e5509cb4114",
+  "sampling": "bounded byte ranges; not random or population-representative"
+}

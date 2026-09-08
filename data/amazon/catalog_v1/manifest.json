@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "catalog_id": "amazon_daily_v1",
+  "dataset": "McAuley-Lab/Amazon-Reviews-2023",
+  "revision": "2b6d039ed471f2ba5fd2acb718bf33b0a7e5598e",
+  "item_count": 600,
+  "category_count": 12,
+  "currency": "USD",
+  "price_kind": "historical_snapshot",
+  "selection": "price_quartile_round_robin_with_brand_diversity; deterministic",
+  "files": {
+    "products.jsonl": "a8c0c12a042b9eae076b21d4989de467d762b5bcbffc14bcf2ee87b945d2a20a",
+    "source_records.jsonl": "febae75e3c2e39bf7ea2d7d2b4902ed7f82b60bcf47b4913d31e957bd6f23bc2",
+    "quality_report.json": "8abc75ba9325f6b064febe27e0c0b7a45d86119b127e91556eb751c5fcc02c91"
+  },
+  "candidates_sha256": "76f6ae726e8daafa2ac684920ed9edc718ae8f651c3298139d498e5509cb4114",
+  "builder_sha256": "ae11ea82c0fa2883387d7fa933f58badbff6830d6c628754b2b7f0ca0c346f5c",
+  "review_exclusions_sha256": "10bf4f73b863e97a7e12248d0e325e4b3ee97527485eb7aa44a0b06b5c45b51b"
+}

@@ -1,0 +1,379 @@
+{
+  "categories": {
+    "headphones": {
+      "name": "耳机",
+      "candidates": 1892,
+      "eligible": 426,
+      "selected": 50,
+      "target": 50,
+      "brands": 50,
+      "min_price_usd": 3.99,
+      "max_price_usd": 169.57,
+      "required_attributes": [
+        "connectivity",
+        "form_factor"
+      ],
+      "attribute_coverage": {
+        "connectivity": 50,
+        "form_factor": 50,
+        "weight": 48,
+        "color": 44,
+        "model": 45,
+        "dimensions": 28,
+        "special_features": 14,
+        "material": 1
+      }
+    },
+    "bluetooth_speakers": {
+      "name": "便携蓝牙音箱",
+      "candidates": 292,
+      "eligible": 92,
+      "selected": 50,
+      "target": 50,
+      "brands": 50,
+      "min_price_usd": 9.99,
+      "max_price_usd": 249.0,
+      "required_attributes": [
+        "connectivity",
+        "speaker_type"
+      ],
+      "attribute_coverage": {
+        "connectivity": 50,
+        "speaker_type": 50,
+        "dimensions": 43,
+        "weight": 46,
+        "model": 45,
+        "special_features": 45,
+        "color": 2
+      }
+    },
+    "keyboards": {
+      "name": "键盘",
+      "candidates": 719,
+      "eligible": 53,
+      "selected": 50,
+      "target": 50,
+      "brands": 40,
+      "min_price_usd": 7.99,
+      "max_price_usd": 399.95,
+      "required_attributes": [
+        "connectivity",
+        "keyboard_description"
+      ],
+      "attribute_coverage": {
+        "connectivity": 50,
+        "keyboard_description": 50,
+        "dimensions": 35,
+        "weight": 47,
+        "color": 49,
+        "model": 32,
+        "compatible_devices": 46,
+        "special_features": 49,
+        "number_of_keys": 46,
+        "material": 13
+      }
+    },
+    "mice": {
+      "name": "鼠标",
+      "candidates": 705,
+      "eligible": 82,
+      "selected": 50,
+      "target": 50,
+      "brands": 46,
+      "min_price_usd": 4.99,
+      "max_price_usd": 129.99,
+      "required_attributes": [
+        "connectivity",
+        "tracking"
+      ],
+      "attribute_coverage": {
+        "connectivity": 50,
+        "tracking": 50,
+        "dimensions": 35,
+        "weight": 49,
+        "color": 43,
+        "model": 30,
+        "number_of_buttons": 11,
+        "special_features": 45
+      }
+    },
+    "rice_cookers": {
+      "name": "电饭煲",
+      "candidates": 375,
+      "eligible": 68,
+      "selected": 50,
+      "target": 50,
+      "brands": 40,
+      "min_price_usd": 24.99,
+      "max_price_usd": 715.0,
+      "required_attributes": [
+        "capacity",
+        "power"
+      ],
+      "attribute_coverage": {
+        "capacity": 50,
+        "material": 44,
+        "power": 50,
+        "dimensions": 44,
+        "weight": 49,
+        "color": 43,
+        "model": 41,
+        "voltage": 38,
+        "special_features": 48,
+        "power_source": 32
+      }
+    },
+    "electric_kettles": {
+      "name": "电热水壶",
+      "candidates": 676,
+      "eligible": 129,
+      "selected": 50,
+      "target": 50,
+      "brands": 50,
+      "min_price_usd": 18.99,
+      "max_price_usd": 149.0,
+      "required_attributes": [
+        "capacity",
+        "material"
+      ],
+      "attribute_coverage": {
+        "capacity": 50,
+        "material": 50,
+        "power": 48,
+        "dimensions": 42,
+        "weight": 50,
+        "color": 50,
+        "model": 37,
+        "voltage": 44,
+        "special_features": 23
+      }
+    },
+    "vacuum_cleaners": {
+      "name": "吸尘器",
+      "candidates": 3938,
+      "eligible": 319,
+      "selected": 50,
+      "target": 50,
+      "brands": 50,
+      "min_price_usd": 5.0,
+      "max_price_usd": 409.99,
+      "required_attributes": [
+        "vacuum_type",
+        "power_source"
+      ],
+      "attribute_coverage": {
+        "capacity": 33,
+        "power": 50,
+        "power_source": 50,
+        "vacuum_type": 50,
+        "dimensions": 43,
+        "weight": 50,
+        "color": 44,
+        "model": 41,
+        "battery_life": 16,
+        "special_features": 46
+      }
+    },
+    "desk_lamps": {
+      "name": "台灯",
+      "candidates": 398,
+      "eligible": 91,
+      "selected": 50,
+      "target": 50,
+      "brands": 50,
+      "min_price_usd": 8.99,
+      "max_price_usd": 207.77,
+      "required_attributes": [
+        "light_source",
+        "power_source"
+      ],
+      "attribute_coverage": {
+        "material": 43,
+        "power": 50,
+        "power_source": 50,
+        "light_source": 50,
+        "dimensions": 44,
+        "weight": 50,
+        "color": 47,
+        "model": 31,
+        "voltage": 36,
+        "special_features": 47
+      }
+    },
+    "backpacks": {
+      "name": "双肩包",
+      "candidates": 1305,
+      "eligible": 85,
+      "selected": 50,
+      "target": 50,
+      "brands": 50,
+      "min_price_usd": 11.99,
+      "max_price_usd": 241.47,
+      "required_attributes": [
+        "dimensions",
+        "material"
+      ],
+      "attribute_coverage": {
+        "dimensions": 50,
+        "weight": 37,
+        "color": 39,
+        "material": 50,
+        "special_features": 11,
+        "model": 24,
+        "capacity": 19
+      }
+    },
+    "water_bottles": {
+      "name": "水杯／保温杯",
+      "candidates": 3615,
+      "eligible": 528,
+      "selected": 50,
+      "target": 50,
+      "brands": 50,
+      "min_price_usd": 6.99,
+      "max_price_usd": 188.0,
+      "required_attributes": [
+        "capacity",
+        "material"
+      ],
+      "attribute_coverage": {
+        "capacity": 50,
+        "material": 50,
+        "dimensions": 43,
+        "weight": 46,
+        "color": 49,
+        "special_features": 34,
+        "model": 33
+      }
+    },
+    "electric_toothbrushes": {
+      "name": "电动牙刷",
+      "candidates": 444,
+      "eligible": 82,
+      "selected": 50,
+      "target": 50,
+      "brands": 50,
+      "min_price_usd": 7.88,
+      "max_price_usd": 326.62,
+      "required_attributes": [
+        "power_source",
+        "age_range"
+      ],
+      "attribute_coverage": {
+        "power_source": 50,
+        "age_range": 50,
+        "special_features": 49,
+        "dimensions": 24,
+        "model": 31,
+        "color": 8,
+        "material": 3
+      }
+    },
+    "electric_shavers": {
+      "name": "电动剃须刀",
+      "candidates": 329,
+      "eligible": 55,
+      "selected": 50,
+      "target": 50,
+      "brands": 36,
+      "min_price_usd": 8.93,
+      "max_price_usd": 223.23,
+      "required_attributes": [
+        "power_source",
+        "shaving_use"
+      ],
+      "attribute_coverage": {
+        "power_source": 50,
+        "dimensions": 29,
+        "shaving_use": 50,
+        "special_features": 48,
+        "head_type": 24,
+        "model": 37,
+        "battery_life": 1,
+        "color": 1,
+        "material": 1
+      }
+    }
+  },
+  "rejections": {
+    "backpacks:missing_descriptive_text": 12,
+    "backpacks:missing_or_invalid_price": 793,
+    "backpacks:missing_required:dimensions": 68,
+    "backpacks:missing_required:dimensions,material": 116,
+    "backpacks:missing_required:material": 231,
+    "bluetooth_speakers:missing_descriptive_text": 1,
+    "bluetooth_speakers:missing_or_invalid_price": 157,
+    "bluetooth_speakers:missing_required:connectivity": 1,
+    "bluetooth_speakers:missing_required:connectivity,speaker_type": 14,
+    "bluetooth_speakers:missing_required:speaker_type": 27,
+    "desk_lamps:conflict:title_detail_wattage": 4,
+    "desk_lamps:missing_descriptive_text": 2,
+    "desk_lamps:missing_or_invalid_price": 261,
+    "desk_lamps:missing_required:light_source": 7,
+    "desk_lamps:missing_required:light_source,power_source": 15,
+    "desk_lamps:missing_required:power_source": 17,
+    "desk_lamps:wrong_lamp_type": 1,
+    "electric_kettles:conflict:title_detail_capacity": 4,
+    "electric_kettles:invalid_capacity_unit": 7,
+    "electric_kettles:missing_descriptive_text": 12,
+    "electric_kettles:missing_or_invalid_price": 423,
+    "electric_kettles:missing_required:capacity": 64,
+    "electric_kettles:missing_required:capacity,material": 30,
+    "electric_kettles:missing_required:material": 6,
+    "electric_kettles:review_excluded": 1,
+    "electric_shavers:missing_or_invalid_price": 199,
+    "electric_shavers:missing_required:power_source": 2,
+    "electric_shavers:missing_required:power_source,shaving_use": 28,
+    "electric_shavers:missing_required:shaving_use": 42,
+    "electric_shavers:review_excluded": 3,
+    "electric_toothbrushes:missing_descriptive_text": 4,
+    "electric_toothbrushes:missing_or_invalid_price": 240,
+    "electric_toothbrushes:missing_required:age_range": 5,
+    "electric_toothbrushes:missing_required:power_source": 57,
+    "electric_toothbrushes:missing_required:power_source,age_range": 55,
+    "electric_toothbrushes:review_excluded": 1,
+    "headphones:conflict:title_detail_form": 7,
+    "headphones:missing_descriptive_text": 13,
+    "headphones:missing_or_invalid_price": 1276,
+    "headphones:missing_required:connectivity": 11,
+    "headphones:missing_required:connectivity,form_factor": 138,
+    "headphones:missing_required:form_factor": 21,
+    "keyboards:missing_descriptive_text": 7,
+    "keyboards:missing_or_invalid_price": 433,
+    "keyboards:missing_required:connectivity": 14,
+    "keyboards:missing_required:connectivity,keyboard_description": 202,
+    "keyboards:missing_required:keyboard_description": 9,
+    "keyboards:review_excluded": 1,
+    "mice:missing_descriptive_text": 4,
+    "mice:missing_or_invalid_price": 385,
+    "mice:missing_required:connectivity": 1,
+    "mice:missing_required:connectivity,tracking": 215,
+    "mice:missing_required:tracking": 18,
+    "rice_cookers:conflict:title_detail_capacity": 1,
+    "rice_cookers:conflict:title_detail_wattage": 1,
+    "rice_cookers:invalid_capacity_unit": 29,
+    "rice_cookers:missing_descriptive_text": 7,
+    "rice_cookers:missing_or_invalid_price": 240,
+    "rice_cookers:missing_required:capacity": 1,
+    "rice_cookers:missing_required:capacity,power": 17,
+    "rice_cookers:missing_required:power": 11,
+    "vacuum_cleaners:conflict:title_detail_wattage": 3,
+    "vacuum_cleaners:missing_descriptive_text": 88,
+    "vacuum_cleaners:missing_or_invalid_price": 2345,
+    "vacuum_cleaners:missing_required:power_source": 257,
+    "vacuum_cleaners:missing_required:vacuum_type": 83,
+    "vacuum_cleaners:missing_required:vacuum_type,power_source": 842,
+    "vacuum_cleaners:review_excluded": 1,
+    "water_bottles:conflict:title_detail_capacity": 5,
+    "water_bottles:invalid_capacity_unit": 455,
+    "water_bottles:missing_descriptive_text": 33,
+    "water_bottles:missing_or_invalid_price": 2276,
+    "water_bottles:missing_required:capacity": 233,
+    "water_bottles:missing_required:capacity,material": 71,
+    "water_bottles:missing_required:material": 13,
+    "water_bottles:review_excluded": 1
+  },
+  "total": 600,
+  "all_targets_met": true,
+  "scope": "automated qualification plus recorded targeted review; not exhaustive factual verification"
+}
