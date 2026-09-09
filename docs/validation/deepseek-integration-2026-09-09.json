@@ -1,0 +1,273 @@
+{
+  "date": "2026-09-09",
+  "provider": "DeepSeek",
+  "model": "deepseek-v4-flash",
+  "scope": "integration smoke; not full agent eval",
+  "initial": {
+    "executed": 5,
+    "passed": 4,
+    "cases": [
+      {
+        "input": "找一个100美元以内的耳机，没有其他要求，推荐一个就好。",
+        "passed": true,
+        "kind": "recommendation",
+        "message": "在100美元预算内，我为您推荐 **JBL Tune 225TWS 真无线耳机**（$79.95）。\n\n这款耳机来自知名音频品牌 JBL，具备以下亮点：\n- **JBL Pure Bass 音效**：JBL标志性的低音调音，音质有保障\n- **真无线设计**：无束缚，支持双耳独立使用（Dual Connect）\n- **长达25小时续航**（耳机5小时+充电盒20小时）\n- **蓝牙5.0连接**，配备充电盒\n\n价格79.95美元，在100美元预算内，品牌可靠、功能均衡，是综合表现不错的入门级真无线耳机选择。",
+        "budget": {
+          "status": "active",
+          "strength": "hard",
+          "value": {
+            "amount": "100",
+            "currency": "USD"
+          },
+          "source": {
+            "kind": "explicit",
+            "turn_id": "69b93832-1f23-4edc-b987-de5331676846",
+            "quote": "找一个100美元以内的耳机"
+          }
+        },
+        "excluded": {},
+        "exploration": null,
+        "product_ids": [
+          "amz_B08CGQX4G9"
+        ],
+        "citations": [
+          {
+            "product_id": "amz_B08CGQX4G9",
+            "field": "price",
+            "quote": "79.95"
+          },
+          {
+            "product_id": "amz_B08CGQX4G9",
+            "field": "title",
+            "quote": "JBL Tune 225TWS True Wireless Earbud Headphones - Pure Bass Sound, Bluetooth, 25H Battery, Dual Connect, Native Voice Assistant (Black)"
+          },
+          {
+            "product_id": "amz_B08CGQX4G9",
+            "field": "features",
+            "quote": "JBL PURE BASS SOUND: Powering festivals and concerts around the world for decades, now JBL brings your own world to life with incredible Pure Bass sound in these wireless earbuds."
+          },
+          {
+            "product_id": "amz_B08CGQX4G9",
+            "field": "features",
+            "quote": "UP TO 25 HOURS BATTERY (5 plus 20)"
+          }
+        ],
+        "runtime": {
+          "model": "deepseek-v4-flash",
+          "elapsed_seconds": 11.378,
+          "tool_calls": 6,
+          "error": null,
+          "usage": {
+            "requests": 4,
+            "input_tokens": 27197,
+            "output_tokens": 1063,
+            "total_tokens": 28260
+          }
+        }
+      },
+      {
+        "input": "预算提高到150美元，刚才推荐的第一个不要了。先只记录这些修改，不用再搜索或推荐。",
+        "passed": true,
+        "kind": "answered",
+        "message": "已记录以下修改：\n\n1. **预算提高至 $150 USD**（原为 $100 USD）\n2. **排除**之前推荐的 JBL Tune 225TWS 耳机\n\n两项修改均已生效，暂不进行搜索或推荐。如需继续，请告诉我下一步操作。",
+        "budget": {
+          "status": "active",
+          "strength": "hard",
+          "value": {
+            "amount": "150",
+            "currency": "USD"
+          },
+          "source": {
+            "kind": "explicit",
+            "turn_id": "361fb197-b4f3-4a12-805c-39728cdcaf79",
+            "quote": "预算提高到150美元"
+          }
+        },
+        "excluded": {
+          "amz_B08CGQX4G9": true
+        },
+        "exploration": null,
+        "product_ids": [],
+        "citations": [],
+        "runtime": {
+          "model": "deepseek-v4-flash",
+          "elapsed_seconds": 5.006,
+          "tool_calls": 2,
+          "error": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 13211,
+            "output_tokens": 377,
+            "total_tokens": 13588
+          }
+        }
+      },
+      {
+        "input": "只恢复预算，之前排除的那个仍然不要。先只告诉我当前预算，不用再推荐。",
+        "passed": true,
+        "kind": "answered",
+        "message": "当前预算已恢复为 **$100 USD**（100美元以内）。之前排除的那款耳机仍然保持排除状态，未做改动。暂不进行推荐。",
+        "budget": {
+          "status": "active",
+          "strength": "hard",
+          "value": {
+            "amount": "100",
+            "currency": "USD"
+          },
+          "source": {
+            "kind": "explicit",
+            "turn_id": "69b93832-1f23-4edc-b987-de5331676846",
+            "quote": "找一个100美元以内的耳机"
+          }
+        },
+        "excluded": {
+          "amz_B08CGQX4G9": true
+        },
+        "exploration": null,
+        "product_ids": [],
+        "citations": [],
+        "runtime": {
+          "model": "deepseek-v4-flash",
+          "elapsed_seconds": 3.495,
+          "tool_calls": 2,
+          "error": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 14573,
+            "output_tokens": 202,
+            "total_tokens": 14775
+          }
+        }
+      },
+      {
+        "input": "如果预算提高到200美元呢？先只记录临时方案，不用搜索，正式预算别改。",
+        "passed": true,
+        "kind": "answered",
+        "message": "已记录临时探索方案：假设预算提高到 **$200 USD**。\n\n正式预算保持不变，仍为 **$100 USD**；之前排除的那款耳机也仍然保持排除状态。\n\n按您的要求暂不进行搜索或推荐。如需基于 $200 预算继续探索，请告诉我下一步操作。",
+        "budget": {
+          "status": "active",
+          "strength": "hard",
+          "value": {
+            "amount": "100",
+            "currency": "USD"
+          },
+          "source": {
+            "kind": "explicit",
+            "turn_id": "69b93832-1f23-4edc-b987-de5331676846",
+            "quote": "找一个100美元以内的耳机"
+          }
+        },
+        "excluded": {
+          "amz_B08CGQX4G9": true
+        },
+        "exploration": {
+          "turn_id": "9ee1b309-bfe6-44ea-8a2d-d65e6a6ef052",
+          "quote": "如果预算提高到200美元呢？先只记录临时方案，不用搜索，正式预算别改。",
+          "overrides": {
+            "budget": {
+              "status": "active",
+              "strength": "hard",
+              "value": {
+                "amount": "200",
+                "currency": "USD"
+              }
+            }
+          },
+          "base_requirements_version": 3
+        },
+        "product_ids": [],
+        "citations": [],
+        "runtime": {
+          "model": "deepseek-v4-flash",
+          "elapsed_seconds": 4.229,
+          "tool_calls": 2,
+          "error": null,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 15622,
+            "output_tokens": 356,
+            "total_tokens": 15978
+          }
+        }
+      },
+      {
+        "input": "给我找一个100元人民币以内的耳机。",
+        "passed": false,
+        "kind": "execution_limited",
+        "message": "抱歉，当前系统仅支持以美元（USD）为单位的预算搜索，无法直接以人民币（CNY）预算执行商品检索。您设定的预算是100元人民币，但系统无法自动进行币种换算。\n\n如果您能提供以美元为单位的预算金额，我可以立即为您搜索符合条件的耳机。请问您希望以多少美元预算来搜索呢？",
+        "budget": {
+          "status": "active",
+          "strength": "hard",
+          "value": {
+            "amount": "100",
+            "currency": "CNY"
+          },
+          "source": {
+            "kind": "explicit",
+            "turn_id": "3e1c3f5a-7245-48de-bdcf-ab95798aba9f",
+            "quote": "100元人民币以内"
+          }
+        },
+        "excluded": {},
+        "exploration": null,
+        "product_ids": [],
+        "citations": [],
+        "runtime": {
+          "model": "deepseek-v4-flash",
+          "elapsed_seconds": 7.857,
+          "tool_calls": 4,
+          "error": null,
+          "usage": {
+            "requests": 4,
+            "input_tokens": 14816,
+            "output_tokens": 516,
+            "total_tokens": 15332
+          }
+        }
+      }
+    ]
+  },
+  "currency_recheck": {
+    "input": "给我找一个100元人民币以内的耳机。",
+    "passed": true,
+    "kind": "needs_user",
+    "message": "您希望找100元人民币以内的耳机。不过当前系统需要以美元（USD）为单位来设定预算。请问您的预算大约是多少美元？或者您是否希望我按其他方式处理？",
+    "budget": {
+      "status": "active",
+      "strength": "hard",
+      "value": {
+        "amount": "100",
+        "currency": "CNY"
+      },
+      "source": {
+        "kind": "explicit",
+        "turn_id": "2da59745-cfd9-4776-b0aa-01528595818f",
+        "quote": "100元人民币以内"
+      }
+    },
+    "excluded": {},
+    "exploration": null,
+    "product_ids": [],
+    "citations": [],
+    "runtime": {
+      "model": "deepseek-v4-flash",
+      "elapsed_seconds": 4.905,
+      "tool_calls": 2,
+      "error": null,
+      "usage": {
+        "requests": 2,
+        "input_tokens": 6156,
+        "output_tokens": 308,
+        "total_tokens": 6464
+      }
+    }
+  },
+  "earlier_integration_failures": [
+    "Sync SDK tools accessed SQLite from worker threads; fixed by async functions.",
+    "CLI serialization rejected nested SDK token detail objects after real recommendation; fixed scalar usage output."
+  ],
+  "raw_trace_sha256": {
+    "initial": "6d2b81539c6a230a25bae4158227b67023efa1d272aa3d7ca4f92a94cd8337c6",
+    "currency_recheck": "b073ef0dbe417887cdba8d8941d714485c8ac5f256cfc008eeda01a7412bc2c9"
+  }
+}

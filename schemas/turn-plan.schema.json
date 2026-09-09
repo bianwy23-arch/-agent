@@ -1,0 +1,260 @@
+{
+  "$defs": {
+    "Group": {
+      "additionalProperties": false,
+      "properties": {
+        "group_id": {
+          "title": "Group Id",
+          "type": "string"
+        },
+        "quote": {
+          "title": "Quote",
+          "type": "string"
+        },
+        "action": {
+          "enum": [
+            "apply",
+            "undo",
+            "clarify",
+            "cancel_clarification",
+            "explore",
+            "end_exploration"
+          ],
+          "title": "Action",
+          "type": "string"
+        },
+        "operations": {
+          "items": {
+            "$ref": "#/$defs/Operation"
+          },
+          "title": "Operations",
+          "type": "array"
+        },
+        "dependent": {
+          "default": false,
+          "title": "Dependent",
+          "type": "boolean"
+        },
+        "undo_field": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Undo Field"
+        },
+        "clarification_fields": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Clarification Fields",
+          "type": "array"
+        },
+        "pending_turn_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Pending Turn Id"
+        },
+        "pending_group_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Pending Group Id"
+        }
+      },
+      "required": [
+        "group_id",
+        "quote",
+        "action"
+      ],
+      "title": "Group",
+      "type": "object"
+    },
+    "Money": {
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "title": "Amount",
+          "type": "string"
+        },
+        "currency": {
+          "enum": [
+            "USD",
+            "CNY"
+          ],
+          "title": "Currency",
+          "type": "string"
+        }
+      },
+      "required": [
+        "amount",
+        "currency"
+      ],
+      "title": "Money",
+      "type": "object"
+    },
+    "Operation": {
+      "additionalProperties": false,
+      "properties": {
+        "target": {
+          "enum": [
+            "requirements",
+            "excluded"
+          ],
+          "title": "Target",
+          "type": "string"
+        },
+        "key": {
+          "title": "Key",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Requirement"
+            },
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "target",
+        "key",
+        "value"
+      ],
+      "title": "Operation",
+      "type": "object"
+    },
+    "Requirement": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "active",
+            "no_preference"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "strength": {
+          "enum": [
+            "hard",
+            "soft"
+          ],
+          "title": "Strength",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Money"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "status",
+        "strength",
+        "value"
+      ],
+      "title": "Requirement",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "category": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Category"
+    },
+    "new_task": {
+      "default": false,
+      "title": "New Task",
+      "type": "boolean"
+    },
+    "resume_task_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Resume Task Id"
+    },
+    "groups": {
+      "items": {
+        "$ref": "#/$defs/Group"
+      },
+      "title": "Groups",
+      "type": "array"
+    },
+    "scope_ids": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Scope Ids"
+    },
+    "stop_requested": {
+      "default": false,
+      "title": "Stop Requested",
+      "type": "boolean"
+    },
+    "cheapest_requested": {
+      "default": false,
+      "title": "Cheapest Requested",
+      "type": "boolean"
+    }
+  },
+  "title": "TurnPlan",
+  "type": "object"
+}

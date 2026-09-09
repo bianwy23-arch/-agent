@@ -1,0 +1,84 @@
+{
+  "$defs": {
+    "Citation": {
+      "additionalProperties": false,
+      "properties": {
+        "product_id": {
+          "title": "Product Id",
+          "type": "string"
+        },
+        "field": {
+          "title": "Field",
+          "type": "string"
+        },
+        "quote": {
+          "title": "Quote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_id",
+        "field",
+        "quote"
+      ],
+      "title": "Citation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "kind": {
+      "enum": [
+        "answered",
+        "recommendation",
+        "needs_user",
+        "no_match",
+        "data_limited",
+        "execution_limited",
+        "stopped"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "message": {
+      "title": "Message",
+      "type": "string"
+    },
+    "product_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Product Ids",
+      "type": "array"
+    },
+    "citations": {
+      "items": {
+        "$ref": "#/$defs/Citation"
+      },
+      "title": "Citations",
+      "type": "array"
+    },
+    "unresolved": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Unresolved",
+      "type": "array"
+    },
+    "scope": {
+      "default": "formal",
+      "enum": [
+        "formal",
+        "hypothetical"
+      ],
+      "title": "Scope",
+      "type": "string"
+    }
+  },
+  "required": [
+    "kind",
+    "message"
+  ],
+  "title": "FinalAnswer",
+  "type": "object"
+}
