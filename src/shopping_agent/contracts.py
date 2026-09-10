@@ -12,10 +12,16 @@ class Money(Contract):
     currency: Literal["USD", "CNY"]
 
 
+class Predicate(Contract):
+    operator: Literal["eq", "gte", "lte", "gt", "lt", "contains", "not_contains"]
+    value: str
+    unit: str | None = None
+
+
 class Requirement(Contract):
     status: Literal["active", "no_preference"]
     strength: Literal["hard", "soft"]
-    value: Money | str | None
+    value: Money | Predicate | str | None
 
 
 class Operation(Contract):

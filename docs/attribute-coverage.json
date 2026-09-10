@@ -1,0 +1,222 @@
+{
+  "catalog_revision": "2b6d039ed471f2ba5fd2acb718bf33b0a7e5598e",
+  "products": 600,
+  "coverage": {
+    "headphones": {
+      "connectivity": {
+        "known": 50
+      },
+      "form_factor": {
+        "known": 48,
+        "conflict": 2
+      },
+      "weight": {
+        "known": 48,
+        "unknown": 2
+      },
+      "waterproof": {
+        "unknown": 44,
+        "known": 6
+      }
+    },
+    "bluetooth_speakers": {
+      "connectivity": {
+        "known": 49,
+        "unknown": 1
+      },
+      "speaker_type": {
+        "known": 36,
+        "unknown": 14
+      },
+      "weight": {
+        "known": 46,
+        "unknown": 4
+      },
+      "waterproof": {
+        "known": 27,
+        "unknown": 23
+      }
+    },
+    "keyboards": {
+      "connectivity": {
+        "known": 50
+      },
+      "keyboard_description": {
+        "unknown": 33,
+        "known": 17
+      },
+      "number_of_keys": {
+        "known": 46,
+        "unknown": 4
+      },
+      "compatible_devices": {
+        "known": 32,
+        "unknown": 18
+      },
+      "weight": {
+        "known": 47,
+        "unknown": 3
+      }
+    },
+    "mice": {
+      "connectivity": {
+        "known": 49,
+        "unknown": 1
+      },
+      "tracking": {
+        "known": 50
+      },
+      "number_of_buttons": {
+        "unknown": 39,
+        "known": 11
+      },
+      "weight": {
+        "known": 49,
+        "unknown": 1
+      }
+    },
+    "rice_cookers": {
+      "capacity": {
+        "unknown": 26,
+        "known": 24
+      },
+      "power": {
+        "known": 44,
+        "unknown": 6
+      },
+      "voltage": {
+        "known": 38,
+        "unknown": 12
+      },
+      "material": {
+        "known": 37,
+        "unknown": 13
+      },
+      "power_source": {
+        "unknown": 21,
+        "known": 29
+      }
+    },
+    "electric_kettles": {
+      "capacity": {
+        "known": 48,
+        "unknown": 2
+      },
+      "power": {
+        "known": 46,
+        "unknown": 4
+      },
+      "voltage": {
+        "known": 43,
+        "unknown": 7
+      },
+      "material": {
+        "known": 49,
+        "unknown": 1
+      },
+      "weight": {
+        "known": 50
+      }
+    },
+    "vacuum_cleaners": {
+      "vacuum_type": {
+        "known": 50
+      },
+      "power_source": {
+        "known": 50
+      },
+      "power": {
+        "known": 33,
+        "unknown": 17
+      },
+      "weight": {
+        "known": 50
+      },
+      "capacity": {
+        "unknown": 26,
+        "known": 24
+      },
+      "battery_life": {
+        "unknown": 39,
+        "known": 11
+      }
+    },
+    "desk_lamps": {
+      "light_source": {
+        "known": 49,
+        "unknown": 1
+      },
+      "power_source": {
+        "known": 47,
+        "unknown": 3
+      },
+      "power": {
+        "known": 44,
+        "unknown": 6
+      },
+      "voltage": {
+        "known": 34,
+        "unknown": 16
+      },
+      "material": {
+        "unknown": 28,
+        "known": 22
+      }
+    },
+    "backpacks": {
+      "capacity": {
+        "unknown": 33,
+        "known": 17
+      },
+      "material": {
+        "known": 42,
+        "unknown": 8
+      },
+      "weight": {
+        "known": 37,
+        "unknown": 13
+      }
+    },
+    "water_bottles": {
+      "capacity": {
+        "known": 21,
+        "unknown": 29
+      },
+      "material": {
+        "known": 45,
+        "unknown": 5
+      },
+      "weight": {
+        "known": 46,
+        "unknown": 4
+      }
+    },
+    "electric_toothbrushes": {
+      "age_range": {
+        "known": 49,
+        "unknown": 1
+      },
+      "power_source": {
+        "known": 49,
+        "unknown": 1
+      }
+    },
+    "electric_shavers": {
+      "shaving_use": {
+        "unknown": 5,
+        "known": 45
+      },
+      "power_source": {
+        "known": 50
+      },
+      "head_type": {
+        "unknown": 26,
+        "known": 24
+      },
+      "battery_life": {
+        "unknown": 49,
+        "known": 1
+      }
+    }
+  }
+}

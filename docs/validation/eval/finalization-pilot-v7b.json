@@ -1,0 +1,891 @@
+{
+  "at": "2026-09-09T18:20:45.944996+00:00",
+  "model": "deepseek-v4-flash",
+  "cases_sha256": "0aebe47633cf67a8b1d6bbe9d8a0ad07ae2cf5a95c821168586a227d83947485",
+  "gold_sha256": "4190334c3eaf811f8362982d5396bc63db670e92e95dcc3efd41bf4c4c743f79",
+  "source_hashes": {
+    "src/shopping_agent/catalog.py": "58357d011420d5cd2c5ae7001932d77411a121837261586af0ab224c7c90cc1a",
+    "src/shopping_agent/service.py": "acec40d0845506340072ce0a70b7283cd23d9dc91cec506a2d755bfba3204f71",
+    "src/shopping_agent/web.py": "11e451e16e6d9c3f779b42c567e6a9eb76aec3a3657c1ff992113bb2c4154c18",
+    "src/shopping_agent/config.py": "978644ed070c5eaa356e35c1e224d852bb724582de9ca9049a41b98072b29e41",
+    "src/shopping_agent/__init__.py": "dfe88291ef82838fae520806a0f403b611550437ec7647a2a175b939f8bf1329",
+    "src/shopping_agent/runtime.py": "9e3b6e7732611a1195d0b861f530d40b612c4b30ffeb80878d912e703b7524a3",
+    "src/shopping_agent/cli.py": "b96939a1ec08fd77613637df0698e1bb32b2e6b2a9c32cba7772692c835eb12b",
+    "src/shopping_agent/qualification.py": "55a097643bd2b66c608c87a40720fe5ca210b3d27d717190d3a51eea09b929ab",
+    "src/shopping_agent/contracts.py": "54ab66eb282556f293daa528a2f5571930526604688ff05de220886764696ea5",
+    "src/shopping_agent/state.py": "1933c9785592c36b0d1373c9234514edc07bda3241035951b30b9f4eec356092",
+    "scripts/run_eval.py": "00416c820fc8c7d0728e8df7c2690dd95fdd5cea5b5e62bbb3028865e98d2b72"
+  },
+  "selected": 4,
+  "executed": 4,
+  "program_pass": 2,
+  "semantic_review": "pending",
+  "cases": [
+    {
+      "id": "T01",
+      "split": "development",
+      "family": "category_headphones",
+      "inputs": [
+        "请推荐一个100美元以内的耳机，必须是包耳式（over-ear）。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        []
+      ],
+      "harness_issue": null,
+      "program_pass": true,
+      "semantic_review": "pending",
+      "elapsed_seconds": 9.447,
+      "outputs": [
+        {
+          "kind": "recommendation",
+          "message": "按当前正式需求，以下商品通过了已记录硬条件的核验：\n\n1. **OYEALEX Active Noise Cancelling Over Ear Headphone Bluetooth Wireless Headphones with Microphone Deep Bass Foldable Comfortable Headphones for Online Class, Home Office, PC/Cell Phones/Game Orange**\n   历史价格：24.99 美元。\n   - 价格符合已记录的美元预算上限。\n   - 佩戴形式：资料标注“Over Ear”，符合该项要求。\n\n以上依据商品资料标注，未进行独立实测；价格为历史 USD 快照，不代表当前报价或库存。",
+          "product_ids": [
+            "amz_B09HSL3QRG"
+          ],
+          "citations": [
+            {
+              "product_id": "amz_B09HSL3QRG",
+              "field": "details.Form Factor",
+              "quote": "Over Ear"
+            },
+            {
+              "product_id": "amz_B09HSL3QRG",
+              "field": "price",
+              "quote": "24.99"
+            }
+          ],
+          "unresolved": [],
+          "scope": "formal",
+          "turn_id": "8a401b6c-aa09-4bee-82af-c49f34eb548b",
+          "task_id": "9a228938-cc35-4960-982f-581425e50c94",
+          "display_id": "d1cf1ce4-3b83-4d84-b17a-6a770f18b5f3",
+          "price_notice": "商品价格为历史 USD 数据，不代表当前报价或库存。",
+          "group_errors": [],
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 9.446,
+            "tool_calls": 4,
+            "error": null,
+            "usage": {
+              "requests": 5,
+              "input_tokens": 25555,
+              "output_tokens": 897,
+              "total_tokens": 26452
+            }
+          },
+          "state": {
+            "id": "9a228938-cc35-4960-982f-581425e50c94",
+            "category": "headphones",
+            "revision": 2,
+            "requirements_version": 2,
+            "requirements": {
+              "budget": {
+                "status": "active",
+                "strength": "hard",
+                "value": {
+                  "amount": "100",
+                  "currency": "USD"
+                },
+                "source": {
+                  "kind": "explicit",
+                  "turn_id": "8a401b6c-aa09-4bee-82af-c49f34eb548b",
+                  "quote": "100美元以内"
+                }
+              },
+              "form_factor": {
+                "status": "active",
+                "strength": "hard",
+                "value": "over_ear",
+                "source": {
+                  "kind": "explicit",
+                  "turn_id": "8a401b6c-aa09-4bee-82af-c49f34eb548b",
+                  "quote": "必须是包耳式（over-ear）"
+                }
+              }
+            },
+            "excluded": {},
+            "pending": {},
+            "exploration": null,
+            "decision": {
+              "phase": "exploration",
+              "focus_ids": [],
+              "shortlist_ids": [],
+              "unresolved_tradeoffs": [],
+              "selection": null,
+              "needs_reassessment": true
+            },
+            "displays": {
+              "d1cf1ce4-3b83-4d84-b17a-6a770f18b5f3": [
+                "amz_B09HSL3QRG"
+              ]
+            },
+            "candidate_ids": [
+              "amz_B09HSL3QRG"
+            ],
+            "candidate_facts_sha256": {
+              "amz_B09HSL3QRG": "af1bfe7c664772f3be4f28f795a46691bd1112f75d43520c92e9ad76ef1232bf"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "T26",
+      "split": "development",
+      "family": "whole_undo",
+      "inputs": [
+        "推荐两个100美元以内的耳机，没有其他要求，按库内历史价格即可。",
+        "预算改成150美元，并排除第一个。只记录，不用搜索。",
+        "撤销刚才的修改。只记录，不用搜索。"
+      ],
+      "failures": [
+        [],
+        [],
+        [
+          "runtime_failure",
+          "wrong_stop_kind"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 166.63,
+      "outputs": [
+        {
+          "kind": "recommendation",
+          "message": "按当前正式需求，以下商品通过了已记录硬条件的核验：\n\n1. **JBL Tune 225TWS True Wireless Earbud Headphones - Pure Bass Sound, Bluetooth, 25H Battery, Dual Connect, Native Voice Assistant (Black)**\n   历史价格：79.95 美元。\n   - 价格符合已记录的美元预算上限。\n\n2. **Silensys E7 PRO Active Noise Cancelling Headphones Bluetooth Headphones with Microphone Deep Bass Wireless Headphones Over Ear, Comfortable Fit, 30H Playtime for TV/Computer/Cellphone, Black**\n   历史价格：64.98 美元。\n   - 价格符合已记录的美元预算上限。\n\n以上依据商品资料标注，未进行独立实测；价格为历史 USD 快照，不代表当前报价或库存。",
+          "product_ids": [
+            "amz_B08CGQX4G9",
+            "amz_B09GV2PSSP"
+          ],
+          "citations": [
+            {
+              "product_id": "amz_B08CGQX4G9",
+              "field": "price",
+              "quote": "79.95"
+            },
+            {
+              "product_id": "amz_B08CGQX4G9",
+              "field": "title",
+              "quote": "JBL Tune 225TWS True Wireless Earbud Headphones - Pure Bass Sound, Bluetooth, 25H Battery, Dual Connect, Native Voice Assistant (Black)"
+            },
+            {
+              "product_id": "amz_B09GV2PSSP",
+              "field": "price",
+              "quote": "64.98"
+            },
+            {
+              "product_id": "amz_B09GV2PSSP",
+              "field": "title",
+              "quote": "Silensys E7 PRO Active Noise Cancelling Headphones Bluetooth Headphones with Microphone Deep Bass Wireless Headphones Over Ear, Comfortable Fit, 30H Playtime for TV/Computer/Cellphone, Black"
+            }
+          ],
+          "unresolved": [],
+          "scope": "formal",
+          "turn_id": "e2d47388-8f01-4cf0-92f6-6f0c4be351d8",
+          "task_id": "103a4c35-f1ba-4ca4-8f63-12a600fe43d3",
+          "display_id": "21803d80-ea36-4918-833b-dc6acb10e235",
+          "price_notice": "商品价格为历史 USD 数据，不代表当前报价或库存。",
+          "group_errors": [],
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 11.98,
+            "tool_calls": 7,
+            "error": null,
+            "usage": {
+              "requests": 4,
+              "input_tokens": 37379,
+              "output_tokens": 1304,
+              "total_tokens": 38683
+            }
+          },
+          "state": {
+            "id": "103a4c35-f1ba-4ca4-8f63-12a600fe43d3",
+            "category": "headphones",
+            "revision": 1,
+            "requirements_version": 1,
+            "requirements": {
+              "budget": {
+                "status": "active",
+                "strength": "hard",
+                "value": {
+                  "amount": "100",
+                  "currency": "USD"
+                },
+                "source": {
+                  "kind": "explicit",
+                  "turn_id": "e2d47388-8f01-4cf0-92f6-6f0c4be351d8",
+                  "quote": "推荐两个100美元以内的耳机"
+                }
+              }
+            },
+            "excluded": {},
+            "pending": {},
+            "exploration": null,
+            "decision": {
+              "phase": "exploration",
+              "focus_ids": [],
+              "shortlist_ids": [],
+              "unresolved_tradeoffs": [],
+              "selection": null,
+              "needs_reassessment": true
+            },
+            "displays": {
+              "21803d80-ea36-4918-833b-dc6acb10e235": [
+                "amz_B08CGQX4G9",
+                "amz_B09GV2PSSP"
+              ]
+            },
+            "candidate_ids": [
+              "amz_B0B4JDCDTD",
+              "amz_B00YRR8216",
+              "amz_B08DFNVNG9",
+              "amz_B001F8RIKG",
+              "amz_B07CLC3TQJ",
+              "amz_B07NW9X5BW",
+              "amz_B0B56CRXDC",
+              "amz_B0B8MPMY97",
+              "amz_B09C22NYPW",
+              "amz_B00IBD82V2",
+              "amz_B07G7J8FT4",
+              "amz_B08ZN4VSGY",
+              "amz_B082T33642",
+              "amz_B00WUXSZS4",
+              "amz_B07F6ZWB53",
+              "amz_B019E91BB4",
+              "amz_B06XFNGGSC",
+              "amz_B0BNJW4NV7",
+              "amz_B07QPPC795",
+              "amz_B07QVFP3D6",
+              "amz_B0B242NJR5",
+              "amz_B09QSNNBBV",
+              "amz_B09HSL3QRG",
+              "amz_B07VHBC8VP",
+              "amz_B07SBLQ1C7",
+              "amz_B09J4M1LRX",
+              "amz_B097J15XWR",
+              "amz_B079M27C6B",
+              "amz_B0C58R2R5V",
+              "amz_B0BKKC4JNY",
+              "amz_B07RDMN529",
+              "amz_B09T77MS2W",
+              "amz_B0C39XH7F7",
+              "amz_B0001V2KS8",
+              "amz_B00WUCQH08",
+              "amz_B01M99A3B4",
+              "amz_B07V2KTV4F",
+              "amz_B005M08LGI",
+              "amz_B09GV2PSSP",
+              "amz_B0BRZ7P6T1",
+              "amz_B07W6KFH6J",
+              "amz_B0B614DRZ3",
+              "amz_B08CGQX4G9",
+              "amz_B08KTKPDGP",
+              "amz_B0BB1F44HT"
+            ],
+            "candidate_facts_sha256": {
+              "amz_B0B4JDCDTD": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B00YRR8216": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B08DFNVNG9": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B001F8RIKG": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07CLC3TQJ": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07NW9X5BW": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0B56CRXDC": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0B8MPMY97": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09C22NYPW": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B00IBD82V2": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07G7J8FT4": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B08ZN4VSGY": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B082T33642": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B00WUXSZS4": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07F6ZWB53": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B019E91BB4": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B06XFNGGSC": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0BNJW4NV7": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07QPPC795": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07QVFP3D6": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0B242NJR5": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09QSNNBBV": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09HSL3QRG": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07VHBC8VP": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07SBLQ1C7": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09J4M1LRX": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B097J15XWR": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B079M27C6B": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0C58R2R5V": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0BKKC4JNY": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07RDMN529": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09T77MS2W": "a2d76baf5a76a36bb421d8b8ac94b9e5b1df3126d9a05318946f2d40c5bbc574",
+              "amz_B0C39XH7F7": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0001V2KS8": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B00WUCQH08": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B01M99A3B4": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07V2KTV4F": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B005M08LGI": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09GV2PSSP": "53198e13add75de4c8d721ddca2df4b8b3a2eda32621e388231333c819f14688",
+              "amz_B0BRZ7P6T1": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07W6KFH6J": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0B614DRZ3": "3981b86d0ade9f12d6f33aecb8312982f17fae6fecc020ad6683f9c08b069a6c",
+              "amz_B08CGQX4G9": "dc3f5ac18475b5bab8362c4de971222938b1e1bccdf0e63f432ffe5ae4c60e89",
+              "amz_B08KTKPDGP": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0BB1F44HT": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            }
+          }
+        },
+        {
+          "kind": "answered",
+          "message": "已记录两项变更（未执行搜索）：\n\n1. **预算**：由 100 美元调整为 **150 美元**（硬性上限）。\n2. **排除**：排除了第一个商品（amz_B08CGQX4G9，即之前推荐的 JBL Tune 225TWS，历史价 79.95 美元）。\n\n按你的要求本轮仅记录，不做搜索或推荐。需要时告诉我即可继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [],
+          "scope": "formal",
+          "turn_id": "16f897e7-db09-41da-8699-cfcc0cdfd7c6",
+          "task_id": "103a4c35-f1ba-4ca4-8f63-12a600fe43d3",
+          "display_id": null,
+          "price_notice": "商品价格为历史 USD 数据，不代表当前报价或库存。",
+          "group_errors": [],
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 4.627,
+            "tool_calls": 2,
+            "error": null,
+            "usage": {
+              "requests": 2,
+              "input_tokens": 24981,
+              "output_tokens": 422,
+              "total_tokens": 25403
+            }
+          },
+          "state": {
+            "id": "103a4c35-f1ba-4ca4-8f63-12a600fe43d3",
+            "category": "headphones",
+            "revision": 3,
+            "requirements_version": 2,
+            "requirements": {
+              "budget": {
+                "status": "active",
+                "strength": "hard",
+                "value": {
+                  "amount": "150",
+                  "currency": "USD"
+                },
+                "source": {
+                  "kind": "explicit",
+                  "turn_id": "16f897e7-db09-41da-8699-cfcc0cdfd7c6",
+                  "quote": "预算改成150美元"
+                }
+              }
+            },
+            "excluded": {
+              "amz_B08CGQX4G9": true
+            },
+            "pending": {},
+            "exploration": null,
+            "decision": {
+              "phase": "exploration",
+              "focus_ids": [],
+              "shortlist_ids": [],
+              "unresolved_tradeoffs": [],
+              "selection": null,
+              "needs_reassessment": true
+            },
+            "displays": {
+              "21803d80-ea36-4918-833b-dc6acb10e235": [
+                "amz_B08CGQX4G9",
+                "amz_B09GV2PSSP"
+              ]
+            },
+            "candidate_ids": [
+              "amz_B0B4JDCDTD",
+              "amz_B00YRR8216",
+              "amz_B08DFNVNG9",
+              "amz_B001F8RIKG",
+              "amz_B07CLC3TQJ",
+              "amz_B07NW9X5BW",
+              "amz_B0B56CRXDC",
+              "amz_B0B8MPMY97",
+              "amz_B09C22NYPW",
+              "amz_B00IBD82V2",
+              "amz_B07G7J8FT4",
+              "amz_B08ZN4VSGY",
+              "amz_B082T33642",
+              "amz_B00WUXSZS4",
+              "amz_B07F6ZWB53",
+              "amz_B019E91BB4",
+              "amz_B06XFNGGSC",
+              "amz_B0BNJW4NV7",
+              "amz_B07QPPC795",
+              "amz_B07QVFP3D6",
+              "amz_B0B242NJR5",
+              "amz_B09QSNNBBV",
+              "amz_B09HSL3QRG",
+              "amz_B07VHBC8VP",
+              "amz_B07SBLQ1C7",
+              "amz_B09J4M1LRX",
+              "amz_B097J15XWR",
+              "amz_B079M27C6B",
+              "amz_B0C58R2R5V",
+              "amz_B0BKKC4JNY",
+              "amz_B07RDMN529",
+              "amz_B09T77MS2W",
+              "amz_B0C39XH7F7",
+              "amz_B0001V2KS8",
+              "amz_B00WUCQH08",
+              "amz_B01M99A3B4",
+              "amz_B07V2KTV4F",
+              "amz_B005M08LGI",
+              "amz_B09GV2PSSP",
+              "amz_B0BRZ7P6T1",
+              "amz_B07W6KFH6J",
+              "amz_B0B614DRZ3",
+              "amz_B08CGQX4G9",
+              "amz_B08KTKPDGP",
+              "amz_B0BB1F44HT"
+            ],
+            "candidate_facts_sha256": {
+              "amz_B0B4JDCDTD": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B00YRR8216": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B08DFNVNG9": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B001F8RIKG": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07CLC3TQJ": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07NW9X5BW": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0B56CRXDC": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0B8MPMY97": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09C22NYPW": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B00IBD82V2": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07G7J8FT4": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B08ZN4VSGY": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B082T33642": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B00WUXSZS4": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07F6ZWB53": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B019E91BB4": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B06XFNGGSC": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0BNJW4NV7": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07QPPC795": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07QVFP3D6": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0B242NJR5": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09QSNNBBV": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09HSL3QRG": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07VHBC8VP": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07SBLQ1C7": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09J4M1LRX": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B097J15XWR": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B079M27C6B": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0C58R2R5V": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0BKKC4JNY": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07RDMN529": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09T77MS2W": "a2d76baf5a76a36bb421d8b8ac94b9e5b1df3126d9a05318946f2d40c5bbc574",
+              "amz_B0C39XH7F7": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0001V2KS8": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B00WUCQH08": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B01M99A3B4": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07V2KTV4F": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B005M08LGI": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09GV2PSSP": "53198e13add75de4c8d721ddca2df4b8b3a2eda32621e388231333c819f14688",
+              "amz_B0BRZ7P6T1": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07W6KFH6J": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0B614DRZ3": "3981b86d0ade9f12d6f33aecb8312982f17fae6fecc020ad6683f9c08b069a6c",
+              "amz_B08CGQX4G9": "dc3f5ac18475b5bab8362c4de971222938b1e1bccdf0e63f432ffe5ae4c60e89",
+              "amz_B08KTKPDGP": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0BB1F44HT": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            }
+          }
+        },
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "turn_timeout"
+          ],
+          "scope": "formal",
+          "turn_id": "12acdf0c-67bd-4e87-92f3-8f745ac15d3d",
+          "task_id": "103a4c35-f1ba-4ca4-8f63-12a600fe43d3",
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 150.01,
+            "tool_calls": 8,
+            "error": "turn_timeout",
+            "usage": null
+          },
+          "state": {
+            "id": "103a4c35-f1ba-4ca4-8f63-12a600fe43d3",
+            "category": "headphones",
+            "revision": 4,
+            "requirements_version": 3,
+            "requirements": {
+              "budget": {
+                "status": "active",
+                "strength": "hard",
+                "value": {
+                  "amount": "100",
+                  "currency": "USD"
+                },
+                "source": {
+                  "kind": "explicit",
+                  "turn_id": "e2d47388-8f01-4cf0-92f6-6f0c4be351d8",
+                  "quote": "推荐两个100美元以内的耳机"
+                }
+              }
+            },
+            "excluded": {},
+            "pending": {},
+            "exploration": null,
+            "decision": {
+              "phase": "exploration",
+              "focus_ids": [],
+              "shortlist_ids": [],
+              "unresolved_tradeoffs": [],
+              "selection": null,
+              "needs_reassessment": true
+            },
+            "displays": {
+              "21803d80-ea36-4918-833b-dc6acb10e235": [
+                "amz_B08CGQX4G9",
+                "amz_B09GV2PSSP"
+              ]
+            },
+            "candidate_ids": [
+              "amz_B0B4JDCDTD",
+              "amz_B00YRR8216",
+              "amz_B08DFNVNG9",
+              "amz_B001F8RIKG",
+              "amz_B07CLC3TQJ",
+              "amz_B07NW9X5BW",
+              "amz_B0B56CRXDC",
+              "amz_B0B8MPMY97",
+              "amz_B09C22NYPW",
+              "amz_B00IBD82V2",
+              "amz_B07G7J8FT4",
+              "amz_B08ZN4VSGY",
+              "amz_B082T33642",
+              "amz_B00WUXSZS4",
+              "amz_B07F6ZWB53",
+              "amz_B019E91BB4",
+              "amz_B06XFNGGSC",
+              "amz_B0BNJW4NV7",
+              "amz_B07QPPC795",
+              "amz_B07QVFP3D6",
+              "amz_B0B242NJR5",
+              "amz_B09QSNNBBV",
+              "amz_B09HSL3QRG",
+              "amz_B07VHBC8VP",
+              "amz_B07SBLQ1C7",
+              "amz_B09J4M1LRX",
+              "amz_B097J15XWR",
+              "amz_B079M27C6B",
+              "amz_B0C58R2R5V",
+              "amz_B0BKKC4JNY",
+              "amz_B07RDMN529",
+              "amz_B09T77MS2W",
+              "amz_B0C39XH7F7",
+              "amz_B0001V2KS8",
+              "amz_B00WUCQH08",
+              "amz_B01M99A3B4",
+              "amz_B07V2KTV4F",
+              "amz_B005M08LGI",
+              "amz_B09GV2PSSP",
+              "amz_B0BRZ7P6T1",
+              "amz_B07W6KFH6J",
+              "amz_B0B614DRZ3",
+              "amz_B08CGQX4G9",
+              "amz_B08KTKPDGP",
+              "amz_B0BB1F44HT"
+            ],
+            "candidate_facts_sha256": {
+              "amz_B0B4JDCDTD": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B00YRR8216": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B08DFNVNG9": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B001F8RIKG": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07CLC3TQJ": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07NW9X5BW": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0B56CRXDC": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0B8MPMY97": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09C22NYPW": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B00IBD82V2": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07G7J8FT4": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B08ZN4VSGY": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B082T33642": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B00WUXSZS4": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07F6ZWB53": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B019E91BB4": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B06XFNGGSC": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0BNJW4NV7": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07QPPC795": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07QVFP3D6": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0B242NJR5": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09QSNNBBV": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09HSL3QRG": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07VHBC8VP": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07SBLQ1C7": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09J4M1LRX": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B097J15XWR": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B079M27C6B": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0C58R2R5V": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0BKKC4JNY": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07RDMN529": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09T77MS2W": "a2d76baf5a76a36bb421d8b8ac94b9e5b1df3126d9a05318946f2d40c5bbc574",
+              "amz_B0C39XH7F7": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0001V2KS8": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B00WUCQH08": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B01M99A3B4": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07V2KTV4F": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B005M08LGI": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09GV2PSSP": "53198e13add75de4c8d721ddca2df4b8b3a2eda32621e388231333c819f14688",
+              "amz_B0BRZ7P6T1": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07W6KFH6J": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0B614DRZ3": "3981b86d0ade9f12d6f33aecb8312982f17fae6fecc020ad6683f9c08b069a6c",
+              "amz_B08CGQX4G9": "dc3f5ac18475b5bab8362c4de971222938b1e1bccdf0e63f432ffe5ae4c60e89",
+              "amz_B08KTKPDGP": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0BB1F44HT": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "T31",
+      "split": "development",
+      "family": "task_isolation",
+      "inputs": [
+        "帮我找100美元以内的耳机，只记录需求，先不搜索。",
+        "另开一个鼠标任务，预算30美元。只记录，不搜索。",
+        "回到刚才耳机任务，只告诉我预算，不搜索。"
+      ],
+      "failures": [
+        [],
+        [],
+        []
+      ],
+      "harness_issue": null,
+      "program_pass": true,
+      "semantic_review": "pending",
+      "elapsed_seconds": 11.129,
+      "outputs": [
+        {
+          "kind": "answered",
+          "message": "已记录您的需求：寻找**100美元以内**的耳机，预算已保存为硬性要求（100 USD）。按您的要求，本轮暂不搜索。如需补充其他条件（如连接方式、佩戴形式等）或开始搜索，请告诉我。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [],
+          "scope": "formal",
+          "turn_id": "dffb0944-ffbf-4242-824b-b1ee394b64c9",
+          "task_id": "f35287e4-ba72-4771-b311-73c5fd02da76",
+          "display_id": null,
+          "price_notice": "商品价格为历史 USD 数据，不代表当前报价或库存。",
+          "group_errors": [],
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 5.3,
+            "tool_calls": 2,
+            "error": null,
+            "usage": {
+              "requests": 3,
+              "input_tokens": 11041,
+              "output_tokens": 308,
+              "total_tokens": 11349
+            }
+          },
+          "state": {
+            "id": "f35287e4-ba72-4771-b311-73c5fd02da76",
+            "category": "headphones",
+            "revision": 1,
+            "requirements_version": 1,
+            "requirements": {
+              "budget": {
+                "status": "active",
+                "strength": "hard",
+                "value": {
+                  "amount": "100",
+                  "currency": "USD"
+                },
+                "source": {
+                  "kind": "explicit",
+                  "turn_id": "dffb0944-ffbf-4242-824b-b1ee394b64c9",
+                  "quote": "帮我找100美元以内的耳机"
+                }
+              }
+            },
+            "excluded": {},
+            "pending": {},
+            "exploration": null,
+            "decision": {
+              "phase": "exploration",
+              "focus_ids": [],
+              "shortlist_ids": [],
+              "unresolved_tradeoffs": [],
+              "selection": null,
+              "needs_reassessment": true
+            },
+            "displays": {},
+            "candidate_ids": [],
+            "candidate_facts_sha256": {}
+          }
+        },
+        {
+          "kind": "answered",
+          "message": "已为您另开一个**鼠标**任务，预算已记录为硬性要求：**30美元**。按您的要求，本轮暂不搜索。如需补充其他条件（如连接方式、按键数量等）或开始搜索，请告诉我。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [],
+          "scope": "formal",
+          "turn_id": "9191a02b-4633-4f11-9887-7f6d197174a2",
+          "task_id": "71cf6c8e-aafc-4ee4-bf96-c8e2b55b9ab2",
+          "display_id": null,
+          "price_notice": "商品价格为历史 USD 数据，不代表当前报价或库存。",
+          "group_errors": [],
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 3.13,
+            "tool_calls": 2,
+            "error": null,
+            "usage": {
+              "requests": 2,
+              "input_tokens": 9041,
+              "output_tokens": 252,
+              "total_tokens": 9293
+            }
+          },
+          "state": {
+            "id": "71cf6c8e-aafc-4ee4-bf96-c8e2b55b9ab2",
+            "category": "mice",
+            "revision": 1,
+            "requirements_version": 1,
+            "requirements": {
+              "budget": {
+                "status": "active",
+                "strength": "hard",
+                "value": {
+                  "amount": "30",
+                  "currency": "USD"
+                },
+                "source": {
+                  "kind": "explicit",
+                  "turn_id": "9191a02b-4633-4f11-9887-7f6d197174a2",
+                  "quote": "另开一个鼠标任务，预算30美元。只记录，不搜索。"
+                }
+              }
+            },
+            "excluded": {},
+            "pending": {},
+            "exploration": null,
+            "decision": {
+              "phase": "exploration",
+              "focus_ids": [],
+              "shortlist_ids": [],
+              "unresolved_tradeoffs": [],
+              "selection": null,
+              "needs_reassessment": true
+            },
+            "displays": {},
+            "candidate_ids": [],
+            "candidate_facts_sha256": {}
+          }
+        },
+        {
+          "kind": "answered",
+          "message": "耳机任务的预算是 **100美元**（硬性要求）。按您的要求，本轮不搜索。如需补充其他条件或开始搜索，请告诉我。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [],
+          "scope": "formal",
+          "turn_id": "c53e1937-4a14-4e73-824d-65deb1de0123",
+          "task_id": "f35287e4-ba72-4771-b311-73c5fd02da76",
+          "display_id": null,
+          "price_notice": "商品价格为历史 USD 数据，不代表当前报价或库存。",
+          "group_errors": [],
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 2.694,
+            "tool_calls": 2,
+            "error": null,
+            "usage": {
+              "requests": 2,
+              "input_tokens": 9299,
+              "output_tokens": 169,
+              "total_tokens": 9468
+            }
+          },
+          "state": {
+            "id": "f35287e4-ba72-4771-b311-73c5fd02da76",
+            "category": "headphones",
+            "revision": 1,
+            "requirements_version": 1,
+            "requirements": {
+              "budget": {
+                "status": "active",
+                "strength": "hard",
+                "value": {
+                  "amount": "100",
+                  "currency": "USD"
+                },
+                "source": {
+                  "kind": "explicit",
+                  "turn_id": "dffb0944-ffbf-4242-824b-b1ee394b64c9",
+                  "quote": "帮我找100美元以内的耳机"
+                }
+              }
+            },
+            "excluded": {},
+            "pending": {},
+            "exploration": null,
+            "decision": {
+              "phase": "exploration",
+              "focus_ids": [],
+              "shortlist_ids": [],
+              "unresolved_tradeoffs": [],
+              "selection": null,
+              "needs_reassessment": true
+            },
+            "displays": {},
+            "candidate_ids": [],
+            "candidate_facts_sha256": {}
+          }
+        }
+      ]
+    },
+    {
+      "id": "T46",
+      "split": "holdout",
+      "family": "unsupported_category",
+      "inputs": [
+        "推荐一瓶新鲜牛奶，预算5美元。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 9.563,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "repeated_call_limit"
+          ],
+          "scope": "formal",
+          "turn_id": "5e1abe21-e23a-4d6d-b0e8-e0e259f34779",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 9.561,
+            "tool_calls": 3,
+            "error": "repeated_call_limit",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    }
+  ]
+}

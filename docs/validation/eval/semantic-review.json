@@ -1,0 +1,344 @@
+{
+  "reviewer": "Codex coding assistant; not independent human acceptance",
+  "method": "Read all final responses against inputs, stored state and relevant actual tool evidence; program assertions are separate. No LLM judge API or user simulator.",
+  "run": "final-v9b",
+  "cases": [
+    {
+      "id": "T01",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T02",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T03",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T04",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T05",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T06",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T07",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T08",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T09",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T10",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T11",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T12",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T13",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T14",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T15",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T16",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T17",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T18",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T19",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T20",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T21",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T22",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T23",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T24",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "逐条复核最终商品名称、历史价和决定性属性；与实际inspect字段及独立允许商品集合一致，按资料标注表达，没有增加实测或保证。"
+    },
+    {
+      "id": "T25",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "只恢复预算至100，排除保持；未重新搜索，已读事实保留。"
+    },
+    {
+      "id": "T26",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "撤销上一轮预算与排除，恢复100且排除为空；未搜索。"
+    },
+    {
+      "id": "T27",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "200仅进入临时探索，正式100不变；结束探索后仍100。"
+    },
+    {
+      "id": "T28",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "排除立即生效，预算澄清未生效；取消仅清除待澄清预算。"
+    },
+    {
+      "id": "T29",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "先追问缺失金额，再接受100美元并推荐一款，pending已清除。"
+    },
+    {
+      "id": "T30",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "排除本次真实展示的第二款，未重新搜索。"
+    },
+    {
+      "id": "T31",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "耳机100与鼠标30任务独立；恢复耳机时预算仍100。"
+    },
+    {
+      "id": "T32",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "只比较原来两款，价格差14.97约15美元正确；附带了有来源的佩戴/连接属性，属多余解释，未扩展商品或购买结论。"
+    },
+    {
+      "id": "T33",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "明确库内低于0.01美元无匹配，不建议增加预算；轨迹有结构化全量覆盖。"
+    },
+    {
+      "id": "T34",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "实测40dB硬条件保存，明确无法确认，没有拿营销降噪当实测或无条件推荐。"
+    },
+    {
+      "id": "T35",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "人民币预算保留后询问美元；用户明确美元预算后才推荐，未自行换汇。"
+    },
+    {
+      "id": "T36",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "连接方式明确无偏好，保留预算，没有搜索。"
+    },
+    {
+      "id": "T37",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "蓝牙条件撤销，预算保留；没有把撤销项恢复为硬条件。"
+    },
+    {
+      "id": "T38",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "停止后无搜索与查看调用，仅复述此前结果。"
+    },
+    {
+      "id": "T39",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "18.99美元为冻结电热水壶库最低价，比较范围明确。"
+    },
+    {
+      "id": "T40",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "未知自制协议硬条件保存，明确核验限制，未宣称全市场不存在。"
+    },
+    {
+      "id": "T41",
+      "program_pass": false,
+      "semantic_pass": false,
+      "combined_pass": false,
+      "note": "搜索后没有有效finish_turn，有限交付修正仍失败；missing_validated_final，推荐和下单能力说明未完成。"
+    },
+    {
+      "id": "T42",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "说明历史价格与库存缺失，不假装确认实时信息。"
+    },
+    {
+      "id": "T43",
+      "program_pass": true,
+      "semantic_pass": false,
+      "combined_pass": false,
+      "note": "拒绝全市场最优合理，但断言没有任何商品提供频响/THD/信噪比参数错误：amz_B09Z4TZQB2.description包含Frequency Response:70Hz-18KHz、S/N Ratio:≥75dB、THD≤1%。这些是厂家标注而非独立实测，仍不能断言不存在参数。"
+    },
+    {
+      "id": "T44",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "明确没有评论原文，没有编造抱怨结论。"
+    },
+    {
+      "id": "T45",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "具体iPad Pro 2024条件保留为未知，未将泛化Tablet视作兼容。"
+    },
+    {
+      "id": "T46",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "说明牛奶品类不支持，未创建错误品类任务或虚构商品。"
+    },
+    {
+      "id": "T47",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "遵守用户先确认预算的要求，不自行选50或100，无搜索。"
+    },
+    {
+      "id": "T48",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "实读6 Cups的SPT/Aroma/CUCKOO及其他明确标升商品，说明杯制无法确定；没有进行杯到升的换算或推荐。"
+    }
+  ],
+  "combined_pass": 46
+}

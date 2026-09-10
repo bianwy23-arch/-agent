@@ -1,0 +1,22 @@
+{
+  "tasks": 48,
+  "turns": 65,
+  "program_pass": 47,
+  "combined_pass": 46,
+  "turn_latency_p50_seconds": 11.107,
+  "turn_latency_p95_seconds": 27.568,
+  "turn_latency_max_seconds": 38.869,
+  "usage": {
+    "requests": 242,
+    "input_tokens": 2235625,
+    "output_tokens": 79383,
+    "total_tokens": 2315008
+  },
+  "turns_with_usage": 65,
+  "usage_scope": "SDK returned usage only; not a provider bill or all historical experiments",
+  "runtime_errors": {
+    "T41": [
+      "missing_validated_final"
+    ]
+  }
+}

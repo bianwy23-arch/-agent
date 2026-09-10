@@ -1,0 +1,363 @@
+{
+  "at": "2026-09-09T23:57:55.435025+00:00",
+  "model": "deepseek-v4-flash",
+  "cases_sha256": "0aebe47633cf67a8b1d6bbe9d8a0ad07ae2cf5a95c821168586a227d83947485",
+  "gold_sha256": "85391f671c22d9b56b86165b1c33d1d6193ccfc53b2d72d23f8e3ccf13fc2f07",
+  "source_hashes": {
+    "src/shopping_agent/catalog.py": "58357d011420d5cd2c5ae7001932d77411a121837261586af0ab224c7c90cc1a",
+    "src/shopping_agent/service.py": "31ef0cd6cc5667d69fc2e825779955e017cad66cf15d10a3cf29c3fe60ab5dde",
+    "src/shopping_agent/web.py": "11e451e16e6d9c3f779b42c567e6a9eb76aec3a3657c1ff992113bb2c4154c18",
+    "src/shopping_agent/config.py": "978644ed070c5eaa356e35c1e224d852bb724582de9ca9049a41b98072b29e41",
+    "src/shopping_agent/__init__.py": "dfe88291ef82838fae520806a0f403b611550437ec7647a2a175b939f8bf1329",
+    "src/shopping_agent/runtime.py": "54f694e2154b4a5bdb8e1df195656f0854b89762a2d987d047bb84411e4c38ac",
+    "src/shopping_agent/cli.py": "b96939a1ec08fd77613637df0698e1bb32b2e6b2a9c32cba7772692c835eb12b",
+    "src/shopping_agent/qualification.py": "55a097643bd2b66c608c87a40720fe5ca210b3d27d717190d3a51eea09b929ab",
+    "src/shopping_agent/contracts.py": "54ab66eb282556f293daa528a2f5571930526604688ff05de220886764696ea5",
+    "src/shopping_agent/state.py": "a4dbcc8b96fae6abc0f41d74b20a0122cd9d026837ee7dc31d0ea79538486d8d",
+    "scripts/run_eval.py": "00416c820fc8c7d0728e8df7c2690dd95fdd5cea5b5e62bbb3028865e98d2b72"
+  },
+  "selected": 2,
+  "executed": 2,
+  "program_pass": 1,
+  "semantic_review": "pending",
+  "cases": [
+    {
+      "id": "T34",
+      "split": "development",
+      "family": "missing_measurement",
+      "inputs": [
+        "推荐一个100美元内的耳机，降噪必须达到实测40dB，没有测量证据就说明无法确定。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 28.834,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "tool_call_limit"
+          ],
+          "scope": "formal",
+          "turn_id": "1aa4d818-26d8-4b0c-ac55-def1f40729d6",
+          "task_id": "0aaff234-1834-4415-b6e0-df649bf3a49c",
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 28.831,
+            "tool_calls": 24,
+            "error": "tool_call_limit",
+            "usage": null
+          },
+          "state": {
+            "id": "0aaff234-1834-4415-b6e0-df649bf3a49c",
+            "category": "headphones",
+            "revision": 2,
+            "requirements_version": 2,
+            "requirements": {
+              "budget": {
+                "status": "active",
+                "strength": "hard",
+                "value": {
+                  "amount": "100",
+                  "currency": "USD"
+                },
+                "source": {
+                  "kind": "explicit",
+                  "turn_id": "1aa4d818-26d8-4b0c-ac55-def1f40729d6",
+                  "quote": "推荐一个100美元内的耳机"
+                }
+              },
+              "noise_cancellation": {
+                "status": "active",
+                "strength": "hard",
+                "value": "降噪实测40dB",
+                "source": {
+                  "kind": "explicit",
+                  "turn_id": "1aa4d818-26d8-4b0c-ac55-def1f40729d6",
+                  "quote": "降噪必须达到实测40dB"
+                }
+              }
+            },
+            "excluded": {},
+            "pending": {},
+            "exploration": null,
+            "decision": {
+              "phase": "exploration",
+              "focus_ids": [],
+              "shortlist_ids": [],
+              "unresolved_tradeoffs": [],
+              "selection": null,
+              "needs_reassessment": true
+            },
+            "displays": {},
+            "candidate_ids": [
+              "amz_B0B4JDCDTD",
+              "amz_B08DFNVNG9",
+              "amz_B07CLC3TQJ",
+              "amz_B07NW9X5BW",
+              "amz_B0B56CRXDC",
+              "amz_B0B8MPMY97",
+              "amz_B09C22NYPW",
+              "amz_B00IBD82V2",
+              "amz_B07G7J8FT4",
+              "amz_B08ZN4VSGY",
+              "amz_B082T33642",
+              "amz_B019E91BB4",
+              "amz_B06XFNGGSC",
+              "amz_B0BNJW4NV7",
+              "amz_B07QVFP3D6",
+              "amz_B0B242NJR5",
+              "amz_B09QSNNBBV",
+              "amz_B09HSL3QRG",
+              "amz_B07VHBC8VP",
+              "amz_B07SBLQ1C7",
+              "amz_B09J4M1LRX",
+              "amz_B097J15XWR",
+              "amz_B079M27C6B",
+              "amz_B0C58R2R5V",
+              "amz_B07RDMN529",
+              "amz_B09T77MS2W",
+              "amz_B0C39XH7F7",
+              "amz_B00WUCQH08",
+              "amz_B07V2KTV4F",
+              "amz_B005M08LGI",
+              "amz_B09GV2PSSP",
+              "amz_B0BRZ7P6T1",
+              "amz_B07W6KFH6J",
+              "amz_B08CGQX4G9",
+              "amz_B0BB1F44HT"
+            ],
+            "candidate_facts_sha256": {
+              "amz_B0B4JDCDTD": "858da76872bc8df192e7a113f1875c2f937f8227512f99f80abcae3a87f0d52b",
+              "amz_B08DFNVNG9": "d7ed57a410c5fe2185976056790f4cbddf58ba21ede4423b3314dd2af740e5e8",
+              "amz_B07CLC3TQJ": "26f498ba09f9e6a032f812f204b0bd9b1ad96ad78a3a52cc2daf27e47cc534f9",
+              "amz_B07NW9X5BW": "26f498ba09f9e6a032f812f204b0bd9b1ad96ad78a3a52cc2daf27e47cc534f9",
+              "amz_B0B56CRXDC": "26f498ba09f9e6a032f812f204b0bd9b1ad96ad78a3a52cc2daf27e47cc534f9",
+              "amz_B0B8MPMY97": "26f498ba09f9e6a032f812f204b0bd9b1ad96ad78a3a52cc2daf27e47cc534f9",
+              "amz_B09C22NYPW": "7866669333760a79dedf92aed390787b3326e4376fe232f081e053fc8c255a68",
+              "amz_B00IBD82V2": "7a85bcbd5ba602493bc4186f17b2b49454578fd4ad96fc47f341159affcb866c",
+              "amz_B07G7J8FT4": "7a85bcbd5ba602493bc4186f17b2b49454578fd4ad96fc47f341159affcb866c",
+              "amz_B08ZN4VSGY": "adae7c39e54403811f22f3e06f1c6e1553cca743b94927a598d02249cedb769b",
+              "amz_B082T33642": "7a97da0b76f5c6ea554cccd8fee52fd8b80c3be794e246dd21234e03372ed2bd",
+              "amz_B019E91BB4": "b03c10ecbb3e756980ff2f194893e9cf3c7dafa1f3943bcbcd6aaca08fb92e37",
+              "amz_B06XFNGGSC": "b03c10ecbb3e756980ff2f194893e9cf3c7dafa1f3943bcbcd6aaca08fb92e37",
+              "amz_B0BNJW4NV7": "b03c10ecbb3e756980ff2f194893e9cf3c7dafa1f3943bcbcd6aaca08fb92e37",
+              "amz_B07QVFP3D6": "0ac271d7a25f031fd69688cb3e935aa98530e592faf641ac5dcd2b9fead48d43",
+              "amz_B0B242NJR5": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09QSNNBBV": "20618b59434f26881f2e0fc5aa82a27c3c426990ec8c34fea813e3d6db24f891",
+              "amz_B09HSL3QRG": "a81073c9ab40d4c2f14271900249fdf90486340286be59dd8c9647838d1541ce",
+              "amz_B07VHBC8VP": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07SBLQ1C7": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09J4M1LRX": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B097J15XWR": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B079M27C6B": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0C58R2R5V": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07RDMN529": "dbbb4c6b96330dc13109adbd4d6b874959c7ddcdc66f13ec7c95dff8ae349d03",
+              "amz_B09T77MS2W": "001ecf4c5715d9012fb8efeca92f8b0d0b94927655950bf85f1022056a31bf3e",
+              "amz_B0C39XH7F7": "670e5a2c9e6a4d1b6cc6c9b3c03aa49ff145f07287386f95c0a5c1c08e867227",
+              "amz_B00WUCQH08": "faf64669ee02e3d6c335643400c8a73870bd3a6b7e4dcaddccac6d237b36ba36",
+              "amz_B07V2KTV4F": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B005M08LGI": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09GV2PSSP": "18bd8ab23e56385f324e3372b26223236ae0ea7c6cb96fd23b00ec23a233afe1",
+              "amz_B0BRZ7P6T1": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07W6KFH6J": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B08CGQX4G9": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0BB1F44HT": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "T40",
+      "split": "development",
+      "family": "unsupported_protocol",
+      "inputs": [
+        "找100美元以内的键盘，必须能原生兼容我自制的ZQX-9000协议。资料没写就不要当成支持。"
+      ],
+      "failures": [
+        []
+      ],
+      "harness_issue": null,
+      "program_pass": true,
+      "semantic_review": "pending",
+      "elapsed_seconds": 17.452,
+      "outputs": [
+        {
+          "kind": "data_limited",
+          "message": "当前查询与证据不足以确认商品同时满足这些硬条件：\n- 必须能原生兼容我自制的ZQX-9000协议\n\n这些要求已保留，不会按已满足来主推荐。这不代表全市场无匹配；这里的范围仅为当前冻结商品资料与已核验信息。\n现有功能暂不能可靠核实这类条件，不能只凭商品描述把它判为满足。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "compatible_devices"
+          ],
+          "scope": "formal",
+          "turn_id": "8e14dd14-b50c-4736-a716-720f19febd7e",
+          "task_id": "bf9cb80f-2ccc-4bb3-a7cc-f1c499cb3d0d",
+          "display_id": null,
+          "price_notice": "商品价格为历史 USD 数据，不代表当前报价或库存。",
+          "group_errors": [],
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 17.445,
+            "tool_calls": 13,
+            "error": null,
+            "usage": {
+              "requests": 5,
+              "input_tokens": 67567,
+              "output_tokens": 2100,
+              "total_tokens": 69667
+            }
+          },
+          "state": {
+            "id": "bf9cb80f-2ccc-4bb3-a7cc-f1c499cb3d0d",
+            "category": "keyboards",
+            "revision": 2,
+            "requirements_version": 2,
+            "requirements": {
+              "budget": {
+                "status": "active",
+                "strength": "hard",
+                "value": {
+                  "amount": "100",
+                  "currency": "USD"
+                },
+                "source": {
+                  "kind": "explicit",
+                  "turn_id": "8e14dd14-b50c-4736-a716-720f19febd7e",
+                  "quote": "找100美元以内的键盘"
+                }
+              },
+              "compatible_devices": {
+                "status": "active",
+                "strength": "hard",
+                "value": "ZQX-9000",
+                "source": {
+                  "kind": "explicit",
+                  "turn_id": "8e14dd14-b50c-4736-a716-720f19febd7e",
+                  "quote": "必须能原生兼容我自制的ZQX-9000协议"
+                }
+              }
+            },
+            "excluded": {},
+            "pending": {},
+            "exploration": null,
+            "decision": {
+              "phase": "exploration",
+              "focus_ids": [],
+              "shortlist_ids": [],
+              "unresolved_tradeoffs": [],
+              "selection": null,
+              "needs_reassessment": true
+            },
+            "displays": {},
+            "candidate_ids": [
+              "amz_B08ZSRCP9W",
+              "amz_B082R6MYX7",
+              "amz_B09KXMCQJW",
+              "amz_B09WDL98XR",
+              "amz_B07Q9KFBP2",
+              "amz_B08BC522KM",
+              "amz_B013VORRFC",
+              "amz_B00HBXWRQY",
+              "amz_B06WWM5TC6",
+              "amz_B07WNM1WNP",
+              "amz_B08SKBLTTD",
+              "amz_B00SK0FOHG",
+              "amz_B07DM54P8F",
+              "amz_B09WDLZ4M9",
+              "amz_B07BRX2XMV",
+              "amz_B083LVY7GZ",
+              "amz_B09K7VVR63",
+              "amz_B002G0052A",
+              "amz_B077QGS9C6",
+              "amz_B0BCK7N5FN",
+              "amz_B01COUZCI8",
+              "amz_B08YRKL1FF",
+              "amz_B0BN1X16C1",
+              "amz_B092MBNGT9",
+              "amz_B001QT6V7A",
+              "amz_B0B5ZTQWWP",
+              "amz_B015LSEQ28",
+              "amz_B002MMY4WY",
+              "amz_B0BKGDCV9D",
+              "amz_B095WCL15B",
+              "amz_B0B3197C4B",
+              "amz_B003EGY6Y8",
+              "amz_B000W0IZKU",
+              "amz_B085V73XNB",
+              "amz_B09CTNCBFG",
+              "amz_B09R6V6KLL",
+              "amz_B0B5LDPJLD",
+              "amz_B00O90HGKY",
+              "amz_B00SWWEUX6",
+              "amz_B07L9YXMRM",
+              "amz_B000MD5442",
+              "amz_B094X38D75",
+              "amz_B07DM8RC5M",
+              "amz_B08ZYYS3HK",
+              "amz_B07HZ69MC6"
+            ],
+            "candidate_facts_sha256": {
+              "amz_B08ZSRCP9W": "dc46dd1b43762a9da56bd8c1bbfb28df7054fb2a76618190761d413975cdf49a",
+              "amz_B082R6MYX7": "9ae5247dabe40f3b6b804d7f3e5cb8d2827f78e125ad7d62f40e1e18a85d5459",
+              "amz_B09KXMCQJW": "e05e47bb7c587bc456ccc157ca9e5b56a05cca15254aa7c170975105c7585f0e",
+              "amz_B09WDL98XR": "b403bdef02519638ace0f889288f087553920bf24f033e81d88c8e5aceb25cd4",
+              "amz_B07Q9KFBP2": "6eac37260f3db7aab167103fc36cbbf53b97ff4f0f7b0b318e005fd0d42810bc",
+              "amz_B08BC522KM": "cc80038dc643e7702679e3e95c3d470fa8482c7affa244bbde4b5f69086fa199",
+              "amz_B013VORRFC": "22bb2dd21e568378401a4b0428bcc31143f470f02a820241d2258137d8721a71",
+              "amz_B00HBXWRQY": "4e8031e1d687ca6f6fd1469d61fb87d64ac03c70b7c3d190ae69b725c27dcadf",
+              "amz_B06WWM5TC6": "dd0c5bc77b32cb3df9c9dbba6c4b96e0285d965849cf76133d8a44f34909d948",
+              "amz_B07WNM1WNP": "6cd11397c4fec10d79b0a07252aec055f89b75e617d64d1ea3f1b78071a7660c",
+              "amz_B08SKBLTTD": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B00SK0FOHG": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07DM54P8F": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09WDLZ4M9": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07BRX2XMV": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B083LVY7GZ": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09K7VVR63": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B002G0052A": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B077QGS9C6": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0BCK7N5FN": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B01COUZCI8": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B08YRKL1FF": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0BN1X16C1": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B092MBNGT9": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B001QT6V7A": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0B5ZTQWWP": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B015LSEQ28": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B002MMY4WY": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0BKGDCV9D": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B095WCL15B": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0B3197C4B": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B003EGY6Y8": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B000W0IZKU": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B085V73XNB": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09CTNCBFG": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B09R6V6KLL": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B0B5LDPJLD": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B00O90HGKY": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B00SWWEUX6": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07L9YXMRM": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B000MD5442": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B094X38D75": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07DM8RC5M": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B08ZYYS3HK": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "amz_B07HZ69MC6": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

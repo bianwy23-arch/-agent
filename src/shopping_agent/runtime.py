@@ -1,6 +1,6 @@
 """OpenAI Agents SDK loop backed by DeepSeek and local business services."""
 import asyncio
-from dataclasses import asdict
+from dataclasses import asdict, replace
 from datetime import datetime, timezone
 import hashlib
 import json
@@ -8,6 +8,7 @@ from pathlib import Path
 import re
 import time
 from typing import Literal
+from pydantic import ValidationError
 from uuid import uuid4
 
 from agents import (Agent, ModelSettings, OpenAIChatCompletionsModel, RunConfig,
@@ -18,6 +19,7 @@ from .catalog import Catalog
 from .contracts import FinalAnswer, TurnPlan
 from .service import ShoppingTurn
 from .state import InvalidChange, TaskStore
+from .qualification import CATEGORY_FIELDS, NUMERIC
 
 
 INSTRUCTIONS = """你是只读商品导购 Agent，中文回复。工具循环由 SDK 执行，你自主决定检索、查看证据、追问或结束。
@@ -30,7 +32,13 @@ INSTRUCTIONS = """你是只读商品导购 Agent，中文回复。工具循环�
 操作示例：{"target":"requirements","key":"budget","value":{"status":"active","strength":"hard","value":{"amount":"100","currency":"USD"}}}。
 排除某商品：target=excluded,key=实际商品ID,value=true；撤销排除 value=null。不要排除整个品牌。
 已应用组重试必须保持 ID 和内容；有错误可修正该失败组，再 process_turn。不能略去用户明确硬要求以通过校验。
-额外硬要求按 requirements 文本保留，例如 waterproof，当前自动资格核验尚不支持时返回 data_limited，不能编造满足。
+额外硬要求必须保存，使用字段表中的规范名称。数值要求用 Predicate：
+{"status":"active","strength":"hard","value":{"operator":"gte","value":"1.5","unit":"L"}} 表示容量至少1.5升；
+功率不超过800瓦用字段 power、operator=lte、value="800"、unit="W"。
+蓝牙是比无线更具体的条件：用户必须蓝牙时 value 必须为 bluetooth，不能改成 wireless。
+枚举要求如无线用 connectivity，value={"operator":"contains","value":"wireless","unit":null}；头戴包耳用 form_factor/over_ear，材料含不锈钢用 material/stainless_steel。
+连接、佩戴、材料、光源、供电、形态、年龄等使用工具给出的字段和原文，不臆造规格。
+未知或超出支持范围的要求仍按文本保存为硬要求，并说明数据限制，不能省略来取得推荐资格。
 用户明确不在意某项时 status=no_preference,value=null；不回答不等于无偏好。模糊条件需要澄清，不擅自猜浮动预算。
 范围仅比较某些商品时 scope_ids=那些ID，不能新增搜索；‘第二个’等按最近实际 display 顺序解析，有歧义应澄清。
 用户说停止时 stop_requested=true；找最便宜时 cheapest_requested=true。预算型请求没有要求最便宜就不要自行增加目标。
@@ -38,15 +46,24 @@ INSTRUCTIONS = """你是只读商品导购 Agent，中文回复。工具循环�
 检索 query 是英文简单词匹配，空字符串列出该品类所有结构化匹配项；不要把中文 query 无结果当无匹配。
 scope=hypothetical 只能在已建立的临时探索内使用，正式要求不改变。临时方案的结果需明确标识。
 搜索卡不是完整证据。推荐或引用前 inspect_product，字段用 price、connection、form_factor、capacity 等实际属性名；
+搜索已对全品类的硬条件做程序检查，优先查看 qualification=satisfied 的候选；unknown/conflict 不是满足。
+若存在满足要求的候选，应查看证据并完成推荐，不因另外一些商品未知而拒绝全部推荐。
 工具会返回原文上下文。字段缺失就是 unknown，不等于不满足，也不能改成已满足。历史价格不保证当前报价。
 finish_turn 是唯一交付出口：kind 区分 answered/recommendation/needs_user/no_match/data_limited/stopped。
 execution_limited 仅由程序在真实超时/调用上限/服务失败时设置。需要用户提供美元预算时用 needs_user，不能用 execution_limited。
 每项主推荐要有真实证据引用。引用 field 使用原始字段名（title/features/description/details.实际键/price），quote 是原文子串。
 先满足用户当前问题即可，不补问无关槽位、不强制凑三个商品、不强制搜索固定次数。
+用户指定推荐一个就只展示一个，指定两个就展示两个；不要附带额外备选。
+禁止提供无来源的人民币美元换算，连示例汇率和约合金额也不要给；直接询问美元预算。
 遇到未知硬约束可给有标签的条件性候选并明确 unresolved，不能用 answered 或 data_limited 偷渡无条件推荐。
 找最便宜需排除更便宜潜在候选的资格不确定性；局部比较不能宣称市场最好。
 needs_user 只用于真实用户信息缺口，不让用户修复工具 JSON。API/执行失败不能伪装成功。
 答复中的商品顺序必须与 product_ids 一致。没有新依据不要重复工具调用；需要更多调用必须说明具体信息缺口。
+所有价格、无匹配和比较结论限于冻结商品库，不外推实际市场或全市场结论。
+用户不允许加预算或拒绝某个方向后，不再建议提高预算或重提已拒绝的方向。
+属性是资料标注，不能把品牌名称推断为品质可靠、音质有保障或用户口碑好；不作没有证据的保证。
+需要追问时只问当前阻塞信息，预算不明确就只问预算，不顺带追问用途或佩戴方式。
+同一轮用户明确要求先确认预算冲突时，只登记 clarify/budget 并追问，不采用最后出现的数值。两个上限在数学上可同时成立，但不能替用户跳过其明确要求的确认。
 不要输出普通最终消息，务必通过 finish_turn 提交，程序拒绝时根据错误调整。
 """
 
@@ -106,6 +123,7 @@ class ShoppingRuntime:
         conversation = self.conversation(conversation_id)
         turn = ShoppingTurn(self.store, self.catalog, conversation, user_text)
         events, fingerprints = [], {}
+        limit_reason = None
         started = time.monotonic()
         limits = self.settings
 
@@ -117,14 +135,17 @@ class ShoppingRuntime:
                 stream.write(redact(json.dumps(record, ensure_ascii=False, default=str), self.settings.api_key) + "\n")
 
         def invoke(name, payload, action):
+            nonlocal limit_reason
             if sum(e["event"] == "tool" for e in events) >= limits.max_tool_calls:
-                raise ExecutionLimit("tool_call_limit")
+                limit_reason = "tool_call_limit"
+                raise ExecutionLimit(limit_reason)
             state = turn.state()
             marker = json.dumps([name, payload, state["requirements_version"] if state else None], sort_keys=True, default=str)
             fingerprint = hashlib.sha256(marker.encode()).hexdigest()
             fingerprints[fingerprint] = fingerprints.get(fingerprint, 0) + 1
             if fingerprints[fingerprint] >= limits.repeated_call_limit:
-                raise ExecutionLimit("repeated_call_limit")
+                limit_reason = "repeated_call_limit"
+                raise ExecutionLimit(limit_reason)
             try:
                 output = action()
                 emit({"event": "tool", "name": name, "arguments": payload, "result": output})
@@ -136,14 +157,35 @@ class ShoppingRuntime:
                 return output
 
         def tool_error(ctx, error):
+            nonlocal limit_reason
             if isinstance(error, ExecutionLimit):
                 raise error
             # SDK schema validation errors are exposed for bounded internal repair.
             message = redact(str(error), limits.api_key)
-            emit({"event": "tool_schema_error", "error": message})
+            diagnostic = {}
+            raw_arguments = getattr(ctx, "tool_arguments", "")
+            try:
+                parsed_arguments = json.loads(raw_arguments)
+                tool_name = getattr(ctx, "tool_name", "")
+                contract = {"process_turn": ("plan", TurnPlan), "finish_turn": ("answer", FinalAnswer)}.get(tool_name)
+                if contract:
+                    field, model_type = contract
+                    if not isinstance(parsed_arguments, dict) or set(parsed_arguments) != {field}:
+                        diagnostic = {"schema_errors": [{"field": "root", "message": "Only the top-level key " + field + " is allowed"}]}
+                    else:
+                        try:
+                            model_type.model_validate(parsed_arguments[field])
+                        except ValidationError as exc:
+                            diagnostic = {"schema_errors": exc.errors(include_input=False, include_url=False, include_context=False)}
+            except json.JSONDecodeError as exc:
+                diagnostic = {"json_error": exc.msg, "line": exc.lineno, "column": exc.colno,
+                              "near": raw_arguments[max(0, exc.pos-60):exc.pos+60]}
+            emit({"event": "tool_schema_error", "error": message, "diagnostic": diagnostic,
+                  "arguments": raw_arguments})
             if sum(e["event"] == "tool_schema_error" for e in events) > 2:
-                raise ExecutionLimit("schema_retry_limit")
-            return json.dumps({"error": message, "instruction": "Correct the tool arguments; do not ask the user to fix JSON."})
+                limit_reason = "schema_retry_limit"
+                raise ExecutionLimit(limit_reason)
+            return json.dumps({"error": message, **diagnostic, "instruction": "Correct JSON brackets at the reported position. Pass process_turn arguments directly as {plan: ...}, never an extra arguments wrapper. Correct schema_errors at their loc: pending_turn_id/pending_group_id belong inside a group, not plan; explicit budget updates automatically resolve pending budget questions. Do not ask the user to fix JSON."})
 
         @function_tool(strict_mode=False, failure_error_function=tool_error)
         async def process_turn(plan: TurnPlan) -> str:
@@ -179,15 +221,30 @@ class ShoppingRuntime:
             current = {k: v for k, v in current.items() if k not in {"receipts", "turns"}}
             current["history"] = current["history"][-8:]
         context = {"supported_categories": self.catalog.categories, "current_task": current,
+                   "attribute_contract": CATEGORY_FIELDS, "numeric_units": NUMERIC,
                    "tasks": [{"id": tid, "category": self.store.get(tid)["category"]} for tid in conversation["task_ids"]],
                    "recent_messages": conversation["messages"][-12:], "CURRENT_USER_INPUT": user_text}
         emit({"event": "turn_start", "input": user_text, "config": public_config(limits), "catalog_version": self.catalog.version})
         result = None
         error = None
+        usage_totals = {name: 0 for name in ("requests", "input_tokens", "output_tokens", "total_tokens")}
         try:
             async with asyncio.timeout(limits.turn_timeout):
-                result = await Runner.run(agent, json.dumps(context, ensure_ascii=False), max_turns=limits.max_turns,
-                                          run_config=RunConfig(tracing_disabled=True))
+                run_input = json.dumps(context, ensure_ascii=False)
+                for attempt in range(2):
+                    remaining = limits.max_turns - usage_totals["requests"]
+                    if remaining <= 0:
+                        break
+                    executing_agent = agent if attempt == 0 else agent.clone(model_settings=replace(agent.model_settings, tool_choice="finish_turn"))
+                    result = await Runner.run(executing_agent, run_input, max_turns=remaining,
+                                              run_config=RunConfig(tracing_disabled=True))
+                    for name in usage_totals:
+                        usage_totals[name] += getattr(result.context_wrapper.usage, name)
+                    if turn.final is not None:
+                        break
+                    if attempt == 0:
+                        emit({"event": "finalization_retry", "reason": "missing_validated_final"})
+                        run_input = result.to_input_list() + [{"role": "user", "content": "本轮尚未通过 finish_turn 交付。请使用 finish_turn 提交刚才的结果，不能只发普通消息；保留已经应用的状态，不重复应用修改。"}]
             if turn.final is None:
                 error = "missing_validated_final"
         except asyncio.TimeoutError:
@@ -196,9 +253,9 @@ class ShoppingRuntime:
             error = str(exc)
         except Exception as exc:
             # Never log raw provider exception bodies or request headers.
-            error = type(exc).__name__
+            error = limit_reason or type(exc).__name__
             emit({"event": "runtime_error", "error_type": error, "http_status": getattr(exc, "status_code", None)})
-            if error in {"UserError", "ModelBehaviorError"}:
+            if type(exc).__name__ in {"UserError", "ModelBehaviorError"}:
                 emit({"event": "sdk_error", "detail": redact(str(exc), limits.api_key)})
         output = turn.final if error is None else {
             "kind": "execution_limited", "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
@@ -206,8 +263,7 @@ class ShoppingRuntime:
             "turn_id": turn.turn_id, "task_id": turn.task_id, "display_id": None, "state": turn.state()}
         output["runtime"] = {"model": limits.model, "elapsed_seconds": round(time.monotonic() - started, 3),
                              "tool_calls": sum(e["event"] == "tool" for e in events), "error": error,
-                             "usage": {name: getattr(result.context_wrapper.usage, name)
-                                       for name in ("requests", "input_tokens", "output_tokens", "total_tokens")} if result else None}
+                             "usage": usage_totals if result else None}
         conversation["messages"].extend([{"role": "user", "content": user_text},
                                           {"role": "assistant", "content": output["message"],
                                            "product_ids": output["product_ids"], "display_id": output["display_id"]}])

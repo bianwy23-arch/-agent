@@ -45,6 +45,15 @@ def validate_requirement(field, value):
             raise InvalidChange("no_preference must have null value")
     elif field == "budget":
         money(value["value"])
+    elif isinstance(value["value"], dict):
+        condition = value["value"]
+        if (set(condition) != {"operator", "value", "unit"}
+                or condition["operator"] not in {"eq", "gte", "lte", "gt", "lt", "contains", "not_contains"}
+                or not isinstance(condition["value"], str) or not condition["value"].strip()
+                or (condition["unit"] is not None and not isinstance(condition["unit"], str))):
+            raise InvalidChange("malformed attribute predicate")
+        # A well-formed but unsupported predicate remains an active requirement.
+        # Dataset limitations must not prevent persistence of the user's condition.
     elif not isinstance(value["value"], str) or not value["value"].strip():
         raise InvalidChange("non-budget requirement requires nonempty text")
 
@@ -113,6 +122,7 @@ class TaskStore:
             state["requirements_version"] += 1
         for candidate_id, candidate in state["candidates"].items():
             candidate["qualification"] = "unknown"
+            candidate.pop("assessment", None)
             candidate["user_excluded"] = candidate_id in state["excluded"]
         # Facts survive; conclusions must be evaluated against current conditions.
         state["decision"]["needs_reassessment"] = True
@@ -161,6 +171,10 @@ class TaskStore:
                                      "dependent": dependent, "writes": writes, "undo_of": []})
             state["receipts"][key] = deepcopy(payload)
             state["pending"].pop(key, None)
+            resolved = {w["key"] for w in writes if w["target"] == "requirements"}
+            for pending_key, pending in list(state["pending"].items()):
+                if set(pending["fields"]) <= resolved:
+                    del state["pending"][pending_key]
             self._refresh(state, any(w["target"] == "requirements" for w in writes))
             self._save(state)
         return "applied"
@@ -186,6 +200,13 @@ class TaskStore:
             if key in state["receipts"]:
                 if state["receipts"][key] != receipt:
                     raise InvalidChange("applied group ID reused")
+                return "already_applied"
+            # Duplicate interpretation of the same undo intent in this turn
+            # must not create a second undo or turn a successful undo into failure.
+            prior_undo_ids = {event["id"] for event in state["history"] if event["turn_id"] == turn_id and event["undo_of"]}
+            if any(state["receipts"].get(old_key) == receipt for old_key in prior_undo_ids):
+                state["receipts"][key] = receipt
+                self._save(state)
                 return "already_applied"
             previous = list(state["turns"])
             previous = previous[:previous.index(turn_id)]
@@ -272,6 +293,18 @@ class TaskStore:
             candidate["facts"].update(deepcopy(facts))
             candidate["qualification"] = "unknown"
             candidate["user_excluded"] = product_id in state["excluded"]
+            self._save(state)
+
+    def assess(self, task_id, product_id, assessment):
+        """Persist a trusted formal assessment; facts and hypothetical checks stay separate."""
+        with self.db:
+            state = self.get(task_id)
+            candidate = state["candidates"][product_id]
+            value = deepcopy(assessment)
+            if product_id in state["excluded"]:
+                value["violated"].append("user_excluded")
+            candidate["assessment"] = {**value, "requirements_version": state["requirements_version"]}
+            candidate["qualification"] = ("violated" if value["violated"] else "unknown" if value["unknown"] or value["conflict"] else "satisfied")
             self._save(state)
 
     def display(self, task_id, display_id, product_ids):

@@ -1,0 +1,3584 @@
+{
+  "catalog_manifest_sha256": "2c2f7bd5e23a35d8012d5c341f2a61e0e4df760178ed0335352d61b96a43295b",
+  "cases": {
+    "T01": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "headphones",
+        "budget": "100",
+        "hard": {
+          "form_factor": {
+            "operator": "contains",
+            "value": "over_ear",
+            "unit": null
+          }
+        },
+        "allowed_ids": [
+          "amz_B0001V2KS8",
+          "amz_B00WUXSZS4",
+          "amz_B079M27C6B",
+          "amz_B07CLC3TQJ",
+          "amz_B09GV2PSSP",
+          "amz_B09HSL3QRG",
+          "amz_B0BNJW4NV7"
+        ],
+        "evidence": {
+          "amz_B0001V2KS8": {
+            "field": "details.Form Factor",
+            "text": "Over Ear"
+          },
+          "amz_B00WUXSZS4": {
+            "field": "details.Form Factor",
+            "text": "Over Ear"
+          },
+          "amz_B079M27C6B": {
+            "field": "details.Form Factor",
+            "text": "Over Ear"
+          },
+          "amz_B07CLC3TQJ": {
+            "field": "details.Form Factor",
+            "text": "Over Ear"
+          },
+          "amz_B09GV2PSSP": {
+            "field": "details.Form Factor",
+            "text": "Over Ear"
+          },
+          "amz_B09HSL3QRG": {
+            "field": "details.Form Factor",
+            "text": "Over Ear"
+          },
+          "amz_B0BNJW4NV7": {
+            "field": "details.Form Factor",
+            "text": "Over Ear"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T02": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "bluetooth_speakers",
+        "budget": "100",
+        "hard": {
+          "connectivity": {
+            "operator": "contains",
+            "value": "bluetooth",
+            "unit": null
+          }
+        },
+        "allowed_ids": [
+          "amz_B013QFKUSM",
+          "amz_B01N02JHRY",
+          "amz_B01N951SR0",
+          "amz_B075SYWK66",
+          "amz_B07FCCYW35",
+          "amz_B07GCK66HL",
+          "amz_B07TJLM1YM",
+          "amz_B0899SX15V",
+          "amz_B08T5VDYWV",
+          "amz_B099WGDVHR",
+          "amz_B09BQLH567",
+          "amz_B09CKDCZ4M",
+          "amz_B09DKB98YG",
+          "amz_B09JK542L2",
+          "amz_B09JWLZJNT",
+          "amz_B09K3XNWHL",
+          "amz_B09NBQN1R6",
+          "amz_B09Y9BPB3H",
+          "amz_B09YJYTWHJ",
+          "amz_B09Z4TZQB2",
+          "amz_B0B1TP23DX",
+          "amz_B0B2CX6JQJ",
+          "amz_B0B2JYDCCV",
+          "amz_B0B6D8SM9Q",
+          "amz_B0B96VV6BJ",
+          "amz_B0B982S6F5",
+          "amz_B0BDQK1TN3",
+          "amz_B0BGT6LKKN",
+          "amz_B0BMLDL1HY",
+          "amz_B0BNY1L4JP",
+          "amz_B0BQDCPLJC",
+          "amz_B0BS1QPFDN",
+          "amz_B0BW8KNM1S",
+          "amz_B0BYBB76HY",
+          "amz_B0BZ3NCXY9",
+          "amz_B0C1H2CLJC",
+          "amz_B0C2PJYP49",
+          "amz_B0C47P84VR"
+        ],
+        "evidence": {
+          "amz_B013QFKUSM": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B01N02JHRY": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth, C type usb, FM, Microphone, Bicycle Horn"
+          },
+          "amz_B01N951SR0": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth, USB"
+          },
+          "amz_B075SYWK66": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B07FCCYW35": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth, Auxiliary, USB"
+          },
+          "amz_B07GCK66HL": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B07TJLM1YM": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth, Auxiliary, USB"
+          },
+          "amz_B0899SX15V": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B08T5VDYWV": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth, USB"
+          },
+          "amz_B099WGDVHR": {
+            "field": "details.Connectivity Technology",
+            "text": "WiFi/Bluetooth/HDMI/2*USB/VGA/AV/Phone/TV Stick"
+          },
+          "amz_B09BQLH567": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B09CKDCZ4M": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B09DKB98YG": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth, USB"
+          },
+          "amz_B09JK542L2": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth, Auxiliary"
+          },
+          "amz_B09JWLZJNT": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B09K3XNWHL": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B09NBQN1R6": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B09Y9BPB3H": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B09YJYTWHJ": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth, Auxiliary, USB"
+          },
+          "amz_B09Z4TZQB2": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth, Auxiliary"
+          },
+          "amz_B0B1TP23DX": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth, Auxiliary, USB"
+          },
+          "amz_B0B2CX6JQJ": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth, USB"
+          },
+          "amz_B0B2JYDCCV": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B0B6D8SM9Q": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B0B96VV6BJ": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B0B982S6F5": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B0BDQK1TN3": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B0BGT6LKKN": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B0BMLDL1HY": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B0BNY1L4JP": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth, Auxiliary"
+          },
+          "amz_B0BQDCPLJC": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B0BS1QPFDN": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B0BW8KNM1S": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth, Auxiliary"
+          },
+          "amz_B0BYBB76HY": {
+            "field": "details.Connectivity Technology",
+            "text": "Wireless, Bluetooth, Wired"
+          },
+          "amz_B0BZ3NCXY9": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth, Auxiliary, NFC, TF card"
+          },
+          "amz_B0C1H2CLJC": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth, SD / TF Card, USB, AUX-IN"
+          },
+          "amz_B0C2PJYP49": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B0C47P84VR": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth, USB"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T03": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "keyboards",
+        "budget": "100",
+        "hard": {
+          "connectivity": {
+            "operator": "contains",
+            "value": "wired",
+            "unit": null
+          }
+        },
+        "allowed_ids": [
+          "amz_B000MD5442",
+          "amz_B003EGY6Y8",
+          "amz_B07BRX2XMV"
+        ],
+        "evidence": {
+          "amz_B000MD5442": {
+            "field": "details.Connectivity Technology",
+            "text": "Wired"
+          },
+          "amz_B003EGY6Y8": {
+            "field": "details.Connectivity Technology",
+            "text": "Wired"
+          },
+          "amz_B07BRX2XMV": {
+            "field": "details.Connectivity Technology",
+            "text": "Wired"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T04": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "mice",
+        "budget": "100",
+        "hard": {
+          "tracking": {
+            "operator": "contains",
+            "value": "optical",
+            "unit": null
+          }
+        },
+        "allowed_ids": [
+          "amz_B002UG1Q2S",
+          "amz_B0038KTBRW",
+          "amz_B004I2HHQQ",
+          "amz_B00CMB5O5Q",
+          "amz_B00D4A7QFK",
+          "amz_B00EBW2YKC",
+          "amz_B00UW3HRDS",
+          "amz_B01M5I6GYA",
+          "amz_B01M8Q3WGV",
+          "amz_B01N0BDJTF",
+          "amz_B07G4SQQH2",
+          "amz_B07K9R8GDB",
+          "amz_B07QFJ2G56",
+          "amz_B07R32PZZ6",
+          "amz_B07RJQ79Z2",
+          "amz_B07RTYW3MZ",
+          "amz_B081DJHGX2",
+          "amz_B082V8GC6T",
+          "amz_B083M8MZK1",
+          "amz_B086BBQTW9",
+          "amz_B08D3G7GMJ",
+          "amz_B08GQ1DG75",
+          "amz_B08JYBC9MY",
+          "amz_B093CJM44K",
+          "amz_B094TXN3PT",
+          "amz_B09CPZ3961",
+          "amz_B09NGG1NWC",
+          "amz_B09PTCFDJY",
+          "amz_B09RZHD8Q8",
+          "amz_B09Y2Z7X71",
+          "amz_B09YYZ3GG6",
+          "amz_B09Z6KMDLN",
+          "amz_B09ZTC6LGP",
+          "amz_B09ZV82ZY4",
+          "amz_B0B7JKYYMG",
+          "amz_B0B8QDHP9W",
+          "amz_B0BGSY4VZP",
+          "amz_B0BJPYL2NX",
+          "amz_B0BM65BH57",
+          "amz_B0BTT611CF",
+          "amz_B0C2VJTSDG",
+          "amz_B0C3H7BR4H"
+        ],
+        "evidence": {
+          "amz_B002UG1Q2S": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B0038KTBRW": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B004I2HHQQ": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B00CMB5O5Q": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B00D4A7QFK": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B00EBW2YKC": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B00UW3HRDS": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B01M5I6GYA": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B01M8Q3WGV": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B01N0BDJTF": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B07G4SQQH2": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B07K9R8GDB": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B07QFJ2G56": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B07R32PZZ6": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B07RJQ79Z2": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B07RTYW3MZ": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B081DJHGX2": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B082V8GC6T": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B083M8MZK1": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B086BBQTW9": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B08D3G7GMJ": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B08GQ1DG75": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B08JYBC9MY": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B093CJM44K": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B094TXN3PT": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B09CPZ3961": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B09NGG1NWC": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B09PTCFDJY": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B09RZHD8Q8": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B09Y2Z7X71": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B09YYZ3GG6": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B09Z6KMDLN": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B09ZTC6LGP": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B09ZV82ZY4": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B0B7JKYYMG": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B0B8QDHP9W": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B0BGSY4VZP": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B0BJPYL2NX": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B0BM65BH57": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B0BTT611CF": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B0C2VJTSDG": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          },
+          "amz_B0C3H7BR4H": {
+            "field": "details.Movement Detection Technology",
+            "text": "Optical"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T05": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "rice_cookers",
+        "budget": "100",
+        "hard": {
+          "capacity": {
+            "operator": "gte",
+            "value": "1",
+            "unit": "L"
+          }
+        },
+        "allowed_ids": [
+          "amz_B01F2O9HPM",
+          "amz_B07KNKS1GC",
+          "amz_B07ZV6J8SV",
+          "amz_B08Q3P2PGD",
+          "amz_B08V579JKZ",
+          "amz_B09HGVR4Q7",
+          "amz_B09Q88JFB3",
+          "amz_B09Q8XY338",
+          "amz_B0BPKDTHNH",
+          "amz_B0BRKTYWDM",
+          "amz_B0BX71S3RC",
+          "amz_B0BXRQ1XZX",
+          "amz_B0C6K1MWQM"
+        ],
+        "evidence": {
+          "amz_B01F2O9HPM": {
+            "field": "details.Capacity",
+            "text": "1.5 Liters"
+          },
+          "amz_B07KNKS1GC": {
+            "field": "details.Capacity",
+            "text": "1.2 Liters"
+          },
+          "amz_B07ZV6J8SV": {
+            "field": "details.Capacity",
+            "text": "2 Liters"
+          },
+          "amz_B08Q3P2PGD": {
+            "field": "details.Capacity",
+            "text": "1 Liters"
+          },
+          "amz_B08V579JKZ": {
+            "field": "details.Capacity",
+            "text": "1.2 Liters"
+          },
+          "amz_B09HGVR4Q7": {
+            "field": "details.Capacity",
+            "text": "2 Liters"
+          },
+          "amz_B09Q88JFB3": {
+            "field": "details.Capacity",
+            "text": "1.8 Liters"
+          },
+          "amz_B09Q8XY338": {
+            "field": "details.Capacity",
+            "text": "1 Liters"
+          },
+          "amz_B0BPKDTHNH": {
+            "field": "details.Capacity",
+            "text": "1.5 Liters"
+          },
+          "amz_B0BRKTYWDM": {
+            "field": "details.Capacity",
+            "text": "1.6 Liters"
+          },
+          "amz_B0BX71S3RC": {
+            "field": "details.Capacity",
+            "text": "1.2 Liters"
+          },
+          "amz_B0BXRQ1XZX": {
+            "field": "details.Capacity",
+            "text": "1 Liters"
+          },
+          "amz_B0C6K1MWQM": {
+            "field": "details.Capacity",
+            "text": "1.2 Liters"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T06": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "electric_kettles",
+        "budget": "100",
+        "hard": {
+          "capacity": {
+            "operator": "gte",
+            "value": "1.5",
+            "unit": "L"
+          }
+        },
+        "allowed_ids": [
+          "amz_B001D0GRXU",
+          "amz_B005013GXC",
+          "amz_B00KJ23KOW",
+          "amz_B00SG8MPT2",
+          "amz_B00Z9TFP20",
+          "amz_B013IG9TA4",
+          "amz_B0756HSSGJ",
+          "amz_B07CRXSGLQ",
+          "amz_B07FLD1T53",
+          "amz_B07HLPVR45",
+          "amz_B089MGHJBL",
+          "amz_B097JJS64P",
+          "amz_B09BR3ZXWW",
+          "amz_B09BSYHH85",
+          "amz_B09LNQ12WL",
+          "amz_B09N6N7FHZ",
+          "amz_B09NC31BRG",
+          "amz_B09VDTGZLX",
+          "amz_B0BDF496NV",
+          "amz_B0BPXBPG79",
+          "amz_B0BTZTYVNY",
+          "amz_B0BV6BGYT5",
+          "amz_B0BYVGCSCP"
+        ],
+        "evidence": {
+          "amz_B001D0GRXU": {
+            "field": "details.Capacity",
+            "text": "1.7 Liters"
+          },
+          "amz_B005013GXC": {
+            "field": "details.Capacity",
+            "text": "1.7 Liters"
+          },
+          "amz_B00KJ23KOW": {
+            "field": "details.Capacity",
+            "text": "1.8 Liters"
+          },
+          "amz_B00SG8MPT2": {
+            "field": "details.Capacity",
+            "text": "1.7 Liters"
+          },
+          "amz_B00Z9TFP20": {
+            "field": "details.Capacity",
+            "text": "1.7 Liters"
+          },
+          "amz_B013IG9TA4": {
+            "field": "details.Capacity",
+            "text": "1.5 Liters"
+          },
+          "amz_B0756HSSGJ": {
+            "field": "details.Capacity",
+            "text": "1.7 Liters"
+          },
+          "amz_B07CRXSGLQ": {
+            "field": "details.Capacity",
+            "text": "1.7 Liters"
+          },
+          "amz_B07FLD1T53": {
+            "field": "details.Capacity",
+            "text": "1.7 Liters"
+          },
+          "amz_B07HLPVR45": {
+            "field": "details.Capacity",
+            "text": "1.5 Liters"
+          },
+          "amz_B089MGHJBL": {
+            "field": "details.Capacity",
+            "text": "1.8 Liters"
+          },
+          "amz_B097JJS64P": {
+            "field": "details.Capacity",
+            "text": "1.7 Liters"
+          },
+          "amz_B09BR3ZXWW": {
+            "field": "details.Capacity",
+            "text": "1.7 Liters"
+          },
+          "amz_B09BSYHH85": {
+            "field": "details.Capacity",
+            "text": "1.5 Liters"
+          },
+          "amz_B09LNQ12WL": {
+            "field": "details.Capacity",
+            "text": "1.7 Liters"
+          },
+          "amz_B09N6N7FHZ": {
+            "field": "details.Capacity",
+            "text": "1.8 Liters"
+          },
+          "amz_B09NC31BRG": {
+            "field": "details.Capacity",
+            "text": "1.7 Liters"
+          },
+          "amz_B09VDTGZLX": {
+            "field": "details.Capacity",
+            "text": "1.5 Liters"
+          },
+          "amz_B0BDF496NV": {
+            "field": "details.Capacity",
+            "text": "1.5 Liters"
+          },
+          "amz_B0BPXBPG79": {
+            "field": "details.Capacity",
+            "text": "1.5 Liters"
+          },
+          "amz_B0BTZTYVNY": {
+            "field": "details.Capacity",
+            "text": "1.7 Liters"
+          },
+          "amz_B0BV6BGYT5": {
+            "field": "details.Capacity",
+            "text": "1.7 Liters"
+          },
+          "amz_B0BYVGCSCP": {
+            "field": "details.Capacity",
+            "text": "1.7 Liters"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T07": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "vacuum_cleaners",
+        "budget": "100",
+        "hard": {
+          "vacuum_type": {
+            "operator": "contains",
+            "value": "handheld",
+            "unit": null
+          }
+        },
+        "allowed_ids": [
+          "amz_B00445L290",
+          "amz_B07DSGVV8M",
+          "amz_B07H5F5YNJ",
+          "amz_B08CQRXKBZ",
+          "amz_B08LYTL6YH",
+          "amz_B094ZNH37K",
+          "amz_B09D8RW3KX",
+          "amz_B09DKPT7G4",
+          "amz_B0B3LNS7HQ",
+          "amz_B0B3Q2SNRN",
+          "amz_B0B4CYF41S",
+          "amz_B0B7J8K8B8",
+          "amz_B0B8M4WHN3",
+          "amz_B0BCQ2P832",
+          "amz_B0BG2BK1FN",
+          "amz_B0BS3GZ2VN",
+          "amz_B0BV2TNM1P",
+          "amz_B0BVDW6M4V",
+          "amz_B0C1PB33FC",
+          "amz_B0C1WLR8S6",
+          "amz_B0C2BWRDR1",
+          "amz_B0C36SSTM5"
+        ],
+        "evidence": {
+          "amz_B00445L290": {
+            "field": "details.Form Factor",
+            "text": "Handheld"
+          },
+          "amz_B07DSGVV8M": {
+            "field": "details.Form Factor",
+            "text": "Handheld"
+          },
+          "amz_B07H5F5YNJ": {
+            "field": "details.Form Factor",
+            "text": "Handheld"
+          },
+          "amz_B08CQRXKBZ": {
+            "field": "details.Form Factor",
+            "text": "Stick, Handheld"
+          },
+          "amz_B08LYTL6YH": {
+            "field": "details.Form Factor",
+            "text": "Handheld"
+          },
+          "amz_B094ZNH37K": {
+            "field": "details.Form Factor",
+            "text": "Handheld"
+          },
+          "amz_B09D8RW3KX": {
+            "field": "details.Form Factor",
+            "text": "Handheld"
+          },
+          "amz_B09DKPT7G4": {
+            "field": "details.Form Factor",
+            "text": "Handheld"
+          },
+          "amz_B0B3LNS7HQ": {
+            "field": "details.Form Factor",
+            "text": "Handheld"
+          },
+          "amz_B0B3Q2SNRN": {
+            "field": "details.Form Factor",
+            "text": "Handheld"
+          },
+          "amz_B0B4CYF41S": {
+            "field": "details.Form Factor",
+            "text": "Handheld"
+          },
+          "amz_B0B7J8K8B8": {
+            "field": "details.Form Factor",
+            "text": "Handheld"
+          },
+          "amz_B0B8M4WHN3": {
+            "field": "details.Form Factor",
+            "text": "Handheld"
+          },
+          "amz_B0BCQ2P832": {
+            "field": "details.Form Factor",
+            "text": "Stick, Handheld"
+          },
+          "amz_B0BG2BK1FN": {
+            "field": "details.Form Factor",
+            "text": "Handheld"
+          },
+          "amz_B0BS3GZ2VN": {
+            "field": "details.Form Factor",
+            "text": "Handheld"
+          },
+          "amz_B0BV2TNM1P": {
+            "field": "details.Form Factor",
+            "text": "Handheld"
+          },
+          "amz_B0BVDW6M4V": {
+            "field": "details.Form Factor",
+            "text": "Stick, Handheld"
+          },
+          "amz_B0C1PB33FC": {
+            "field": "details.Form Factor",
+            "text": "Handheld,Upright"
+          },
+          "amz_B0C1WLR8S6": {
+            "field": "details.Form Factor",
+            "text": "Handheld"
+          },
+          "amz_B0C2BWRDR1": {
+            "field": "details.Form Factor",
+            "text": "Stick, Handheld"
+          },
+          "amz_B0C36SSTM5": {
+            "field": "details.Form Factor",
+            "text": "Handheld"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T08": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "desk_lamps",
+        "budget": "100",
+        "hard": {
+          "light_source": {
+            "operator": "contains",
+            "value": "led",
+            "unit": null
+          }
+        },
+        "allowed_ids": [
+          "amz_B005OUK6P0",
+          "amz_B00QGOZ9YG",
+          "amz_B00VYVO4RO",
+          "amz_B0763SVDT9",
+          "amz_B07CH5V46Z",
+          "amz_B07GBB7GNR",
+          "amz_B07PRMTG6J",
+          "amz_B07QJWR614",
+          "amz_B07QS1332V",
+          "amz_B07XBTL8LZ",
+          "amz_B082M4TR8D",
+          "amz_B088K2VZ47",
+          "amz_B08J3RZXPH",
+          "amz_B08JCVJ81F",
+          "amz_B08L3VTXB8",
+          "amz_B08RYN3RLS",
+          "amz_B08TQQ6ZH6",
+          "amz_B08X37NHV5",
+          "amz_B09FJL4F22",
+          "amz_B09FQKBL1V",
+          "amz_B09J43BQ54",
+          "amz_B09NRJYFVP",
+          "amz_B09QPCQDW8",
+          "amz_B09WJ141VP",
+          "amz_B09XHPTZST",
+          "amz_B09XR52HW2",
+          "amz_B09YXT7FYK",
+          "amz_B0B64BH11F",
+          "amz_B0B64SRWV5",
+          "amz_B0B83SRM56",
+          "amz_B0B9GY58LV",
+          "amz_B0B9ZKXWML",
+          "amz_B0BBMJ3RC1",
+          "amz_B0BHL8NPS2",
+          "amz_B0BKWPYNLL",
+          "amz_B0BM9D71FY",
+          "amz_B0BR59VYT6",
+          "amz_B0BW5KCMD9",
+          "amz_B0BZL3JZFT"
+        ],
+        "evidence": {
+          "amz_B005OUK6P0": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B00QGOZ9YG": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B00VYVO4RO": {
+            "field": "details.Light Source Type",
+            "text": "Halogen, LED"
+          },
+          "amz_B0763SVDT9": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B07CH5V46Z": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B07GBB7GNR": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B07PRMTG6J": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B07QJWR614": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B07QS1332V": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B07XBTL8LZ": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B082M4TR8D": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B088K2VZ47": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B08J3RZXPH": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B08JCVJ81F": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B08L3VTXB8": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B08RYN3RLS": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B08TQQ6ZH6": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B08X37NHV5": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B09FJL4F22": {
+            "field": "details.Light Source Type",
+            "text": "Halogen, LED, CFL, Incandescent"
+          },
+          "amz_B09FQKBL1V": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B09J43BQ54": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B09NRJYFVP": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B09QPCQDW8": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B09WJ141VP": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B09XHPTZST": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B09XR52HW2": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B09YXT7FYK": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B0B64BH11F": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B0B64SRWV5": {
+            "field": "details.Light Source Type",
+            "text": "Halogen, LED, Incandescent"
+          },
+          "amz_B0B83SRM56": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B0B9GY58LV": {
+            "field": "details.Light Source Type",
+            "text": "77 LEDs"
+          },
+          "amz_B0B9ZKXWML": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B0BBMJ3RC1": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B0BHL8NPS2": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B0BKWPYNLL": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B0BM9D71FY": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B0BR59VYT6": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B0BW5KCMD9": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          },
+          "amz_B0BZL3JZFT": {
+            "field": "details.Light Source Type",
+            "text": "LED"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T09": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "backpacks",
+        "budget": "100",
+        "hard": {
+          "material": {
+            "operator": "contains",
+            "value": "nylon",
+            "unit": null
+          }
+        },
+        "allowed_ids": [
+          "amz_B08169ZXRY",
+          "amz_B08BY7LS83",
+          "amz_B08D9BBXN2",
+          "amz_B0916M2S68",
+          "amz_B09B22B7T5",
+          "amz_B0B9CFNMT4",
+          "amz_B0B9FPGSBH",
+          "amz_B0BCK5N69Q",
+          "amz_B0BGSW2Q25"
+        ],
+        "evidence": {
+          "amz_B08169ZXRY": {
+            "field": "title",
+            "text": "Nylon"
+          },
+          "amz_B08BY7LS83": {
+            "field": "title",
+            "text": "Nylon"
+          },
+          "amz_B08D9BBXN2": {
+            "field": "details.Material",
+            "text": "Nylon, Polyurethane"
+          },
+          "amz_B0916M2S68": {
+            "field": "details.Material",
+            "text": "Polyurethane (PU), Nylon, Polyurethane"
+          },
+          "amz_B09B22B7T5": {
+            "field": "details.Material",
+            "text": "Nylon"
+          },
+          "amz_B0B9CFNMT4": {
+            "field": "details.Material",
+            "text": "Nylon"
+          },
+          "amz_B0B9FPGSBH": {
+            "field": "details.Material",
+            "text": "Nylon"
+          },
+          "amz_B0BCK5N69Q": {
+            "field": "title",
+            "text": "Nylon"
+          },
+          "amz_B0BGSW2Q25": {
+            "field": "title",
+            "text": "Nylon"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T10": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "water_bottles",
+        "budget": "100",
+        "hard": {
+          "material": {
+            "operator": "contains",
+            "value": "stainless_steel",
+            "unit": null
+          }
+        },
+        "allowed_ids": [
+          "amz_B00624VY1W",
+          "amz_B015WH6G44",
+          "amz_B0728832H8",
+          "amz_B07BWP6672",
+          "amz_B07CCMS4D1",
+          "amz_B07RG51468",
+          "amz_B07XNFRNHL",
+          "amz_B0858F4P5Q",
+          "amz_B086H9VS8C",
+          "amz_B08PNYF6XP",
+          "amz_B08TM6LY1P",
+          "amz_B08Y4H1PJ4",
+          "amz_B08Z3W2CP5",
+          "amz_B094DHHGTB",
+          "amz_B098KMVMNP",
+          "amz_B09C87QZP3",
+          "amz_B09DYPP9L9",
+          "amz_B09NPYGLX9",
+          "amz_B09PGS95JB",
+          "amz_B09QW2CP63",
+          "amz_B09RWGMW1Y",
+          "amz_B09SHLYKWG",
+          "amz_B0B2D3FCVZ",
+          "amz_B0B636Q5Z5",
+          "amz_B0B6ZL41KB",
+          "amz_B0BJDN7933",
+          "amz_B0BKRKXHRJ",
+          "amz_B0BQL61115",
+          "amz_B0BS3PBLP9",
+          "amz_B0BSFL93PK",
+          "amz_B0BT9F15GY",
+          "amz_B0BYKBMWRX",
+          "amz_B0C5KTD9FS",
+          "amz_B0C6QMFL7K"
+        ],
+        "evidence": {
+          "amz_B00624VY1W": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B015WH6G44": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B0728832H8": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B07BWP6672": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B07CCMS4D1": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B07RG51468": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B07XNFRNHL": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B0858F4P5Q": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B086H9VS8C": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B08PNYF6XP": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B08TM6LY1P": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B08Y4H1PJ4": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B08Z3W2CP5": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B094DHHGTB": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B098KMVMNP": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B09C87QZP3": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B09DYPP9L9": {
+            "field": "details.Material",
+            "text": "Food grade 304 stainless steel+food grade PP+food grade silicone"
+          },
+          "amz_B09NPYGLX9": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B09PGS95JB": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B09QW2CP63": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B09RWGMW1Y": {
+            "field": "details.Material",
+            "text": "Stainless Steel, Silicone, Acrylonitrile Butadiene Styrene"
+          },
+          "amz_B09SHLYKWG": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B0B2D3FCVZ": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B0B636Q5Z5": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B0B6ZL41KB": {
+            "field": "details.Material",
+            "text": "Stainless Steel, Acrylic"
+          },
+          "amz_B0BJDN7933": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B0BKRKXHRJ": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B0BQL61115": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B0BS3PBLP9": {
+            "field": "title",
+            "text": "Stainless Steel"
+          },
+          "amz_B0BSFL93PK": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B0BT9F15GY": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B0BYKBMWRX": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B0C5KTD9FS": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          },
+          "amz_B0C6QMFL7K": {
+            "field": "details.Material",
+            "text": "Stainless Steel"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T11": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "electric_toothbrushes",
+        "budget": "100",
+        "hard": {
+          "age_range": {
+            "operator": "contains",
+            "value": "adult",
+            "unit": null
+          }
+        },
+        "allowed_ids": [
+          "amz_B004PWK0IQ",
+          "amz_B00QL330K2",
+          "amz_B0189HSFYS",
+          "amz_B07W944P55",
+          "amz_B07WN4MQNR",
+          "amz_B08N7D5TSP",
+          "amz_B09D2VF2N6",
+          "amz_B09N315TYQ",
+          "amz_B09SHKQSFP",
+          "amz_B09V1757S5",
+          "amz_B09YLRS62C",
+          "amz_B0BGXCF98P",
+          "amz_B0BGXQBM5Y",
+          "amz_B0BKF47MTL",
+          "amz_B0BMDN8TGG",
+          "amz_B0BN4RJKS6",
+          "amz_B0BYD833YB",
+          "amz_B0C325MWJ3",
+          "amz_B0C38N4SB1"
+        ],
+        "evidence": {
+          "amz_B004PWK0IQ": {
+            "field": "details.Age Range (Description)",
+            "text": "Adult"
+          },
+          "amz_B00QL330K2": {
+            "field": "details.Age Range (Description)",
+            "text": "Adult"
+          },
+          "amz_B0189HSFYS": {
+            "field": "details.Age Range (Description)",
+            "text": "Adult"
+          },
+          "amz_B07W944P55": {
+            "field": "details.Age Range (Description)",
+            "text": "Adult"
+          },
+          "amz_B07WN4MQNR": {
+            "field": "details.Age Range (Description)",
+            "text": "Adult"
+          },
+          "amz_B08N7D5TSP": {
+            "field": "details.Age Range (Description)",
+            "text": "Adult"
+          },
+          "amz_B09D2VF2N6": {
+            "field": "details.Age Range (Description)",
+            "text": "Adult"
+          },
+          "amz_B09N315TYQ": {
+            "field": "details.Age Range (Description)",
+            "text": "Adult & Kids"
+          },
+          "amz_B09SHKQSFP": {
+            "field": "details.Age Range (Description)",
+            "text": "Adult"
+          },
+          "amz_B09V1757S5": {
+            "field": "details.Age Range (Description)",
+            "text": "Adult"
+          },
+          "amz_B09YLRS62C": {
+            "field": "details.Age Range (Description)",
+            "text": "Adult"
+          },
+          "amz_B0BGXCF98P": {
+            "field": "details.Age Range (Description)",
+            "text": "Adult"
+          },
+          "amz_B0BGXQBM5Y": {
+            "field": "details.Age Range (Description)",
+            "text": "Adult"
+          },
+          "amz_B0BKF47MTL": {
+            "field": "details.Age Range (Description)",
+            "text": "Adult"
+          },
+          "amz_B0BMDN8TGG": {
+            "field": "details.Age Range (Description)",
+            "text": "Adult"
+          },
+          "amz_B0BN4RJKS6": {
+            "field": "details.Age Range (Description)",
+            "text": "Adult"
+          },
+          "amz_B0BYD833YB": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid & Adult"
+          },
+          "amz_B0C325MWJ3": {
+            "field": "details.Age Range (Description)",
+            "text": "Adult"
+          },
+          "amz_B0C38N4SB1": {
+            "field": "details.Age Range (Description)",
+            "text": "Adult"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T12": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "electric_shavers",
+        "budget": "100",
+        "hard": {
+          "power_source": {
+            "operator": "contains",
+            "value": "battery",
+            "unit": null
+          }
+        },
+        "allowed_ids": [
+          "amz_B00BE571R0",
+          "amz_B07CMX1ZM9",
+          "amz_B07WRLJHTQ",
+          "amz_B0812F2QRD",
+          "amz_B081CLSKQX",
+          "amz_B0871YDLKD",
+          "amz_B08JPHNJ6M",
+          "amz_B08S37X9N4",
+          "amz_B08Y5TNF3Z",
+          "amz_B094N5LKZG",
+          "amz_B094NCLMX4",
+          "amz_B09C7PZZZ3",
+          "amz_B09FJPRQ5S",
+          "amz_B09J1926NT",
+          "amz_B09K7RT6T6",
+          "amz_B09LCH5H3G",
+          "amz_B09Q5DSR6K",
+          "amz_B09QW879T3",
+          "amz_B09STPN6YJ",
+          "amz_B09SZ572V6",
+          "amz_B09WDGSW3S",
+          "amz_B09XM3ZB4G",
+          "amz_B09XVFWS8M",
+          "amz_B09Z2MY69B",
+          "amz_B0B247WL8L",
+          "amz_B0B2D2B4ZY",
+          "amz_B0B3TFHK63",
+          "amz_B0B5WKBYFX",
+          "amz_B0BCYJG62Z",
+          "amz_B0BG3883FL",
+          "amz_B0BLC9Z39M",
+          "amz_B0BLN69W6C",
+          "amz_B0BMTQKRKD",
+          "amz_B0BQJC7JQT",
+          "amz_B0BWC8V9SC",
+          "amz_B0BXXG1F81",
+          "amz_B0BZ6PZG86",
+          "amz_B0C13J76QR",
+          "amz_B0C22S3NGM",
+          "amz_B0C4SD491J",
+          "amz_B0C62YZBSF",
+          "amz_B0C69V2DBQ",
+          "amz_B00U8FEG0M",
+          "amz_B07H454N73"
+        ],
+        "evidence": {
+          "amz_B00BE571R0": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B07CMX1ZM9": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B07WRLJHTQ": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0812F2QRD": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B081CLSKQX": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0871YDLKD": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B08JPHNJ6M": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B08S37X9N4": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B08Y5TNF3Z": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B094N5LKZG": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B094NCLMX4": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B09C7PZZZ3": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B09FJPRQ5S": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B09J1926NT": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B09K7RT6T6": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B09LCH5H3G": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B09Q5DSR6K": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B09QW879T3": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B09STPN6YJ": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B09SZ572V6": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B09WDGSW3S": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B09XM3ZB4G": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B09XVFWS8M": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B09Z2MY69B": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0B247WL8L": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0B2D2B4ZY": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0B3TFHK63": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0B5WKBYFX": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0BCYJG62Z": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0BG3883FL": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0BLC9Z39M": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0BLN69W6C": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0BMTQKRKD": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0BQJC7JQT": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0BWC8V9SC": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0BXXG1F81": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0BZ6PZG86": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0C13J76QR": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0C22S3NGM": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0C4SD491J": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0C62YZBSF": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0C69V2DBQ": {
+            "field": "details.Power Source",
+            "text": "Li-Ion Battery Powered"
+          },
+          "amz_B00U8FEG0M": {
+            "field": "details.Power Source",
+            "text": "Lithium Rechargeable"
+          },
+          "amz_B07H454N73": {
+            "field": "details.Power Source",
+            "text": "Rechargeable"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T13": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "headphones",
+        "budget": "100",
+        "hard": {
+          "weight": {
+            "operator": "lte",
+            "value": "300",
+            "unit": "g"
+          }
+        },
+        "allowed_ids": [
+          "amz_B0001V2KS8",
+          "amz_B005M08LGI",
+          "amz_B00IBD82V2",
+          "amz_B00WUCQH08",
+          "amz_B00YRR8216",
+          "amz_B019E91BB4",
+          "amz_B01M99A3B4",
+          "amz_B06XFNGGSC",
+          "amz_B079M27C6B",
+          "amz_B07CLC3TQJ",
+          "amz_B07F6ZWB53",
+          "amz_B07G7J8FT4",
+          "amz_B07NW9X5BW",
+          "amz_B07QPPC795",
+          "amz_B07QVFP3D6",
+          "amz_B07RDMN529",
+          "amz_B07SBLQ1C7",
+          "amz_B07V2KTV4F",
+          "amz_B07VHBC8VP",
+          "amz_B07W6KFH6J",
+          "amz_B082T33642",
+          "amz_B08CGQX4G9",
+          "amz_B08DFNVNG9",
+          "amz_B08ZN4VSGY",
+          "amz_B09C22NYPW",
+          "amz_B09J4M1LRX",
+          "amz_B09QSNNBBV",
+          "amz_B0B242NJR5",
+          "amz_B0B4JDCDTD",
+          "amz_B0B56CRXDC",
+          "amz_B0B614DRZ3",
+          "amz_B0BB1F44HT",
+          "amz_B0BKKC4JNY",
+          "amz_B0BNJW4NV7",
+          "amz_B0BRZ7P6T1",
+          "amz_B0C39XH7F7",
+          "amz_B0C58R2R5V",
+          "amz_B09HSL3QRG"
+        ],
+        "evidence": {
+          "amz_B0001V2KS8": {
+            "field": "details.Item Weight",
+            "text": "0.3 Pounds"
+          },
+          "amz_B005M08LGI": {
+            "field": "details.Item Weight",
+            "text": "1 Grams"
+          },
+          "amz_B00IBD82V2": {
+            "field": "details.Item Weight",
+            "text": "0.01 Pounds"
+          },
+          "amz_B00WUCQH08": {
+            "field": "details.Item Weight",
+            "text": "0.1 Pounds"
+          },
+          "amz_B00YRR8216": {
+            "field": "details.Item Weight",
+            "text": "0.353 ounces"
+          },
+          "amz_B019E91BB4": {
+            "field": "details.Item Weight",
+            "text": "0.352 ounces"
+          },
+          "amz_B01M99A3B4": {
+            "field": "details.Item Weight",
+            "text": "0.03 Pounds"
+          },
+          "amz_B06XFNGGSC": {
+            "field": "details.Item Weight",
+            "text": "9.4 ounces"
+          },
+          "amz_B079M27C6B": {
+            "field": "details.Item Weight",
+            "text": "0.2 Grams"
+          },
+          "amz_B07CLC3TQJ": {
+            "field": "details.Item Weight",
+            "text": "0.55 Pounds"
+          },
+          "amz_B07F6ZWB53": {
+            "field": "details.Item Weight",
+            "text": "1.44 Ounces"
+          },
+          "amz_B07G7J8FT4": {
+            "field": "details.Item Weight",
+            "text": "2 ounces"
+          },
+          "amz_B07NW9X5BW": {
+            "field": "details.Item Weight",
+            "text": "0.1 Grams"
+          },
+          "amz_B07QPPC795": {
+            "field": "details.Item Weight",
+            "text": "6.4 ounces"
+          },
+          "amz_B07QVFP3D6": {
+            "field": "details.Item Weight",
+            "text": "0.05 Pounds"
+          },
+          "amz_B07RDMN529": {
+            "field": "details.Item Weight",
+            "text": "0.13 Pounds"
+          },
+          "amz_B07SBLQ1C7": {
+            "field": "details.Item Weight",
+            "text": "80 Grams"
+          },
+          "amz_B07V2KTV4F": {
+            "field": "details.Item Weight",
+            "text": "23 Grams"
+          },
+          "amz_B07VHBC8VP": {
+            "field": "details.Item Weight",
+            "text": "0.03 Pounds"
+          },
+          "amz_B07W6KFH6J": {
+            "field": "details.Item Weight",
+            "text": "7.4 Ounces"
+          },
+          "amz_B082T33642": {
+            "field": "details.Item Weight",
+            "text": "6 Ounces"
+          },
+          "amz_B08CGQX4G9": {
+            "field": "details.Item Weight",
+            "text": "2 Ounces"
+          },
+          "amz_B08DFNVNG9": {
+            "field": "details.Item Weight",
+            "text": "0.95 ounces"
+          },
+          "amz_B08ZN4VSGY": {
+            "field": "details.Item Weight",
+            "text": "1.44 ounces"
+          },
+          "amz_B09C22NYPW": {
+            "field": "details.Item Weight",
+            "text": "1.13 ounces"
+          },
+          "amz_B09J4M1LRX": {
+            "field": "details.Item Weight",
+            "text": "4.8 ounces"
+          },
+          "amz_B09QSNNBBV": {
+            "field": "details.Item Weight",
+            "text": "3 Grams"
+          },
+          "amz_B0B242NJR5": {
+            "field": "details.Item Weight",
+            "text": "3.87 ounces"
+          },
+          "amz_B0B4JDCDTD": {
+            "field": "details.Item Weight",
+            "text": "0.317 ounces"
+          },
+          "amz_B0B56CRXDC": {
+            "field": "details.Item Weight",
+            "text": "2.39 ounces"
+          },
+          "amz_B0B614DRZ3": {
+            "field": "details.Item Weight",
+            "text": "8.1 ounces"
+          },
+          "amz_B0BB1F44HT": {
+            "field": "details.Item Weight",
+            "text": "32 Grams"
+          },
+          "amz_B0BKKC4JNY": {
+            "field": "details.Item Weight",
+            "text": "4.2 ounces"
+          },
+          "amz_B0BNJW4NV7": {
+            "field": "details.Item Weight",
+            "text": "4 Grams"
+          },
+          "amz_B0BRZ7P6T1": {
+            "field": "details.Item Weight",
+            "text": "0.07 Pounds"
+          },
+          "amz_B0C39XH7F7": {
+            "field": "details.Item Weight",
+            "text": "166.3 Grams"
+          },
+          "amz_B0C58R2R5V": {
+            "field": "details.Item Weight",
+            "text": "3.2 ounces"
+          },
+          "amz_B09HSL3QRG": {
+            "field": "details.Item Weight",
+            "text": "0.21 Kilograms"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T14": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "bluetooth_speakers",
+        "budget": "100",
+        "hard": {
+          "speaker_type": {
+            "operator": "contains",
+            "value": "outdoor",
+            "unit": null
+          }
+        },
+        "allowed_ids": [
+          "amz_B013QFKUSM",
+          "amz_B01N02JHRY",
+          "amz_B07GCK66HL",
+          "amz_B08T5VDYWV",
+          "amz_B09CKDCZ4M",
+          "amz_B09DKB98YG",
+          "amz_B09DZR9DHX",
+          "amz_B09K3XNWHL",
+          "amz_B09NBQN1R6",
+          "amz_B09Y9BPB3H",
+          "amz_B09YJYTWHJ",
+          "amz_B0B2JYDCCV",
+          "amz_B0BNY1L4JP",
+          "amz_B0BS1QPFDN",
+          "amz_B0BW8KNM1S",
+          "amz_B0BYBB76HY",
+          "amz_B0BZ3NCXY9"
+        ],
+        "evidence": {
+          "amz_B013QFKUSM": {
+            "field": "details.Speaker Type",
+            "text": "Outdoor"
+          },
+          "amz_B01N02JHRY": {
+            "field": "details.Speaker Type",
+            "text": "Outdoor"
+          },
+          "amz_B07GCK66HL": {
+            "field": "details.Speaker Type",
+            "text": "Outdoor"
+          },
+          "amz_B08T5VDYWV": {
+            "field": "details.Speaker Type",
+            "text": "Outdoor, Indoor, Portable"
+          },
+          "amz_B09CKDCZ4M": {
+            "field": "details.Speaker Type",
+            "text": "Outdoor"
+          },
+          "amz_B09DKB98YG": {
+            "field": "details.Speaker Type",
+            "text": "Subwoofer, Outdoor"
+          },
+          "amz_B09DZR9DHX": {
+            "field": "details.Speaker Type",
+            "text": "Surround Sound, Outdoor"
+          },
+          "amz_B09K3XNWHL": {
+            "field": "details.Speaker Type",
+            "text": "Outdoor"
+          },
+          "amz_B09NBQN1R6": {
+            "field": "details.Speaker Type",
+            "text": "Outdoor, Computer"
+          },
+          "amz_B09Y9BPB3H": {
+            "field": "details.Speaker Type",
+            "text": "Outdoor"
+          },
+          "amz_B09YJYTWHJ": {
+            "field": "details.Speaker Type",
+            "text": "Computer, Outdoor"
+          },
+          "amz_B0B2JYDCCV": {
+            "field": "details.Speaker Type",
+            "text": "Portable,Outdoor,Waterproof"
+          },
+          "amz_B0BNY1L4JP": {
+            "field": "details.Speaker Type",
+            "text": "Outdoor"
+          },
+          "amz_B0BS1QPFDN": {
+            "field": "details.Speaker Type",
+            "text": "Surround Sound, Outdoor"
+          },
+          "amz_B0BW8KNM1S": {
+            "field": "details.Speaker Type",
+            "text": "Outdoor, Stereo"
+          },
+          "amz_B0BYBB76HY": {
+            "field": "details.Speaker Type",
+            "text": "Surround Sound, Outdoor"
+          },
+          "amz_B0BZ3NCXY9": {
+            "field": "details.Speaker Type",
+            "text": "Subwoofer,Loud Waterproof Portable Outdoor Speaker"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T15": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "keyboards",
+        "budget": "100",
+        "hard": {
+          "number_of_keys": {
+            "operator": "gte",
+            "value": "87",
+            "unit": "count"
+          }
+        },
+        "allowed_ids": [
+          "amz_B000MD5442",
+          "amz_B000W0IZKU",
+          "amz_B001QT6V7A",
+          "amz_B002G0052A",
+          "amz_B002MMY4WY",
+          "amz_B003EGY6Y8",
+          "amz_B00O90HGKY",
+          "amz_B00SK0FOHG",
+          "amz_B013VORRFC",
+          "amz_B015LSEQ28",
+          "amz_B06WWM5TC6",
+          "amz_B077QGS9C6",
+          "amz_B07BRX2XMV",
+          "amz_B07DM8RC5M",
+          "amz_B07WNM1WNP",
+          "amz_B085V73XNB",
+          "amz_B08SKBLTTD",
+          "amz_B08ZSRCP9W",
+          "amz_B09K7VVR63",
+          "amz_B09KXMCQJW",
+          "amz_B09WDLZ4M9"
+        ],
+        "evidence": {
+          "amz_B000MD5442": {
+            "field": "details.Number of Keys",
+            "text": "104"
+          },
+          "amz_B000W0IZKU": {
+            "field": "details.Number of Keys",
+            "text": "104"
+          },
+          "amz_B001QT6V7A": {
+            "field": "details.Number of Keys",
+            "text": "104"
+          },
+          "amz_B002G0052A": {
+            "field": "details.Number of Keys",
+            "text": "104"
+          },
+          "amz_B002MMY4WY": {
+            "field": "details.Number of Keys",
+            "text": "120"
+          },
+          "amz_B003EGY6Y8": {
+            "field": "details.Number of Keys",
+            "text": "104"
+          },
+          "amz_B00O90HGKY": {
+            "field": "details.Number of Keys",
+            "text": "104"
+          },
+          "amz_B00SK0FOHG": {
+            "field": "details.Number of Keys",
+            "text": "90"
+          },
+          "amz_B013VORRFC": {
+            "field": "details.Number of Keys",
+            "text": "104"
+          },
+          "amz_B015LSEQ28": {
+            "field": "details.Number of Keys",
+            "text": "92"
+          },
+          "amz_B06WWM5TC6": {
+            "field": "details.Number of Keys",
+            "text": "106"
+          },
+          "amz_B077QGS9C6": {
+            "field": "details.Number of Keys",
+            "text": "92"
+          },
+          "amz_B07BRX2XMV": {
+            "field": "details.Number of Keys",
+            "text": "87"
+          },
+          "amz_B07DM8RC5M": {
+            "field": "details.Number of Keys",
+            "text": "104"
+          },
+          "amz_B07WNM1WNP": {
+            "field": "details.Number of Keys",
+            "text": "104"
+          },
+          "amz_B085V73XNB": {
+            "field": "details.Number of Keys",
+            "text": "104"
+          },
+          "amz_B08SKBLTTD": {
+            "field": "details.Number of Keys",
+            "text": "108"
+          },
+          "amz_B08ZSRCP9W": {
+            "field": "details.Number of Keys",
+            "text": "104"
+          },
+          "amz_B09K7VVR63": {
+            "field": "details.Number of Keys",
+            "text": "104"
+          },
+          "amz_B09KXMCQJW": {
+            "field": "details.Number of Keys",
+            "text": "104"
+          },
+          "amz_B09WDLZ4M9": {
+            "field": "details.Number of Keys",
+            "text": "110"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T16": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "mice",
+        "budget": "100",
+        "hard": {
+          "connectivity": {
+            "operator": "contains",
+            "value": "bluetooth",
+            "unit": null
+          }
+        },
+        "allowed_ids": [
+          "amz_B01N0BDJTF",
+          "amz_B07RTYW3MZ",
+          "amz_B082V8GC6T",
+          "amz_B0849T5PWR",
+          "amz_B093GFJXN5",
+          "amz_B094TXN3PT",
+          "amz_B09RZHD8Q8",
+          "amz_B0BTT611CF"
+        ],
+        "evidence": {
+          "amz_B01N0BDJTF": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B07RTYW3MZ": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth, USB"
+          },
+          "amz_B082V8GC6T": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth, Wireless, USB"
+          },
+          "amz_B0849T5PWR": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth or included USB wireless adapter"
+          },
+          "amz_B093GFJXN5": {
+            "field": "details.Connectivity Technology",
+            "text": "Wireless, Bluetooth, Wired"
+          },
+          "amz_B094TXN3PT": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth，Wireless USB"
+          },
+          "amz_B09RZHD8Q8": {
+            "field": "details.Connectivity Technology",
+            "text": "Bluetooth"
+          },
+          "amz_B0BTT611CF": {
+            "field": "details.Connectivity Technology",
+            "text": "Wireless, Bluetooth, USB"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T17": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "rice_cookers",
+        "budget": "100",
+        "hard": {
+          "power": {
+            "operator": "lte",
+            "value": "800",
+            "unit": "W"
+          }
+        },
+        "allowed_ids": [
+          "amz_B000PC3G7M",
+          "amz_B001AFGUDA",
+          "amz_B001AFOUIW",
+          "amz_B002VHKQCM",
+          "amz_B004SICLXO",
+          "amz_B007YYU1D6",
+          "amz_B07DTNNS1X",
+          "amz_B07FGRHXX9",
+          "amz_B07KNKS1GC",
+          "amz_B07M9TXXRG",
+          "amz_B07ZV6J8SV",
+          "amz_B08BSP3XJW",
+          "amz_B08Q3P2PGD",
+          "amz_B08TDNRCT4",
+          "amz_B08V579JKZ",
+          "amz_B08ZG84RX1",
+          "amz_B09HGVR4Q7",
+          "amz_B09Q8XY338",
+          "amz_B09QKRY9Q3",
+          "amz_B09SR15R3P",
+          "amz_B09XQMW62L",
+          "amz_B0BKYR3LS2",
+          "amz_B0BPKDTHNH",
+          "amz_B0BRKTYWDM",
+          "amz_B0C6K1MWQM"
+        ],
+        "evidence": {
+          "amz_B000PC3G7M": {
+            "field": "details.Wattage",
+            "text": "500 watts"
+          },
+          "amz_B001AFGUDA": {
+            "field": "details.Wattage",
+            "text": "350 watts"
+          },
+          "amz_B001AFOUIW": {
+            "field": "details.Wattage",
+            "text": "500 watts"
+          },
+          "amz_B002VHKQCM": {
+            "field": "details.Wattage",
+            "text": "700 watts"
+          },
+          "amz_B004SICLXO": {
+            "field": "details.Wattage",
+            "text": "500 watts"
+          },
+          "amz_B007YYU1D6": {
+            "field": "details.Wattage",
+            "text": "700 watts"
+          },
+          "amz_B07DTNNS1X": {
+            "field": "details.Wattage",
+            "text": "200 watts"
+          },
+          "amz_B07FGRHXX9": {
+            "field": "details.Wattage",
+            "text": "500 watts"
+          },
+          "amz_B07KNKS1GC": {
+            "field": "details.Wattage",
+            "text": "200 watts"
+          },
+          "amz_B07M9TXXRG": {
+            "field": "details.Wattage",
+            "text": "200"
+          },
+          "amz_B07ZV6J8SV": {
+            "field": "details.Wattage",
+            "text": "200 watts"
+          },
+          "amz_B08BSP3XJW": {
+            "field": "details.Wattage",
+            "text": "100 watts"
+          },
+          "amz_B08Q3P2PGD": {
+            "field": "details.Wattage",
+            "text": "450 watts"
+          },
+          "amz_B08TDNRCT4": {
+            "field": "details.Wattage",
+            "text": "500 watts"
+          },
+          "amz_B08V579JKZ": {
+            "field": "details.Wattage",
+            "text": "200 watts"
+          },
+          "amz_B08ZG84RX1": {
+            "field": "details.Wattage",
+            "text": "580"
+          },
+          "amz_B09HGVR4Q7": {
+            "field": "details.Wattage",
+            "text": "200 watts"
+          },
+          "amz_B09Q8XY338": {
+            "field": "details.Wattage",
+            "text": "400 watts"
+          },
+          "amz_B09QKRY9Q3": {
+            "field": "details.Wattage",
+            "text": "300 watts"
+          },
+          "amz_B09SR15R3P": {
+            "field": "details.Wattage",
+            "text": "375 watts"
+          },
+          "amz_B09XQMW62L": {
+            "field": "details.Wattage",
+            "text": "350 watts"
+          },
+          "amz_B0BKYR3LS2": {
+            "field": "details.Wattage",
+            "text": "700 watts"
+          },
+          "amz_B0BPKDTHNH": {
+            "field": "details.Wattage",
+            "text": "300 watts"
+          },
+          "amz_B0BRKTYWDM": {
+            "field": "details.Wattage",
+            "text": "300 watts"
+          },
+          "amz_B0C6K1MWQM": {
+            "field": "details.Wattage",
+            "text": "200 watts"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T18": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "electric_kettles",
+        "budget": "100",
+        "hard": {
+          "material": {
+            "operator": "contains",
+            "value": "glass",
+            "unit": null
+          }
+        },
+        "allowed_ids": [
+          "amz_B00SG8MPT2",
+          "amz_B089MGHJBL",
+          "amz_B095SHWW2Q",
+          "amz_B09N6N7FHZ",
+          "amz_B0BDF496NV",
+          "amz_B0BNHZRJQ2"
+        ],
+        "evidence": {
+          "amz_B00SG8MPT2": {
+            "field": "details.Material",
+            "text": "Plastic, Borosilicate Glass"
+          },
+          "amz_B089MGHJBL": {
+            "field": "details.Material",
+            "text": "Stainless Steel, Plastic, Borosilicate Glass"
+          },
+          "amz_B095SHWW2Q": {
+            "field": "details.Material",
+            "text": "Glass"
+          },
+          "amz_B09N6N7FHZ": {
+            "field": "details.Material",
+            "text": "Stainless Steel & Borosilicate Glass"
+          },
+          "amz_B0BDF496NV": {
+            "field": "details.Material",
+            "text": "Borosilicate Glass, Plastic"
+          },
+          "amz_B0BNHZRJQ2": {
+            "field": "details.Material",
+            "text": "Borosilicate Glass, Food Grade, 304 Stainless Steel, BPA-free"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T19": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "vacuum_cleaners",
+        "budget": "100",
+        "hard": {
+          "power_source": {
+            "operator": "contains",
+            "value": "battery",
+            "unit": null
+          }
+        },
+        "allowed_ids": [
+          "amz_B07DSGVV8M",
+          "amz_B07H5F5YNJ",
+          "amz_B08CQRXKBZ",
+          "amz_B08LYTL6YH",
+          "amz_B094ZNH37K",
+          "amz_B09D8RW3KX",
+          "amz_B09DKPT7G4",
+          "amz_B09JZM67CH",
+          "amz_B0B3LNS7HQ",
+          "amz_B0B3Q2SNRN",
+          "amz_B0B4CYF41S",
+          "amz_B0B7J8K8B8",
+          "amz_B0BCQ2P832",
+          "amz_B0BG2BK1FN",
+          "amz_B0BS3GZ2VN",
+          "amz_B0BV2TNM1P",
+          "amz_B0BVDW6M4V",
+          "amz_B0C1FCTBR2",
+          "amz_B0C1PB33FC",
+          "amz_B0C1WLR8S6",
+          "amz_B0C2BWRDR1",
+          "amz_B0C36SSTM5"
+        ],
+        "evidence": {
+          "amz_B07DSGVV8M": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B07H5F5YNJ": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B08CQRXKBZ": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B08LYTL6YH": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B094ZNH37K": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B09D8RW3KX": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B09DKPT7G4": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B09JZM67CH": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0B3LNS7HQ": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0B3Q2SNRN": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0B4CYF41S": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0B7J8K8B8": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0BCQ2P832": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0BG2BK1FN": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0BS3GZ2VN": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0BV2TNM1P": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0BVDW6M4V": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0C1FCTBR2": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0C1PB33FC": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0C1WLR8S6": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0C2BWRDR1": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          },
+          "amz_B0C36SSTM5": {
+            "field": "details.Power Source",
+            "text": "Battery Powered"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T20": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "desk_lamps",
+        "budget": "100",
+        "hard": {
+          "power": {
+            "operator": "lte",
+            "value": "10",
+            "unit": "W"
+          }
+        },
+        "allowed_ids": [
+          "amz_B00QGOZ9YG",
+          "amz_B0763SVDT9",
+          "amz_B07CH5V46Z",
+          "amz_B07GBB7GNR",
+          "amz_B07QJWR614",
+          "amz_B07XBTL8LZ",
+          "amz_B082M4TR8D",
+          "amz_B08J3RZXPH",
+          "amz_B08RYN3RLS",
+          "amz_B08TQQ6ZH6",
+          "amz_B09FQKBL1V",
+          "amz_B09J43BQ54",
+          "amz_B09NRJYFVP",
+          "amz_B09WJ141VP",
+          "amz_B09XHPTZST",
+          "amz_B09XR52HW2",
+          "amz_B0B64BH11F",
+          "amz_B0B83SRM56",
+          "amz_B0BHL8NPS2",
+          "amz_B0BKWPYNLL",
+          "amz_B0BR59VYT6"
+        ],
+        "evidence": {
+          "amz_B00QGOZ9YG": {
+            "field": "details.Wattage",
+            "text": "6.00"
+          },
+          "amz_B0763SVDT9": {
+            "field": "details.Wattage",
+            "text": "6 watts"
+          },
+          "amz_B07CH5V46Z": {
+            "field": "details.Wattage",
+            "text": "5 watts"
+          },
+          "amz_B07GBB7GNR": {
+            "field": "details.Wattage",
+            "text": "4 watts"
+          },
+          "amz_B07QJWR614": {
+            "field": "details.Wattage",
+            "text": "9 watts"
+          },
+          "amz_B07XBTL8LZ": {
+            "field": "details.Wattage",
+            "text": "3 watts"
+          },
+          "amz_B082M4TR8D": {
+            "field": "details.Wattage",
+            "text": "5 watts"
+          },
+          "amz_B08J3RZXPH": {
+            "field": "details.Wattage",
+            "text": "6 watts"
+          },
+          "amz_B08RYN3RLS": {
+            "field": "details.Wattage",
+            "text": "6 watts"
+          },
+          "amz_B08TQQ6ZH6": {
+            "field": "details.Wattage",
+            "text": "6 watts"
+          },
+          "amz_B09FQKBL1V": {
+            "field": "details.Wattage",
+            "text": "4.50"
+          },
+          "amz_B09J43BQ54": {
+            "field": "details.Wattage",
+            "text": "4 watts"
+          },
+          "amz_B09NRJYFVP": {
+            "field": "details.Wattage",
+            "text": "9 watts"
+          },
+          "amz_B09WJ141VP": {
+            "field": "details.Wattage",
+            "text": "10 watts"
+          },
+          "amz_B09XHPTZST": {
+            "field": "details.Wattage",
+            "text": "7 watts"
+          },
+          "amz_B09XR52HW2": {
+            "field": "details.Wattage",
+            "text": "10 watts"
+          },
+          "amz_B0B64BH11F": {
+            "field": "details.Wattage",
+            "text": "2 watts"
+          },
+          "amz_B0B83SRM56": {
+            "field": "details.Wattage",
+            "text": "7 watts"
+          },
+          "amz_B0BHL8NPS2": {
+            "field": "details.Wattage",
+            "text": "5 watts"
+          },
+          "amz_B0BKWPYNLL": {
+            "field": "details.Wattage",
+            "text": "6 watts"
+          },
+          "amz_B0BR59VYT6": {
+            "field": "details.Wattage",
+            "text": "10 watts"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T21": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "backpacks",
+        "budget": "100",
+        "hard": {
+          "material": {
+            "operator": "contains",
+            "value": "polyester",
+            "unit": null
+          }
+        },
+        "allowed_ids": [
+          "amz_B01GE7FHLY",
+          "amz_B07743BNVP",
+          "amz_B07BZJ3S83",
+          "amz_B07TZM7X1N",
+          "amz_B07XLG49YT",
+          "amz_B08MW6JBKH",
+          "amz_B091GQ8TF1",
+          "amz_B092CCZD23",
+          "amz_B093P4WJJJ",
+          "amz_B096FRBTFW",
+          "amz_B09K4RRTH9",
+          "amz_B09KS4H77V",
+          "amz_B09Q9CMWGD",
+          "amz_B0B133MY68",
+          "amz_B0B54SYZ6P",
+          "amz_B0B562V1GF",
+          "amz_B0B6Q6ZM77",
+          "amz_B0BG7XHF39",
+          "amz_B0BLFBPZ53",
+          "amz_B0BLMTBDX1"
+        ],
+        "evidence": {
+          "amz_B01GE7FHLY": {
+            "field": "details.Material",
+            "text": "Polyester"
+          },
+          "amz_B07743BNVP": {
+            "field": "details.Material",
+            "text": "Polyester"
+          },
+          "amz_B07BZJ3S83": {
+            "field": "details.Material",
+            "text": "Polyester"
+          },
+          "amz_B07TZM7X1N": {
+            "field": "details.Material",
+            "text": "Polyester"
+          },
+          "amz_B07XLG49YT": {
+            "field": "title",
+            "text": "Polyester"
+          },
+          "amz_B08MW6JBKH": {
+            "field": "details.Material",
+            "text": "Polyester / Polypropylene"
+          },
+          "amz_B091GQ8TF1": {
+            "field": "details.Material",
+            "text": "Polyester"
+          },
+          "amz_B092CCZD23": {
+            "field": "details.Material",
+            "text": "Polyester"
+          },
+          "amz_B093P4WJJJ": {
+            "field": "details.Material",
+            "text": "Polyester"
+          },
+          "amz_B096FRBTFW": {
+            "field": "details.Material",
+            "text": "Polyester"
+          },
+          "amz_B09K4RRTH9": {
+            "field": "details.Material",
+            "text": "Polyester,Pvc"
+          },
+          "amz_B09KS4H77V": {
+            "field": "details.Material",
+            "text": "Polyester"
+          },
+          "amz_B09Q9CMWGD": {
+            "field": "details.Material",
+            "text": "Polyester"
+          },
+          "amz_B0B133MY68": {
+            "field": "details.Material",
+            "text": "Polyester, Plastic"
+          },
+          "amz_B0B54SYZ6P": {
+            "field": "details.Material",
+            "text": "Polyester, Foam, Aluminum"
+          },
+          "amz_B0B562V1GF": {
+            "field": "details.Material",
+            "text": "Polyester"
+          },
+          "amz_B0B6Q6ZM77": {
+            "field": "details.Material",
+            "text": "Polyester"
+          },
+          "amz_B0BG7XHF39": {
+            "field": "details.Material",
+            "text": "Polyester"
+          },
+          "amz_B0BLFBPZ53": {
+            "field": "details.Material",
+            "text": "Polyester"
+          },
+          "amz_B0BLMTBDX1": {
+            "field": "details.Material",
+            "text": "Polyester"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T22": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "water_bottles",
+        "budget": "100",
+        "hard": {
+          "capacity": {
+            "operator": "gte",
+            "value": "500",
+            "unit": "ml"
+          }
+        },
+        "allowed_ids": [
+          "amz_B00624VY1W",
+          "amz_B0728832H8",
+          "amz_B07CCMS4D1",
+          "amz_B07DMGMWB5",
+          "amz_B086H9VS8C",
+          "amz_B08TM6LY1P",
+          "amz_B08X6T2GMF",
+          "amz_B08Y4H1PJ4",
+          "amz_B08Z3W2CP5",
+          "amz_B094DHHGTB",
+          "amz_B096K5W1SD",
+          "amz_B098KMVMNP",
+          "amz_B09SHLYKWG",
+          "amz_B0BJDN7933",
+          "amz_B0BVN13DM8"
+        ],
+        "evidence": {
+          "amz_B00624VY1W": {
+            "field": "details.Capacity",
+            "text": "600 Milliliters"
+          },
+          "amz_B0728832H8": {
+            "field": "details.Capacity",
+            "text": "1800 Milliliters"
+          },
+          "amz_B07CCMS4D1": {
+            "field": "details.Capacity",
+            "text": "500 Milliliters"
+          },
+          "amz_B07DMGMWB5": {
+            "field": "details.Capacity",
+            "text": "750 Milliliters"
+          },
+          "amz_B086H9VS8C": {
+            "field": "details.Capacity",
+            "text": "750 Milliliters"
+          },
+          "amz_B08TM6LY1P": {
+            "field": "details.Capacity",
+            "text": "500 Milliliters"
+          },
+          "amz_B08X6T2GMF": {
+            "field": "details.Capacity",
+            "text": "1 Liters"
+          },
+          "amz_B08Y4H1PJ4": {
+            "field": "details.Capacity",
+            "text": "750 Milliliters"
+          },
+          "amz_B08Z3W2CP5": {
+            "field": "details.Capacity",
+            "text": "500 Milliliters"
+          },
+          "amz_B094DHHGTB": {
+            "field": "details.Capacity",
+            "text": "800 Milliliters"
+          },
+          "amz_B096K5W1SD": {
+            "field": "details.Capacity",
+            "text": "500 Milliliters"
+          },
+          "amz_B098KMVMNP": {
+            "field": "details.Capacity",
+            "text": "500 Milliliters"
+          },
+          "amz_B09SHLYKWG": {
+            "field": "details.Capacity",
+            "text": "750 Milliliters"
+          },
+          "amz_B0BJDN7933": {
+            "field": "details.Capacity",
+            "text": "500 Milliliters"
+          },
+          "amz_B0BVN13DM8": {
+            "field": "details.Capacity",
+            "text": "1 Liters"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T23": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "electric_toothbrushes",
+        "budget": "100",
+        "hard": {
+          "age_range": {
+            "operator": "contains",
+            "value": "kid",
+            "unit": null
+          }
+        },
+        "allowed_ids": [
+          "amz_B00IGQRT8G",
+          "amz_B075MLN99G",
+          "amz_B08H9WXW4R",
+          "amz_B08TV5XHPP",
+          "amz_B08ZFC7XQ5",
+          "amz_B091YFMFPY",
+          "amz_B095K6H46X",
+          "amz_B09779FYF1",
+          "amz_B097K2BXCK",
+          "amz_B099FBX5TQ",
+          "amz_B09K5TGQMR",
+          "amz_B09N315TYQ",
+          "amz_B09RWJ42M2",
+          "amz_B09WTGWJR5",
+          "amz_B0B58CT2SN",
+          "amz_B0B5L5Q5TF",
+          "amz_B0B8CR6F8W",
+          "amz_B0BLWJNZ2J",
+          "amz_B0BP6PQ99K",
+          "amz_B0BQ5K2CX6",
+          "amz_B0BR8T29MV",
+          "amz_B0BTHTCY8V",
+          "amz_B0BTPSKNS8",
+          "amz_B0BTRYHY6M",
+          "amz_B0BYD833YB",
+          "amz_B0C4B4MGTY",
+          "amz_B0C53LD937"
+        ],
+        "evidence": {
+          "amz_B00IGQRT8G": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B075MLN99G": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B08H9WXW4R": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B08TV5XHPP": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B08ZFC7XQ5": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B091YFMFPY": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B095K6H46X": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B09779FYF1": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B097K2BXCK": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B099FBX5TQ": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B09K5TGQMR": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B09N315TYQ": {
+            "field": "details.Age Range (Description)",
+            "text": "Adult & Kids"
+          },
+          "amz_B09RWJ42M2": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B09WTGWJR5": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B0B58CT2SN": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B0B5L5Q5TF": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid · 5 Piece Set"
+          },
+          "amz_B0B8CR6F8W": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B0BLWJNZ2J": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B0BP6PQ99K": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B0BQ5K2CX6": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B0BR8T29MV": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B0BTHTCY8V": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B0BTPSKNS8": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B0BTRYHY6M": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B0BYD833YB": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid & Adult"
+          },
+          "amz_B0C4B4MGTY": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          },
+          "amz_B0C53LD937": {
+            "field": "details.Age Range (Description)",
+            "text": "Kid"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T24": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "electric_shavers",
+        "budget": "100",
+        "hard": {
+          "head_type": {
+            "operator": "contains",
+            "value": "rotary",
+            "unit": null
+          }
+        },
+        "allowed_ids": [
+          "amz_B07CMX1ZM9",
+          "amz_B07WRLJHTQ",
+          "amz_B081CLSKQX",
+          "amz_B094NCLMX4",
+          "amz_B09C7PZZZ3",
+          "amz_B09STPN6YJ",
+          "amz_B09WDGSW3S",
+          "amz_B09Z2MY69B",
+          "amz_B0B247WL8L",
+          "amz_B0BLC9Z39M",
+          "amz_B0BQJC7JQT",
+          "amz_B0BWC8V9SC",
+          "amz_B0BXXG1F81",
+          "amz_B0C4SD491J",
+          "amz_B0C6KPPCF6"
+        ],
+        "evidence": {
+          "amz_B07CMX1ZM9": {
+            "field": "title",
+            "text": "Rotary"
+          },
+          "amz_B07WRLJHTQ": {
+            "field": "title",
+            "text": "Rotary"
+          },
+          "amz_B081CLSKQX": {
+            "field": "title",
+            "text": "Rotary"
+          },
+          "amz_B094NCLMX4": {
+            "field": "title",
+            "text": "Rotary"
+          },
+          "amz_B09C7PZZZ3": {
+            "field": "title",
+            "text": "Rotary"
+          },
+          "amz_B09STPN6YJ": {
+            "field": "title",
+            "text": "Rotary"
+          },
+          "amz_B09WDGSW3S": {
+            "field": "title",
+            "text": "Rotary"
+          },
+          "amz_B09Z2MY69B": {
+            "field": "title",
+            "text": "Rotary"
+          },
+          "amz_B0B247WL8L": {
+            "field": "title",
+            "text": "Rotary"
+          },
+          "amz_B0BLC9Z39M": {
+            "field": "title",
+            "text": "Rotary"
+          },
+          "amz_B0BQJC7JQT": {
+            "field": "title",
+            "text": "Rotary"
+          },
+          "amz_B0BWC8V9SC": {
+            "field": "title",
+            "text": "Rotary"
+          },
+          "amz_B0BXXG1F81": {
+            "field": "title",
+            "text": "Rotary"
+          },
+          "amz_B0C4SD491J": {
+            "field": "title",
+            "text": "Rotary"
+          },
+          "amz_B0C6KPPCF6": {
+            "field": "title",
+            "text": "Rotary"
+          }
+        },
+        "min_products": 1,
+        "max_products": 1
+      }
+    ],
+    "T25": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "headphones",
+        "budget": "100",
+        "min_products": 2
+      },
+      {
+        "kind": [
+          "answered",
+          "stopped"
+        ],
+        "budget": "150",
+        "excluded_display": [
+          0,
+          0
+        ],
+        "no_search": true
+      },
+      {
+        "kind": [
+          "answered",
+          "stopped"
+        ],
+        "budget": "100",
+        "no_search": true,
+        "excluded_display": [
+          0,
+          0
+        ],
+        "facts_survive": true
+      }
+    ],
+    "T26": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "headphones",
+        "budget": "100",
+        "min_products": 2
+      },
+      {
+        "kind": [
+          "answered",
+          "stopped"
+        ],
+        "budget": "150",
+        "excluded_display": [
+          0,
+          0
+        ],
+        "no_search": true
+      },
+      {
+        "kind": [
+          "answered",
+          "stopped"
+        ],
+        "budget": "100",
+        "no_search": true,
+        "excluded_empty": true
+      }
+    ],
+    "T27": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "headphones",
+        "budget": "100",
+        "min_products": 2
+      },
+      {
+        "kind": [
+          "answered",
+          "stopped"
+        ],
+        "budget": "100",
+        "no_search": true,
+        "exploration_budget": "200"
+      },
+      {
+        "kind": [
+          "answered",
+          "stopped"
+        ],
+        "budget": "100",
+        "no_search": true,
+        "exploration_none": true
+      }
+    ],
+    "T28": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "headphones",
+        "budget": "100",
+        "min_products": 2
+      },
+      {
+        "kind": [
+          "needs_user"
+        ],
+        "budget": "100",
+        "excluded_display": [
+          0,
+          0
+        ],
+        "pending": [
+          "budget"
+        ]
+      },
+      {
+        "kind": [
+          "answered",
+          "stopped"
+        ],
+        "budget": "100",
+        "no_search": true,
+        "excluded_display": [
+          0,
+          0
+        ],
+        "pending_empty": true
+      }
+    ],
+    "T29": [
+      {
+        "kind": [
+          "needs_user"
+        ],
+        "category": "headphones"
+      },
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "budget": "100",
+        "pending_empty": true,
+        "min_products": 1
+      }
+    ],
+    "T30": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "headphones",
+        "budget": "100",
+        "min_products": 2
+      },
+      {
+        "kind": [
+          "answered",
+          "stopped"
+        ],
+        "budget": "100",
+        "no_search": true,
+        "excluded_display": [
+          0,
+          1
+        ]
+      }
+    ],
+    "T31": [
+      {
+        "kind": [
+          "answered",
+          "stopped"
+        ],
+        "category": "headphones",
+        "budget": "100",
+        "no_search": true
+      },
+      {
+        "kind": [
+          "answered",
+          "stopped"
+        ],
+        "category": "mice",
+        "budget": "30",
+        "no_search": true
+      },
+      {
+        "kind": [
+          "answered",
+          "stopped"
+        ],
+        "budget": "100",
+        "no_search": true,
+        "category": "headphones",
+        "same_task_as": 0,
+        "task_count": 2
+      }
+    ],
+    "T32": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "headphones",
+        "budget": "100",
+        "min_products": 2
+      },
+      {
+        "kind": [
+          "answered",
+          "stopped"
+        ],
+        "scope_display": 0,
+        "no_search": true,
+        "min_products": 2
+      }
+    ],
+    "T33": [
+      {
+        "kind": [
+          "no_match"
+        ],
+        "category": "electric_kettles",
+        "budget": "0.01",
+        "exhaustive": true
+      }
+    ],
+    "T34": [
+      {
+        "kind": [
+          "data_limited"
+        ],
+        "budget": "100",
+        "unknown_hard": true
+      }
+    ],
+    "T35": [
+      {
+        "kind": [
+          "needs_user"
+        ],
+        "currency": "CNY",
+        "budget": "100"
+      },
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "currency": "USD",
+        "budget": "100",
+        "min_products": 1
+      }
+    ],
+    "T36": [
+      {
+        "kind": [
+          "answered",
+          "stopped"
+        ],
+        "category": "mice",
+        "budget": "100",
+        "no_search": true
+      },
+      {
+        "kind": [
+          "answered",
+          "stopped"
+        ],
+        "budget": "100",
+        "no_search": true,
+        "no_preference": "connectivity"
+      }
+    ],
+    "T37": [
+      {
+        "kind": [
+          "answered",
+          "stopped"
+        ],
+        "budget": "100",
+        "hard": {
+          "connectivity": {
+            "operator": "contains",
+            "value": "bluetooth",
+            "unit": null
+          }
+        },
+        "no_search": true
+      },
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "budget": "100",
+        "absent": "connectivity",
+        "min_products": 1
+      }
+    ],
+    "T38": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "headphones",
+        "budget": "100",
+        "min_products": 2
+      },
+      {
+        "kind": [
+          "stopped"
+        ],
+        "no_search": true,
+        "no_inspect": true
+      }
+    ],
+    "T39": [
+      {
+        "kind": [
+          "recommendation"
+        ],
+        "category": "electric_kettles",
+        "cheapest": true,
+        "exhaustive": true,
+        "min_products": 1
+      }
+    ],
+    "T40": [
+      {
+        "kind": [
+          "data_limited"
+        ],
+        "category": "keyboards",
+        "budget": "100",
+        "unknown_hard": true
+      }
+    ],
+    "T41": [
+      {
+        "kind": [
+          "recommendation",
+          "data_limited",
+          "answered"
+        ],
+        "no_purchase_claim": true,
+        "budget": "100"
+      }
+    ],
+    "T42": [
+      {
+        "kind": [
+          "data_limited",
+          "answered"
+        ],
+        "current_limit": true
+      }
+    ],
+    "T43": [
+      {
+        "kind": [
+          "data_limited",
+          "answered"
+        ],
+        "market_limit": true
+      }
+    ],
+    "T44": [
+      {
+        "kind": [
+          "data_limited",
+          "answered"
+        ],
+        "review_limit": true
+      }
+    ],
+    "T45": [
+      {
+        "kind": [
+          "data_limited"
+        ],
+        "budget": "100",
+        "unknown_hard": true
+      }
+    ],
+    "T46": [
+      {
+        "kind": [
+          "data_limited",
+          "needs_user"
+        ],
+        "unsupported_category": true
+      }
+    ],
+    "T47": [
+      {
+        "kind": [
+          "needs_user"
+        ],
+        "no_search": true,
+        "budget_unresolved": true
+      }
+    ],
+    "T48": [
+      {
+        "kind": [
+          "answered",
+          "data_limited"
+        ],
+        "cups_limit": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "cases": "0aebe47633cf67a8b1d6bbe9d8a0ad07ae2cf5a95c821168586a227d83947485",
+  "gold": "85391f671c22d9b56b86165b1c33d1d6193ccfc53b2d72d23f8e3ccf13fc2f07",
+  "source": {
+    "src/shopping_agent/catalog.py": "58357d011420d5cd2c5ae7001932d77411a121837261586af0ab224c7c90cc1a",
+    "src/shopping_agent/service.py": "31ef0cd6cc5667d69fc2e825779955e017cad66cf15d10a3cf29c3fe60ab5dde",
+    "src/shopping_agent/web.py": "11e451e16e6d9c3f779b42c567e6a9eb76aec3a3657c1ff992113bb2c4154c18",
+    "src/shopping_agent/config.py": "978644ed070c5eaa356e35c1e224d852bb724582de9ca9049a41b98072b29e41",
+    "src/shopping_agent/__init__.py": "dfe88291ef82838fae520806a0f403b611550437ec7647a2a175b939f8bf1329",
+    "src/shopping_agent/runtime.py": "54f694e2154b4a5bdb8e1df195656f0854b89762a2d987d047bb84411e4c38ac",
+    "src/shopping_agent/cli.py": "b96939a1ec08fd77613637df0698e1bb32b2e6b2a9c32cba7772692c835eb12b",
+    "src/shopping_agent/qualification.py": "55a097643bd2b66c608c87a40720fe5ca210b3d27d717190d3a51eea09b929ab",
+    "src/shopping_agent/contracts.py": "54ab66eb282556f293daa528a2f5571930526604688ff05de220886764696ea5",
+    "src/shopping_agent/state.py": "a4dbcc8b96fae6abc0f41d74b20a0122cd9d026837ee7dc31d0ea79538486d8d",
+    "scripts/run_eval.py": "c2222c4d5daf3359f96d551f6ea28c9f2f056a8e6a597feb93d826f7afd306a2"
+  }
+}

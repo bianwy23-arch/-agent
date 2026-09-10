@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 
 from .state import InvalidChange, money
+from .qualification import normalize, check, CATEGORY_FIELDS
 
 
 class Catalog:
@@ -88,6 +89,23 @@ class Catalog:
                             "excluded_ids": sorted(excluded)},
                 "other_requirements_evaluated": False}
 
+    def qualification(self, product_id, requirements):
+        if product_id not in self._products:
+            raise InvalidChange("unknown product")
+        product = self._products[product_id]
+        result = {"satisfied": [], "violated": [], "unknown": [], "conflict": [], "checks": {}}
+        for name, req in requirements.items():
+            if req["status"] != "active" or req["strength"] != "hard":
+                continue
+            if name == "budget":
+                status = "unknown" if req["value"]["currency"] != "USD" else ("satisfied" if Decimal(str(product["price"]["amount"])) <= money(req["value"]) else "violated")
+                detail = {"status": status, "price": deepcopy(product["price"])}
+            else:
+                detail = check(product, name, req)
+            result[detail["status"]].append(name)
+            result["checks"][name] = detail
+        return result
+
     def inspect(self, product_id, fields):
         if product_id not in self._products:
             raise InvalidChange("unknown product")
@@ -105,6 +123,7 @@ class Catalog:
                 facts[field] = {"status": "unknown", "value": None, "evidence": None}
         return {"product_id": product_id, "catalog_version": self.version,
                 "source": deepcopy(p["source"]), "facts": facts,
+                "normalized": {field: normalize(p, field) for field in set(fields) | set(CATEGORY_FIELDS[p["category_id"]])},
                 "context": {"title": p["title"], "features": deepcopy(p["features"]),
                             "description": deepcopy(p["description"]), "details": deepcopy(p["details"])},
                 "qualification": "not_evaluated"}

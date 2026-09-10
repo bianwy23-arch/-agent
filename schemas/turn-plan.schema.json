@@ -148,6 +148,46 @@
       "title": "Operation",
       "type": "object"
     },
+    "Predicate": {
+      "additionalProperties": false,
+      "properties": {
+        "operator": {
+          "enum": [
+            "eq",
+            "gte",
+            "lte",
+            "gt",
+            "lt",
+            "contains",
+            "not_contains"
+          ],
+          "title": "Operator",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        }
+      },
+      "required": [
+        "operator",
+        "value"
+      ],
+      "title": "Predicate",
+      "type": "object"
+    },
     "Requirement": {
       "additionalProperties": false,
       "properties": {
@@ -171,6 +211,9 @@
           "anyOf": [
             {
               "$ref": "#/$defs/Money"
+            },
+            {
+              "$ref": "#/$defs/Predicate"
             },
             {
               "type": "string"

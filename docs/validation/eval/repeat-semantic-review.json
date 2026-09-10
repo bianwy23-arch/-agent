@@ -1,0 +1,78 @@
+{
+  "reviewer": "Codex coding assistant; not independent human acceptance",
+  "run": "repeat-v9b",
+  "same_source_suite_and_gold_as": "final-v9b",
+  "combined_pass": 10,
+  "cases": [
+    {
+      "id": "T25",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "只恢复预算至100，排除保持；未重新搜索，已读事实保留。"
+    },
+    {
+      "id": "T26",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "撤销上一轮预算与排除，恢复100且排除为空；未搜索。"
+    },
+    {
+      "id": "T27",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "200仅进入临时探索，正式100不变；结束探索后仍100。"
+    },
+    {
+      "id": "T28",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "排除立即生效，预算澄清未生效；取消仅清除待澄清预算。"
+    },
+    {
+      "id": "T29",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "先追问缺失金额，再接受100美元并推荐一款，pending已清除。"
+    },
+    {
+      "id": "T31",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "耳机100与鼠标30任务独立；恢复耳机时预算仍100。"
+    },
+    {
+      "id": "T34",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "实测40dB硬条件保存，明确无法确认，没有拿营销降噪当实测或无条件推荐。"
+    },
+    {
+      "id": "T37",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "蓝牙条件撤销，预算保留；没有把撤销项恢复为硬条件。"
+    },
+    {
+      "id": "T46",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "说明牛奶品类不支持，未创建错误品类任务或虚构商品。"
+    },
+    {
+      "id": "T47",
+      "program_pass": true,
+      "semantic_pass": true,
+      "combined_pass": true,
+      "note": "遵守用户先确认预算的要求，不自行选50或100，无搜索。"
+    }
+  ]
+}

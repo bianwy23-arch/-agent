@@ -93,3 +93,7 @@
 - [状态设计备忘](decision-state-design-notes.md)：待落地的需求、候选与决策状态设计。
 - [动作选择设计备忘](action-selection-design-notes.md)：已确认的追问、查看证据、继续搜索与停止原则及验收方向。
 - [Amazon 数据说明](amazon-data.md)：已交付商品数据与独立接口的范围，不等同于新 Agent 全链路已完成。
+
+## 实际验收入口
+
+上述内容是约定；2026-09-10 实际执行的案例、失败、修复和重复运行结果见 [最新验收报告](evaluation-results.md) 与 [真实故障记录](reproducible-fixes.md)。

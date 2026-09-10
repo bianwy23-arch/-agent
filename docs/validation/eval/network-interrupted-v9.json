@@ -1,0 +1,1357 @@
+{
+  "at": "2026-09-10T00:01:04.018721+00:00",
+  "model": "deepseek-v4-flash",
+  "cases_sha256": "0aebe47633cf67a8b1d6bbe9d8a0ad07ae2cf5a95c821168586a227d83947485",
+  "gold_sha256": "85391f671c22d9b56b86165b1c33d1d6193ccfc53b2d72d23f8e3ccf13fc2f07",
+  "source_hashes": {
+    "src/shopping_agent/catalog.py": "58357d011420d5cd2c5ae7001932d77411a121837261586af0ab224c7c90cc1a",
+    "src/shopping_agent/service.py": "31ef0cd6cc5667d69fc2e825779955e017cad66cf15d10a3cf29c3fe60ab5dde",
+    "src/shopping_agent/web.py": "11e451e16e6d9c3f779b42c567e6a9eb76aec3a3657c1ff992113bb2c4154c18",
+    "src/shopping_agent/config.py": "978644ed070c5eaa356e35c1e224d852bb724582de9ca9049a41b98072b29e41",
+    "src/shopping_agent/__init__.py": "dfe88291ef82838fae520806a0f403b611550437ec7647a2a175b939f8bf1329",
+    "src/shopping_agent/runtime.py": "54f694e2154b4a5bdb8e1df195656f0854b89762a2d987d047bb84411e4c38ac",
+    "src/shopping_agent/cli.py": "b96939a1ec08fd77613637df0698e1bb32b2e6b2a9c32cba7772692c835eb12b",
+    "src/shopping_agent/qualification.py": "55a097643bd2b66c608c87a40720fe5ca210b3d27d717190d3a51eea09b929ab",
+    "src/shopping_agent/contracts.py": "54ab66eb282556f293daa528a2f5571930526604688ff05de220886764696ea5",
+    "src/shopping_agent/state.py": "a4dbcc8b96fae6abc0f41d74b20a0122cd9d026837ee7dc31d0ea79538486d8d",
+    "scripts/run_eval.py": "00416c820fc8c7d0728e8df7c2690dd95fdd5cea5b5e62bbb3028865e98d2b72"
+  },
+  "selected": 48,
+  "executed": 26,
+  "program_pass": 0,
+  "semantic_review": "pending",
+  "cases": [
+    {
+      "id": "T01",
+      "split": "development",
+      "family": "category_headphones",
+      "inputs": [
+        "请推荐一个100美元以内的耳机，必须是包耳式（over-ear）。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_form_factor",
+          "predicate_form_factor",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.894,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "ee809396-3f7c-40fe-976b-5e40be9fdd19",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.893,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T02",
+      "split": "development",
+      "family": "category_bluetooth_speakers",
+      "inputs": [
+        "请推荐一个100美元以内的蓝牙音箱，必须支持蓝牙。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_connectivity",
+          "predicate_connectivity",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.715,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "1dc75005-99aa-4d8d-b8d5-37781b73d4b0",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.714,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T03",
+      "split": "development",
+      "family": "category_keyboards",
+      "inputs": [
+        "请推荐一个100美元以内的键盘，必须支持有线连接。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_connectivity",
+          "predicate_connectivity",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.601,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "3854c0fc-0807-4123-a524-32d5b3b49ca1",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.599,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T04",
+      "split": "development",
+      "family": "category_mice",
+      "inputs": [
+        "请推荐一个100美元以内的鼠标，必须使用光学追踪。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_tracking",
+          "predicate_tracking",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.726,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "4d0eff1c-6e61-46f1-b48c-7e152b1f881a",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.725,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T05",
+      "split": "development",
+      "family": "category_rice_cookers",
+      "inputs": [
+        "请推荐一个100美元以内的电饭煲，容量必须至少1升。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_capacity",
+          "predicate_capacity",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.6,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "8d11b64d-08ba-4310-af07-b1487ef332cf",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.6,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T06",
+      "split": "development",
+      "family": "category_electric_kettles",
+      "inputs": [
+        "请推荐一个100美元以内的电热水壶，容量必须至少1.5升。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_capacity",
+          "predicate_capacity",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.497,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "cb3f72c9-a870-4a3d-895f-ccf5b12c934e",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.495,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T07",
+      "split": "development",
+      "family": "category_vacuum_cleaners",
+      "inputs": [
+        "请推荐一个100美元以内的吸尘器，必须是手持式。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_vacuum_type",
+          "predicate_vacuum_type",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.563,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "12f5d8e5-61ac-4d78-a89c-2f0c773c16b7",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.562,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T08",
+      "split": "development",
+      "family": "category_desk_lamps",
+      "inputs": [
+        "请推荐一个100美元以内的台灯，光源必须是LED。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_light_source",
+          "predicate_light_source",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.455,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "b7a1d4f9-1684-4d37-b5eb-3b32d1edcc17",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.453,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T09",
+      "split": "development",
+      "family": "category_backpacks",
+      "inputs": [
+        "请推荐一个100美元以内的双肩包，材料必须包含尼龙。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_material",
+          "predicate_material",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.481,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "f3c2f483-4210-44b3-9260-997b69eded1e",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.481,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T10",
+      "split": "development",
+      "family": "category_water_bottles",
+      "inputs": [
+        "请推荐一个100美元以内的水杯，材料必须包含不锈钢。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_material",
+          "predicate_material",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.491,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "8ec15f66-b0d6-4d5d-9338-18bd1f297bd4",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.49,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T11",
+      "split": "development",
+      "family": "category_electric_toothbrushes",
+      "inputs": [
+        "请推荐一个100美元以内的电动牙刷，必须适用于成人。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_age_range",
+          "predicate_age_range",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.451,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "ca78d603-6c0b-44a2-a39b-ebe8d279ac40",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.449,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T12",
+      "split": "development",
+      "family": "category_electric_shavers",
+      "inputs": [
+        "请推荐一个100美元以内的电动剃须刀，必须为电池供电。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_power_source",
+          "predicate_power_source",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.652,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "195eed1f-0efb-4a83-b73f-29ecb4777a9a",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.651,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T13",
+      "split": "development",
+      "family": "category_headphones",
+      "inputs": [
+        "请推荐一个100美元以内的耳机，商品重量必须不超过300克。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_weight",
+          "predicate_weight",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.675,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "670c85e4-2690-4043-b52a-696a15d85f2c",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.674,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T14",
+      "split": "development",
+      "family": "category_bluetooth_speakers",
+      "inputs": [
+        "请推荐一个100美元以内的蓝牙音箱，扬声器类型必须标明户外使用。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_speaker_type",
+          "predicate_speaker_type",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.538,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "7a94a21b-1981-4862-a87d-5f2612c4c146",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.538,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T15",
+      "split": "development",
+      "family": "category_keyboards",
+      "inputs": [
+        "请推荐一个100美元以内的键盘，按键数量必须至少87个。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_number_of_keys",
+          "predicate_number_of_keys",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.393,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "5e9b1f80-0fe1-4be9-8b38-56a1ece152d5",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.391,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T16",
+      "split": "development",
+      "family": "category_mice",
+      "inputs": [
+        "请推荐一个100美元以内的鼠标，必须支持蓝牙连接。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_connectivity",
+          "predicate_connectivity",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.544,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "fa1f4a1c-e46a-4fc4-b6ed-26724300db90",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.542,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T17",
+      "split": "development",
+      "family": "category_rice_cookers",
+      "inputs": [
+        "请推荐一个100美元以内的电饭煲，功率必须不超过800瓦。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_power",
+          "predicate_power",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.606,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "1a70a259-c534-4bcf-8ac7-9c1d8658afde",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.605,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T18",
+      "split": "development",
+      "family": "category_electric_kettles",
+      "inputs": [
+        "请推荐一个100美元以内的电热水壶，材料必须包含玻璃。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_material",
+          "predicate_material",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.526,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "f8df1dca-9525-4e91-808c-a5ddd9dbc302",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.526,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T19",
+      "split": "development",
+      "family": "category_vacuum_cleaners",
+      "inputs": [
+        "请推荐一个100美元以内的吸尘器，必须为电池供电。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_power_source",
+          "predicate_power_source",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.499,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "3f846801-ee19-4f30-a644-033adab8a061",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.497,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T20",
+      "split": "development",
+      "family": "category_desk_lamps",
+      "inputs": [
+        "请推荐一个100美元以内的台灯，功率必须不超过10瓦。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_power",
+          "predicate_power",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.519,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "bbe27f4d-5864-4588-b89c-04eb7ac2591c",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.518,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T21",
+      "split": "development",
+      "family": "category_backpacks",
+      "inputs": [
+        "请推荐一个100美元以内的双肩包，材料必须包含聚酯纤维。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_material",
+          "predicate_material",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.651,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "0cda46f8-d3eb-4375-a54d-93ce25027f2d",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.65,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T22",
+      "split": "development",
+      "family": "category_water_bottles",
+      "inputs": [
+        "请推荐一个100美元以内的水杯，容量必须至少500毫升。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_capacity",
+          "predicate_capacity",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.685,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "41a63892-04bf-483d-b99c-ff1b8652a36b",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.685,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T23",
+      "split": "development",
+      "family": "category_electric_toothbrushes",
+      "inputs": [
+        "请推荐一个100美元以内的电动牙刷，必须适用于儿童。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_age_range",
+          "predicate_age_range",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.553,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "fceb4717-5b85-4cf8-8b88-905f6ba6326b",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.553,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T24",
+      "split": "development",
+      "family": "category_electric_shavers",
+      "inputs": [
+        "请推荐一个100美元以内的电动剃须刀，必须为旋转式刀头。这是硬条件，其他没有要求。按库内历史价格即可。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "missing_hard_head_type",
+          "predicate_head_type",
+          "incomplete_product_count"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 0.414,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "f4fba405-93fb-46ae-a742-f1832fa5f46c",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.411,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T26",
+      "split": "development",
+      "family": "whole_undo",
+      "inputs": [
+        "推荐两个100美元以内的耳机，没有其他要求，按库内历史价格即可。",
+        "预算改成150美元，并排除第一个。只记录，不用搜索。",
+        "撤销刚才的修改。只记录，不用搜索。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "incomplete_product_count"
+        ],
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "budget_state",
+          "budget_currency",
+          "wrong_exclusion_reference"
+        ],
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "budget_state",
+          "budget_currency"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 1.368,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "9c16ed65-0e11-47a8-aee2-941f0827d10d",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.48,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        },
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "76195acc-51e9-4a11-939b-468073012821",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.427,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        },
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "41bcad47-7bc8-439e-a49d-1df703c0ff9e",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.455,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "T27",
+      "split": "development",
+      "family": "hypothesis",
+      "inputs": [
+        "推荐两个100美元以内的耳机，没有其他要求，按库内历史价格即可。",
+        "如果预算200美元呢？仅记录这个假设，不搜索，正式预算别改。",
+        "结束假设，回到正式方案，只报当前预算，不搜索。"
+      ],
+      "failures": [
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "category",
+          "budget_state",
+          "budget_currency",
+          "incomplete_product_count"
+        ],
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "budget_state",
+          "budget_currency",
+          "hypothesis_state"
+        ],
+        [
+          "runtime_failure",
+          "wrong_stop_kind",
+          "budget_state",
+          "budget_currency"
+        ]
+      ],
+      "harness_issue": null,
+      "program_pass": false,
+      "semantic_review": "pending",
+      "elapsed_seconds": 1.397,
+      "outputs": [
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "514654cf-4fec-4071-a096-e6de38273207",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.473,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        },
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "a157cad2-e455-44be-a55e-e00cdf9230f5",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.452,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        },
+        {
+          "kind": "execution_limited",
+          "message": "本轮执行未完成；已生效的需求修改已保留，请稍后继续。",
+          "product_ids": [],
+          "citations": [],
+          "unresolved": [
+            "APIConnectionError"
+          ],
+          "scope": "formal",
+          "turn_id": "1feef8f9-307e-4fc3-a7b4-2660b00669bc",
+          "task_id": null,
+          "display_id": null,
+          "runtime": {
+            "model": "deepseek-v4-flash",
+            "elapsed_seconds": 0.47,
+            "tool_calls": 0,
+            "error": "APIConnectionError",
+            "usage": null
+          },
+          "state": null
+        }
+      ]
+    }
+  ]
+}
