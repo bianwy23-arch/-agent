@@ -11,6 +11,7 @@ class Settings:
     root: Path
     api_key: str = field(repr=False)
     model: str = "deepseek-v4-flash"
+    model_concurrency: int = 4
     max_turns: int = 12
     max_tool_calls: int = 24
     request_timeout: float = 45
@@ -18,6 +19,8 @@ class Settings:
     max_tokens: int = 4096
     max_retries: int = 1
     repeated_call_limit: int = 3
+    context_budget_chars: int = 24000
+    context_candidate_limit: int = 24
 
     @classmethod
     def load(cls, root):
@@ -32,10 +35,13 @@ class Settings:
                 raise ValueError(f"{name} must be between {low} and {high}")
             return value
         return cls(root=root, api_key=key, model=values.get("DEEPSEEK_MODEL", "deepseek-v4-flash"),
+                   model_concurrency=integer("AGENT_MODEL_CONCURRENCY",4,1,64),
                    max_turns=integer("AGENT_MAX_TURNS", 12, 1, 30),
                    max_tool_calls=integer("AGENT_MAX_TOOL_CALLS", 24, 1, 60),
                    request_timeout=integer("AGENT_REQUEST_TIMEOUT", 45, 5, 120),
                    turn_timeout=integer("AGENT_TURN_TIMEOUT", 150, 10, 600),
                    max_tokens=integer("AGENT_MAX_OUTPUT_TOKENS", 4096, 256, 8192),
                    max_retries=integer("AGENT_API_RETRIES", 1, 0, 2),
-                   repeated_call_limit=integer("AGENT_REPEATED_CALL_LIMIT", 3, 2, 5))
+                   repeated_call_limit=integer("AGENT_REPEATED_CALL_LIMIT", 3, 2, 5),
+                   context_budget_chars=integer("AGENT_CONTEXT_BUDGET_CHARS",24000,4000,100000),
+                   context_candidate_limit=integer("AGENT_CONTEXT_CANDIDATE_LIMIT",24,1,100))

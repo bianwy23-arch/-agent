@@ -1,5 +1,44 @@
 {
   "$defs": {
+    "AnswerBoundary": {
+      "additionalProperties": false,
+      "description": "A question-bound limitation, not a claim that a product meets a criterion.",
+      "properties": {
+        "question_quote": {
+          "maxLength": 300,
+          "minLength": 2,
+          "title": "Question Quote",
+          "type": "string"
+        },
+        "target_field": {
+          "minLength": 1,
+          "title": "Target Field",
+          "type": "string"
+        },
+        "basis_fields": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 4,
+          "title": "Basis Fields",
+          "type": "array"
+        },
+        "product_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 10,
+          "title": "Product Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "question_quote",
+        "target_field"
+      ],
+      "title": "AnswerBoundary",
+      "type": "object"
+    },
     "Citation": {
       "additionalProperties": false,
       "properties": {
@@ -23,10 +62,311 @@
       ],
       "title": "Citation",
       "type": "object"
+    },
+    "Claim": {
+      "additionalProperties": false,
+      "properties": {
+        "key": {
+          "minLength": 1,
+          "title": "Key",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "attribute_fact",
+            "numeric_difference",
+            "preference_advantage",
+            "tradeoff",
+            "conditional_recommendation",
+            "evidence_gap"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "product_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Product Ids",
+          "type": "array"
+        },
+        "field": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Field"
+        },
+        "preference_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Preference Id"
+        },
+        "hypothesis_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Hypothesis Id"
+        },
+        "conditions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Conditions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "key",
+        "kind",
+        "product_ids"
+      ],
+      "title": "Claim",
+      "type": "object"
+    },
+    "Question": {
+      "additionalProperties": false,
+      "properties": {
+        "gap_id": {
+          "minLength": 1,
+          "title": "Gap Id",
+          "type": "string"
+        },
+        "action": {
+          "const": "ask_user",
+          "default": "ask_user",
+          "title": "Action",
+          "type": "string"
+        },
+        "expected_information": {
+          "minLength": 1,
+          "title": "Expected Information",
+          "type": "string"
+        }
+      },
+      "required": [
+        "gap_id",
+        "expected_information"
+      ],
+      "title": "Question",
+      "type": "object"
+    },
+    "RecommendationProposal": {
+      "additionalProperties": false,
+      "properties": {
+        "assessment_id": {
+          "title": "Assessment Id",
+          "type": "string"
+        },
+        "ordered_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Ordered Ids",
+          "type": "array"
+        },
+        "representative_roles": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Representative Roles",
+          "type": "object"
+        },
+        "emphasis_reasons": {
+          "additionalProperties": {
+            "enum": [
+              "advantage",
+              "tradeoff",
+              "equal",
+              "unknown",
+              "strict"
+            ],
+            "type": "string"
+          },
+          "title": "Emphasis Reasons",
+          "type": "object"
+        },
+        "preference_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Preference Refs",
+          "type": "array"
+        },
+        "hypothesis_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Hypothesis Refs",
+          "type": "array"
+        },
+        "claim_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Claim Refs",
+          "type": "array"
+        },
+        "conditions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Conditions",
+          "type": "array"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "assessment_id",
+        "ordered_ids"
+      ],
+      "title": "RecommendationProposal",
+      "type": "object"
+    },
+    "RecommendationReason": {
+      "additionalProperties": false,
+      "properties": {
+        "product_id": {
+          "title": "Product Id",
+          "type": "string"
+        },
+        "claim_refs": {
+          "description": "Legacy or computed claim keys. Attribute reasons should prefer evidence_refs from inspect_product.",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 4,
+          "title": "Claim Refs",
+          "type": "array"
+        },
+        "evidence_refs": {
+          "description": "Program-issued evidence_id values from this turn's inspection of this same product. No need to repeat their attribute claims or citations. References establish provenance, not semantic truth.",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 4,
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "text": {
+          "description": "One concise customer-facing reason grounded in referenced evidence and current needs. Unconfirmed usage must be conditional; do not invent performance or user preferences.",
+          "maxLength": 180,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_id",
+        "text"
+      ],
+      "title": "RecommendationReason",
+      "type": "object"
     }
   },
   "additionalProperties": false,
   "properties": {
+    "answer_boundary": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/AnswerBoundary"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "answer_purpose": {
+      "anyOf": [
+        {
+          "enum": [
+            "interaction",
+            "state",
+            "evidence"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "For answered only: interaction is a brief conversation-only reply without product assertions or claims of state changes; state confirms authoritative saved state; evidence answers product/concept/capability questions using verified evidence. Omit only for legacy callers.",
+      "title": "Answer Purpose"
+    },
+    "recommendation_reasons": {
+      "description": "Optional evidence-linked reasons, at most two per recommended product. Omit when no useful supported reason is available.",
+      "items": {
+        "$ref": "#/$defs/RecommendationReason"
+      },
+      "title": "Recommendation Reasons",
+      "type": "array"
+    },
+    "limit_fact_refs": {
+      "items": {
+        "enum": [
+          "realtime_price",
+          "realtime_stock"
+        ],
+        "type": "string"
+      },
+      "title": "Limit Fact Refs",
+      "type": "array"
+    },
+    "decision_receipt_refs": {
+      "description": "Receipt IDs from this turn explicitly reviewed before completion. Required for no-change or partially effective decision operations. Correct wrong targets using a NEW group_id; references acknowledge evidence, not semantic success.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Decision Receipt Refs",
+      "type": "array"
+    },
+    "state_fact_refs": {
+      "items": {
+        "enum": [
+          "preferences",
+          "excluded",
+          "shortlist",
+          "selection",
+          "selection_qualification",
+          "budget",
+          "purchase",
+          "formal_budget",
+          "temporary_budget",
+          "exploration_status"
+        ],
+        "type": "string"
+      },
+      "title": "State Fact Refs",
+      "type": "array"
+    },
     "kind": {
       "enum": [
         "answered",
@@ -39,6 +379,20 @@
       ],
       "title": "Kind",
       "type": "string"
+    },
+    "response_text": {
+      "anyOf": [
+        {
+          "maxLength": 6000,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Optional natural final response, reviewed against verified facts before delivery. Does not change state.",
+      "title": "Response Text"
     },
     "message": {
       "title": "Message",
@@ -73,6 +427,60 @@
       ],
       "title": "Scope",
       "type": "string"
+    },
+    "assessment_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Assessment Id"
+    },
+    "recommendation_proposal": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/RecommendationProposal"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "claims": {
+      "items": {
+        "$ref": "#/$defs/Claim"
+      },
+      "title": "Claims",
+      "type": "array"
+    },
+    "question": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Question"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "explanation_topics": {
+      "items": {
+        "enum": [
+          "hard_vs_soft",
+          "unknown_vs_no_preference",
+          "selection_vs_purchase",
+          "historical_prices"
+        ],
+        "type": "string"
+      },
+      "title": "Explanation Topics",
+      "type": "array"
     }
   },
   "required": [

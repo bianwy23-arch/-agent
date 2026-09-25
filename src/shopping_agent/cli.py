@@ -21,7 +21,8 @@ async def chat(args):
             result = await runtime.run(conversation_id, message)
             print(json.dumps(result, ensure_ascii=False, indent=2) if args.json else result["message"])
             if not args.json:
-                print(f"[{result['kind']}] {result.get('price_notice', '')}")
+                if result.get("price_notice"):
+                    print(result["price_notice"])
             if args.message:
                 return
     finally:

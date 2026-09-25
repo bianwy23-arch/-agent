@@ -11,6 +11,13 @@ from .state import InvalidChange, money
 from .qualification import normalize, check, CATEGORY_FIELDS
 
 
+# Exact broad discovery aliases only. These are not inferred hard constraints.
+DISCOVERY_ALIASES = {
+    "headphones": {"耳机", "通勤耳机", "轻便耳机", "headphones", "earphones", "earbuds"},
+    "bluetooth_speakers": {"蓝牙音箱", "便携音箱", "每天携带", "bluetooth speaker", "bluetooth speakers"},
+}
+
+
 class Catalog:
     def __init__(self, directory):
         directory = Path(directory)
@@ -69,7 +76,8 @@ class Catalog:
         excluded = set(excluded_ids)
         if not excluded.issubset(self._products):
             raise InvalidChange("unknown excluded product")
-        tokens = query.casefold().split()
+        broad_alias = query.strip().casefold() in DISCOVERY_ALIASES.get(category, set())
+        tokens = [] if broad_alias else query.casefold().split()
         candidates = [p for p in self._products.values() if p["category_id"] == category
                       and p["id"] not in excluded
                       and (ceiling is None or Decimal(str(p["price"]["amount"])) <= ceiling)]
@@ -87,7 +95,11 @@ class Catalog:
                 "structured_match_count": len(candidates),
                 "filters": {"category": category, "budget": deepcopy(budget),
                             "excluded_ids": sorted(excluded)},
-                "other_requirements_evaluated": False}
+                "other_requirements_evaluated": False,
+                "query_interpretation": {"original": query,
+                    "mode": "category_discovery_alias" if broad_alias else "literal",
+                    "semantic_match_verified": False,
+                    "limitations": ["Scene suitability is not established by retrieval."] if broad_alias else []}}
 
     def qualification(self, product_id, requirements):
         if product_id not in self._products:

@@ -1,0 +1,48 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "action": {
+      "enum": [
+        "shortlist_add",
+        "shortlist_remove",
+        "focus_set",
+        "exclude",
+        "restore",
+        "select_tentative",
+        "select_confirmed",
+        "selection_clear",
+        "compare"
+      ],
+      "title": "Action",
+      "type": "string"
+    },
+    "product_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Product Ids",
+      "type": "array"
+    },
+    "task_id": {
+      "title": "Task Id",
+      "type": "string"
+    },
+    "display_id": {
+      "title": "Display Id",
+      "type": "string"
+    },
+    "request_id": {
+      "minLength": 1,
+      "title": "Request Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "action",
+    "task_id",
+    "display_id",
+    "request_id"
+  ],
+  "title": "DecisionAction",
+  "type": "object"
+}

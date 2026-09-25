@@ -1,8 +1,74 @@
 {
   "$defs": {
+    "DecisionInput": {
+      "additionalProperties": false,
+      "properties": {
+        "product_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Product Ids",
+          "type": "array"
+        },
+        "display_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Display Id"
+        },
+        "positions": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Positions",
+          "type": "array"
+        }
+      },
+      "title": "DecisionInput",
+      "type": "object"
+    },
+    "DirectionRejection": {
+      "additionalProperties": false,
+      "properties": {
+        "direction": {
+          "const": "raise_budget",
+          "title": "Direction",
+          "type": "string"
+        },
+        "quote": {
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "direction",
+        "quote"
+      ],
+      "title": "DirectionRejection",
+      "type": "object"
+    },
     "Group": {
       "additionalProperties": false,
       "properties": {
+        "interpretation": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RequirementInterpretation"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Meaning of this single quoted clause. Absence of a need is not a prohibition; use separate groups for different meanings. Required for negative or unsupported hard predicates."
+        },
         "group_id": {
           "title": "Group Id",
           "type": "string"
@@ -29,6 +95,15 @@
           },
           "title": "Operations",
           "type": "array"
+        },
+        "scope": {
+          "default": "formal",
+          "enum": [
+            "formal",
+            "hypothetical"
+          ],
+          "title": "Scope",
+          "type": "string"
         },
         "dependent": {
           "default": false,
@@ -87,6 +162,49 @@
       "title": "Group",
       "type": "object"
     },
+    "HypothesisProposal": {
+      "additionalProperties": false,
+      "properties": {
+        "scenario_keys": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Scenario Keys",
+          "type": "array"
+        },
+        "field": {
+          "minLength": 1,
+          "title": "Field",
+          "type": "string"
+        },
+        "expression": {
+          "$ref": "#/$defs/SoftExpression"
+        },
+        "reason": {
+          "minLength": 1,
+          "title": "Reason",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "scenario_keys",
+        "field",
+        "expression",
+        "reason",
+        "limitations"
+      ],
+      "title": "HypothesisProposal",
+      "type": "object"
+    },
     "Money": {
       "additionalProperties": false,
       "properties": {
@@ -116,7 +234,11 @@
         "target": {
           "enum": [
             "requirements",
-            "excluded"
+            "excluded",
+            "decision",
+            "relations",
+            "hypotheses",
+            "scenarios"
           ],
           "title": "Target",
           "type": "string"
@@ -129,6 +251,21 @@
           "anyOf": [
             {
               "$ref": "#/$defs/Requirement"
+            },
+            {
+              "$ref": "#/$defs/SoftPreference"
+            },
+            {
+              "$ref": "#/$defs/PreferenceRelation"
+            },
+            {
+              "$ref": "#/$defs/DecisionInput"
+            },
+            {
+              "$ref": "#/$defs/ScenarioValue"
+            },
+            {
+              "$ref": "#/$defs/HypothesisProposal"
             },
             {
               "type": "boolean"
@@ -188,9 +325,81 @@
       "title": "Predicate",
       "type": "object"
     },
+    "PreferenceRelation": {
+      "additionalProperties": false,
+      "properties": {
+        "higher_preference_id": {
+          "title": "Higher Preference Id",
+          "type": "string"
+        },
+        "lower_preference_id": {
+          "title": "Lower Preference Id",
+          "type": "string"
+        },
+        "mode": {
+          "default": "emphasis",
+          "enum": [
+            "strict",
+            "emphasis"
+          ],
+          "title": "Mode",
+          "type": "string"
+        }
+      },
+      "required": [
+        "higher_preference_id",
+        "lower_preference_id"
+      ],
+      "title": "PreferenceRelation",
+      "type": "object"
+    },
+    "QuestionResponse": {
+      "additionalProperties": false,
+      "properties": {
+        "question_key": {
+          "title": "Question Key",
+          "type": "string"
+        },
+        "outcome": {
+          "enum": [
+            "answered",
+            "unknown",
+            "no_preference",
+            "direct_recommendation"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "quote": {
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "question_key",
+        "outcome",
+        "quote"
+      ],
+      "title": "QuestionResponse",
+      "type": "object"
+    },
     "Requirement": {
       "additionalProperties": false,
       "properties": {
+        "field": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Canonical product attribute, independent of the requirement key. Use budget only with key budget.",
+          "title": "Field"
+        },
         "status": {
           "enum": [
             "active",
@@ -232,10 +441,242 @@
       ],
       "title": "Requirement",
       "type": "object"
+    },
+    "RequirementInterpretation": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "scenario",
+            "no_requirement",
+            "explicit_requirement",
+            "explicit_exclusion",
+            "withdraw_requirement",
+            "uncertain"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "existing_key": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Exact existing requirement key for withdrawal only. Other independent requirements must remain unchanged.",
+          "title": "Existing Key"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "title": "RequirementInterpretation",
+      "type": "object"
+    },
+    "ScenarioValue": {
+      "additionalProperties": false,
+      "properties": {
+        "active": {
+          "title": "Active",
+          "type": "boolean"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "active",
+        "text"
+      ],
+      "title": "ScenarioValue",
+      "type": "object"
+    },
+    "SoftExpression": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "minimize",
+            "maximize",
+            "target",
+            "prefer_value",
+            "qualitative"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "target": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Predicate"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target"
+        },
+        "text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Text"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "title": "SoftExpression",
+      "type": "object"
+    },
+    "SoftPreference": {
+      "additionalProperties": false,
+      "properties": {
+        "field": {
+          "minLength": 1,
+          "title": "Field",
+          "type": "string"
+        },
+        "status": {
+          "default": "active",
+          "enum": [
+            "active",
+            "no_preference"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "strength": {
+          "const": "soft",
+          "default": "soft",
+          "title": "Strength",
+          "type": "string"
+        },
+        "expression": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SoftExpression"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "field",
+        "expression"
+      ],
+      "title": "SoftPreference",
+      "type": "object"
+    },
+    "StateQuery": {
+      "additionalProperties": false,
+      "properties": {
+        "task_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Task Id"
+        },
+        "category": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Category"
+        },
+        "scope": {
+          "default": "formal",
+          "enum": [
+            "formal",
+            "hypothetical"
+          ],
+          "title": "Scope",
+          "type": "string"
+        },
+        "fields": {
+          "items": {
+            "enum": [
+              "preferences",
+              "excluded",
+              "shortlist",
+              "selection",
+              "selection_qualification",
+              "budget",
+              "purchase",
+              "formal_budget",
+              "temporary_budget",
+              "exploration_status"
+            ],
+            "type": "string"
+          },
+          "maxItems": 11,
+          "minItems": 1,
+          "title": "Fields",
+          "type": "array"
+        }
+      },
+      "required": [
+        "fields"
+      ],
+      "title": "StateQuery",
+      "type": "object"
     }
   },
   "additionalProperties": false,
   "properties": {
+    "state_queries": {
+      "items": {
+        "$ref": "#/$defs/StateQuery"
+      },
+      "maxItems": 12,
+      "title": "State Queries",
+      "type": "array"
+    },
+    "state_query_mode": {
+      "anyOf": [
+        {
+          "enum": [
+            "only",
+            "alongside"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "State Query Mode"
+    },
     "category": {
       "anyOf": [
         {
@@ -296,6 +737,41 @@
       "default": false,
       "title": "Cheapest Requested",
       "type": "boolean"
+    },
+    "recommendation_scope": {
+      "anyOf": [
+        {
+          "enum": [
+            "formal",
+            "hypothetical"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Override recommendation scope only when the user explicitly asks for formal or temporary recommendations. Omit to continue the active valid temporary exploration, otherwise formal. Does not change state-query scope.",
+      "title": "Recommendation Scope"
+    },
+    "question_response": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/QuestionResponse"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "direction_rejections": {
+      "items": {
+        "$ref": "#/$defs/DirectionRejection"
+      },
+      "title": "Direction Rejections",
+      "type": "array"
     }
   },
   "title": "TurnPlan",

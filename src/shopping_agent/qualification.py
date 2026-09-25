@@ -191,6 +191,7 @@ def predicate(field, value):
 
 
 def check(product, field, requirement):
+    field = requirement.get("field") or field
     canonical = ALIASES.get(field, field)
     actual = normalize(product, canonical)
     desired = predicate(canonical, requirement["value"])
